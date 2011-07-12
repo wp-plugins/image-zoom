@@ -2,7 +2,7 @@
 /*
 Plugin Name: Image Zoom
 Description: <p>Allow to zoom dynamically on images in posts/pages/... </p><p>This plugin implements the highslide javascript library. </p><p>Plugin developped from the orginal plugin <a href="http://wordpress.org/extend/plugins/zoom-highslide/">Zoom-Hishslide</a>. </p><p>This plugin is under GPL licence (please note that the <a href="http://highslide.com/">highslide library</a> is not under GPL licence but under Creative Commons Attribution-NonCommercial 2.5 License. This means you need the author's permission to use Highslide JS on commercial websites.) </p>
-Version: 1.0.1
+Version: 1.0.2
 Author: SedLex
 Author URI: http://www.sedlex.fr/
 Plugin URI: http://wordpress.org/extend/plugins/image-zoom/
@@ -125,24 +125,6 @@ class imagezoom extends pluginSedLex {
 				}
 			});			
 						
-			var widthRestriction = <?php echo $this->get_param('widthRestriction');?>; 
-			var heightRestriction = <?php echo $this->get_param('heightRestriction');?>;
-
-			window.onload = function() {  
-				for (var index = 0; index < document.images.length; index++) { 
-					document.images[index].style.display="";
-					var rate = document.images[index].width / document.images[index].height; 
-					
-					if (document.images[index].width > widthRestriction) { 
-						document.images[index].width = widthRestriction; 
-						document.images[index].height = widthRestriction / rate; 
-					} else if (document.images[index].height > heightRestriction) { 
-						document.images[index].height = heightRestriction; 
-						document.images[index].width = heightRestriction * rate; 
-					} 
-					
-				} 
-			}
 	<?php 
 		$content = ob_get_clean() ; 
 		$this->add_inline_js($content) ; 
@@ -159,7 +141,7 @@ class imagezoom extends pluginSedLex {
 	*/
 	function zoom($string) {
 		$pattern = '/(<a href="([^"]*.)'.$this->image_type.'"><img(.*?)src="([^"]*.)'.$this->image_type.'"(.*?)\><\/a>)/ie';
-		$replacement = 'stripslashes("<a href=\"\2\3\" class=\"highslide\" onclick=\"return hs.expand(this);\"><img\4src=\"\5\6\" \7></a>")';
+		$replacement = 'stripslashes("<a href=\"\2\3\" class=\"highslide\" onclick=\"return hs.expand(this , { maxWidth: '.$this->get_param('widthRestriction').', maxHeight: '.$this->get_param('heightRestriction').' });\"><img\4src=\"\5\6\" \7></a>")';
 		return preg_replace($pattern, $replacement, $string);
 	}
 

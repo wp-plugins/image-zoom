@@ -2,7 +2,7 @@
 
 Contributors: SedLex
 Author URI: http://www.sedlex.fr/
-Plugin URI: http://wordpress.org/extend/plugins/social-linkz/
+Plugin URI: http://wordpress.org/extend/plugins/image-zoom/
 Tags: plugin, image, highslide
 Requires at least: 3.0
 Tested up to: 3.2
@@ -30,6 +30,9 @@ This plugin implements the highslide javascript library.
 2. An image zommed
 
 == Changelog ==
+
+= 1.0.2 =
+* Bug correction (thanks to Chipset): block property of images was cleared and this action could have change their paginations
 
 = 1.0.1 =
 * First release in the wild web (enjoy)
