@@ -195,7 +195,7 @@ class imagezoom extends pluginSedLex {
 					$params = new parametersSedLex($this, 'tab-parameters') ; 
 					$params->add_title(__('What is the clipped dimensions of the zoomed image?',$this->pluginName)) ; 
 					$params->add_param('widthRestriction', __('Max width:',$this->pluginName)) ; 
-					$params->add_param('heightRestriction', __('Max width:',$this->pluginName)) ; 
+					$params->add_param('heightRestriction', __('Max height:',$this->pluginName)) ; 
 					
 					$params->add_title(__('What is the other parameters?',$this->pluginName)) ; 
 					$params->add_param('show_interval', __('Transition time if the slideshow is "on":',$this->pluginName)) ; 
