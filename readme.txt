@@ -31,6 +31,9 @@ This plugin implements the highslide javascript library.
 
 == Changelog ==
 
+= 1.0.3 =
+* Major release of the framework (3.0)
+
 = 1.0.2 =
 * Bug correction (thanks to Chipset): block property of images was cleared and this action could have change their paginations
 
