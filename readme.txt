@@ -31,6 +31,16 @@ This plugin implements the highslide javascript library.
 
 == Changelog ==
 
+
+= 1.0.4 =
+* Correction of a bug in the load-style.php which change dynamically the url of the image contained in the CSS file
+* Enable the translation of the plugin (modification in the framework, thus all your plugin developped with this framework can enable this feature easily)
+* Add the email of the author in the header of the file to be able to send email to him
+* Enhance the localization of the plugin
+* The javascript function to be called for table cell can have now complex parameters (instead of just the id of the line)
+* Add the French localization
+* Add a form to send feedback to the author
+
 = 1.0.3 =
 * Major release of the framework (3.0)
 

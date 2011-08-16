@@ -2,8 +2,10 @@
 /*
 Plugin Name: Image Zoom
 Description: <p>Allow to zoom dynamically on images in posts/pages/... </p><p>This plugin implements the highslide javascript library. </p><p>Plugin developped from the orginal plugin <a href="http://wordpress.org/extend/plugins/zoom-highslide/">Zoom-Hishslide</a>. </p><p>This plugin is under GPL licence (please note that the <a href="http://highslide.com/">highslide library</a> is not under GPL licence but under Creative Commons Attribution-NonCommercial 2.5 License. This means you need the author's permission to use Highslide JS on commercial websites.) </p>
-Version: 1.0.3
+Version: 1.0.4
 Author: SedLex
+Author Email: sedlex@sedlex.fr
+Framework Email: sedlex@sedlex.fr
 Author URI: http://www.sedlex.fr/
 Plugin URI: http://wordpress.org/extend/plugins/image-zoom/
 License: GPL3
@@ -161,7 +163,7 @@ class imagezoom extends pluginSedLex {
 			<div id="icon-themes" class="icon32"><br></div>
 			<h2><?php echo $this->pluginName ?></h2>
 			<?php echo $this->signature ; ?>
-			<p>This plugin allows a dynamic zoom on the images (based on the highslide javascript library)</p>
+			
 			<!--debut de personnalisation-->
 		<?php
 			
@@ -171,44 +173,42 @@ class imagezoom extends pluginSedLex {
 			//		(bien mettre a jour les liens contenu dans les <li> qui suivent)
 			//
 			//==========================================================================================
-	?>		
-			<script>jQuery(function($){ $('#tabs').tabs(); }) ; </script>		
-			<div id="tabs">
-				<ul class="hide-if-no-js">
-					<li><a href="#tab-parameters"><? echo __('Parameters',$this->pluginName) ?></a></li>					
-				</ul>
-				<?php
-				//==========================================================================================
-				//
-				// Premier Onglet 
-				//		(bien verifier que id du 1er div correspond a celui indique dans la mise en 
-				//			place des onglets)
-				//
-				//==========================================================================================
-				?>
-				<div id="tab-parameters" class="blc-section">
+			
+			
+			$tabs = new adminTabs() ; 
+			echo "<p>".__('This plugin allows a dynamic zoom on the images (based on the highslide javascript library)', $this->pluginID)."</p>" ; 
+			ob_start() ; 
+				echo __('Here is the parameters of the plugin. Please modify them at your convenience.',$this->pluginID) ;
+				$params = new parametersSedLex($this, 'tab-parameters') ; 
+				$params->add_title(__('What is the clipped dimensions of the zoomed image?',$this->pluginID)) ; 
+				$params->add_param('widthRestriction', __('Max width:',$this->pluginID)) ; 
+				$params->add_param('heightRestriction', __('Max height:',$this->pluginID)) ; 
 				
-					<h3 class="hide-if-js"><? echo __('Parameters',$this->pluginName) ?></h3>
-					<p><?php echo __('Here is the parameters of the plugin. Please modify them at your convenience.',$this->pluginName) ; ?> </p>
-				
-					<?php					
-					$params = new parametersSedLex($this, 'tab-parameters') ; 
-					$params->add_title(__('What is the clipped dimensions of the zoomed image?',$this->pluginName)) ; 
-					$params->add_param('widthRestriction', __('Max width:',$this->pluginName)) ; 
-					$params->add_param('heightRestriction', __('Max height:',$this->pluginName)) ; 
+				$params->add_title(__('What is the other parameters?',$this->pluginID)) ; 
+				$params->add_param('show_interval', __('Transition time if the slideshow is on:',$this->pluginID)) ; 
+				$params->add_param('controler_position', __('The position of the button (play, next, ...) (e.g top center):',$this->pluginID)) ; 
+				$params->add_param('background_opacity', __('The opacity of the background:',$this->pluginID)) ; 
 					
-					$params->add_title(__('What is the other parameters?',$this->pluginName)) ; 
-					$params->add_param('show_interval', __('Transition time if the slideshow is "on":',$this->pluginName)) ; 
-					$params->add_param('controler_position', __('The position of the button (play, next, ...) (e.g "top center"):',$this->pluginName)) ; 
-					$params->add_param('background_opacity', __('The opacity of the background:',$this->pluginName)) ; 
+				$params->flush() ; 
+			$tabs->add_tab(__('Parameters',  $this->pluginID), ob_get_clean() ) ; 	
+
 						
-					$params->flush() ; 
-					
-					?>
-				</div>
-			</div>
-			<!--fin de personnalisation-->
-			<?php echo $this->signature ; ?>
+			ob_start() ; 
+				$plugin = str_replace("/","",str_replace(basename(__FILE__),"",plugin_basename( __FILE__))) ; 
+				$trans = new translationSL($this->pluginID, $plugin) ; 
+				$trans->enable_translation() ; 
+			$tabs->add_tab(__('Manage translations',  $this->pluginID), ob_get_clean() ) ; 	
+
+			ob_start() ; 
+				echo __('This form is an easy way to contact the author and to discuss issues / incompatibilities / etc.',  $this->pluginID) ; 
+				$plugin = str_replace("/","",str_replace(basename(__FILE__),"",plugin_basename( __FILE__))) ; 
+				$trans = new feedbackSL($plugin) ; 
+				$trans->enable_feedback() ; 
+			$tabs->add_tab(__('Give feedback',  $this->pluginID), ob_get_clean() ) ; 	
+			
+			echo $tabs->flush() ; 
+			
+			echo $this->signature ; ?>
 		</div>
 		<?php
 	}

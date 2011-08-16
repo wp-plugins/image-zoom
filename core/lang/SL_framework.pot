@@ -1,0 +1,374 @@
+Content-Transfer-Encoding: 8bit
+
+#: core.php:187
+#: core.php:187
+#@ SL_framework
+msgid "About..."
+msgstr ""
+
+#: core.php:230
+#: core.php:601
+#@ SL_framework
+msgid "Settings"
+msgstr ""
+
+#: core.php:565
+#@ SL_framework
+msgid "Summary page for the plugins developped with the SL framework"
+msgstr ""
+
+#: core.php:576
+#@ SL_framework
+msgid "For now, you have installed %d  plugins including %d plugins developped with the 'SL framework':"
+msgstr ""
+
+#: core.php:586
+#@ SL_framework
+msgid "Plugin name"
+msgstr ""
+
+#: core.php:586
+#@ SL_framework
+msgid "Description"
+msgstr ""
+
+#: core.php:586
+#@ SL_framework
+msgid "Status"
+msgstr ""
+
+#: core.php:619
+#@ SL_framework
+msgid "List of SL plugins"
+msgstr ""
+
+#: core.php:630
+#@ SL_framework
+msgid "The following description is a quick tutorial on about how to create a plugin with the SL framework. (Please note that the following description is in English for developpers, sorry for this inconvenience)"
+msgstr ""
+
+#: core.php:697
+#@ SL_framework
+msgid "How to create a new Plugin with the SL framework"
+msgstr ""
+
+#: core.php:722
+#@ SL_framework
+msgid "Framework documentation"
+msgstr ""
+
+#: core.php:729
+#@ SL_framework
+msgid "The core file used for the SedLex plugins is:"
+msgstr ""
+
+#: core.php:811
+#@ SL_framework
+msgid "Please find hearafter all the possible classes and methods for the development with this framework"
+msgstr ""
+
+#: core.php:834
+#@ SL_framework
+msgid "Here is the method of the class:"
+msgstr ""
+
+#: core.php:848
+#@ SL_framework
+msgid "[METHOD]"
+msgstr ""
+
+#: core.php:851
+#@ SL_framework
+msgid "Description:"
+msgstr ""
+
+#: core.php:866
+#: core.php:890
+#@ SL_framework
+msgid "Parameters:"
+msgstr ""
+
+#: core.php:874
+#@ SL_framework
+msgid "[optional]"
+msgstr ""
+
+#: core.php:874
+#@ SL_framework
+msgid "(by default, its value is:"
+msgstr ""
+
+#: core.php:890
+#@ SL_framework
+msgid "No param"
+msgstr ""
+
+#: core.php:897
+#@ SL_framework
+msgid "Return value:"
+msgstr ""
+
+#: core.php:903
+#@ SL_framework
+msgid "Typical call:"
+msgstr ""
+
+#: core.php:908
+#@ SL_framework
+msgid "See also:"
+msgstr ""
+
+#: core.php:997
+#: core.php:1003
+#: core.php:1042
+#@ SL_framework
+msgid "Version of"
+msgstr ""
+
+#: core.php:1005
+#: core.php:1037
+#@ SL_framework
+msgid "bytes"
+msgstr ""
+
+#: core.php:1020
+#@ SL_framework
+msgid "file not found"
+msgstr ""
+
+#: core/utils.class.php:123
+#@ SL_framework
+msgid "KB"
+msgstr ""
+
+#: core/utils.class.php:127
+#@ SL_framework
+msgid "MB"
+msgstr ""
+
+#: core/utils.class.php:130
+#@ SL_framework
+msgid "GB"
+msgstr ""
+
+#: core/parameters.class.php:129
+#@ SL_framework
+msgid "Error: the submitted value is not an integer and thus, the parameter has not been updated!"
+msgstr ""
+
+#: core/parameters.class.php:142
+#@ SL_framework
+msgid "Warning: some characters have been removed because they are not allowed here"
+msgstr ""
+
+#: core/parameters.class.php:147
+#@ SL_framework
+msgid "Error: the submitted string does not match the constrains"
+msgstr ""
+
+#: core/parameters.class.php:321
+#@ SL_framework
+msgid "Update"
+msgstr ""
+
+#: core/parameters.class.php:333
+#@ SL_framework
+msgid "Some parameters have not been updated due to errors (see below) !"
+msgstr ""
+
+#: core/parameters.class.php:339
+#@ SL_framework
+msgid "Parameters have been updated (but with some warnings) !"
+msgstr ""
+
+#: core/parameters.class.php:345
+#@ SL_framework
+msgid "Parameters have been updated successfully !"
+msgstr ""
+
+#: core/feedback.class.php:37
+#: core/translation.class.php:400
+#: core/translation.class.php:480
+#@ SL_framework
+msgid "Your name:"
+msgstr ""
+
+#: core/feedback.class.php:38
+#@ SL_framework
+msgid "Your email (for response):"
+msgstr ""
+
+#: core/feedback.class.php:39
+#@ SL_framework
+msgid "Your comments:"
+msgstr ""
+
+#: core/feedback.class.php:41
+#@ SL_framework
+msgid "Send feedback"
+msgstr ""
+
+#: core/feedback.class.php:47
+#@ SL_framework
+msgid "No email have been provided for the author of this plugin. Therefore, the feedback is impossible"
+msgstr ""
+
+#: core/feedback.class.php:90
+#@ SL_framework
+msgid "The feedback has been sent"
+msgstr ""
+
+#: core/feedback.class.php:94
+#: core/translation.class.php:604
+#@ SL_framework
+msgid "An error occured sending the email."
+msgstr ""
+
+#: core/feedback.class.php:94
+#: core/translation.class.php:604
+#@ SL_framework
+msgid "Make sure that your wordpress is able to send email."
+msgstr ""
+
+#: core/translation.class.php:246
+#@ SL_framework
+msgid "The available translation for the SL framework (contained in the '%s' folder)"
+msgstr ""
+
+#: core/translation.class.php:247
+#@ SL_framework
+msgid "There is %d languages supported for the 'SL framework' (to see the plugin translations %s click here %s) ."
+msgstr ""
+
+#: core/translation.class.php:249
+#@ SL_framework
+msgid "The available translation for this plugin"
+msgstr ""
+
+#: core/translation.class.php:250
+#@ SL_framework
+msgid "There is %d languages supported for this plugin (to see the plugin translations %s click here %s) ."
+msgstr ""
+
+#: core/translation.class.php:256
+#@ SL_framework
+msgid "Language"
+msgstr ""
+
+#: core/translation.class.php:256
+#@ SL_framework
+msgid "Ratio %"
+msgstr ""
+
+#: core/translation.class.php:256
+#@ SL_framework
+msgid "Translators"
+msgstr ""
+
+#: core/translation.class.php:315
+#@ SL_framework
+msgid "Modify"
+msgstr ""
+
+#: core/translation.class.php:318
+#@ SL_framework
+msgid "Send to the author of the framework"
+msgstr ""
+
+#: core/translation.class.php:320
+#@ SL_framework
+msgid "Send to the author of the plugin"
+msgstr ""
+
+#: core/translation.class.php:332
+#@ SL_framework
+msgid "Add a new translation"
+msgstr ""
+
+#: core/translation.class.php:333
+#@ SL_framework
+msgid "You may add a new translation hereafter (Please note that it is recommended to send your translation to the author so that he would be able to add your translation to the future release of the plugin !)"
+msgstr ""
+
+#: core/translation.class.php:348
+#@ SL_framework
+msgid "Add"
+msgstr ""
+
+#: core/translation.class.php:377
+#@ SL_framework
+msgid "Adding a new translation for this language:"
+msgstr ""
+
+#: core/translation.class.php:381
+#: core/translation.class.php:437
+#@ SL_framework
+msgid "Sentence to translate"
+msgstr ""
+
+#: core/translation.class.php:381
+#: core/translation.class.php:437
+#@ SL_framework
+msgid "Translation"
+msgstr ""
+
+#: core/translation.class.php:400
+#@ SL_framework
+msgid "(if your name/pseudo is already in the list, there is no need to fill this input)"
+msgstr ""
+
+#: core/translation.class.php:401
+#: core/translation.class.php:481
+#@ SL_framework
+msgid "Your email or your website:"
+msgstr ""
+
+#: core/translation.class.php:403
+#@ SL_framework
+msgid "Create the translation files"
+msgstr ""
+
+#: core/translation.class.php:433
+#@ SL_framework
+msgid "Modifying the translation for this language:"
+msgstr ""
+
+#: core/translation.class.php:483
+#@ SL_framework
+msgid "Modify the translation files"
+msgstr ""
+
+#: core/translation.class.php:542
+#@ SL_framework
+msgid "%s sentences have been translated (i.e. %s)."
+msgstr ""
+
+#: core/translation.class.php:600
+#@ SL_framework
+msgid "The translation %s have been sent"
+msgstr ""
+
+#: core/translation.class.php:750
+#: core/translation.class.php:753
+#@ SL_framework
+msgid "%s file has been updated for %s"
+msgstr ""
+
+#: core/translation.class.php:751
+#: core/translation.class.php:754
+#@ SL_framework
+msgid "%s file has been updated from this file"
+msgstr ""
+
+#: core/translation.class.php:758
+#: core/translation.class.php:761
+#@ SL_framework
+msgid "%s file has been created with a new translation for %s"
+msgstr ""
+
+#: core/translation.class.php:759
+#: core/translation.class.php:762
+#@ SL_framework
+msgid "%s file has been created from this file"
+msgstr ""
+
