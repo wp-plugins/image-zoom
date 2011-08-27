@@ -31,6 +31,8 @@ This plugin implements the highslide javascript library.
 
 == Changelog ==
 
+= 1.0.5 =
+* Enhance the framework (feedback, other plugins, translations)
 
 = 1.0.4 =
 * Correction of a bug in the load-style.php which change dynamically the url of the image contained in the CSS file
@@ -50,12 +52,11 @@ This plugin implements the highslide javascript library.
 = 1.0.1 =
 * First release in the wild web (enjoy)
 
-
 == Frequently Asked Questions ==
 
 * Where can I read more?
 
 Visit http://www.sedlex.fr/cote_geek/
 
-
-
+ 
+InfoVersion:9a66e1d8bfff1f3aa5128099e2b43718

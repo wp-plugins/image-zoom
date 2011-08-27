@@ -2,7 +2,7 @@
 /*
 Plugin Name: Image Zoom
 Description: <p>Allow to zoom dynamically on images in posts/pages/... </p><p>This plugin implements the highslide javascript library. </p><p>Plugin developped from the orginal plugin <a href="http://wordpress.org/extend/plugins/zoom-highslide/">Zoom-Hishslide</a>. </p><p>This plugin is under GPL licence (please note that the <a href="http://highslide.com/">highslide library</a> is not under GPL licence but under Creative Commons Attribution-NonCommercial 2.5 License. This means you need the author's permission to use Highslide JS on commercial websites.) </p>
-Version: 1.0.4
+Version: 1.0.5
 Author: SedLex
 Author Email: sedlex@sedlex.fr
 Framework Email: sedlex@sedlex.fr
@@ -162,6 +162,8 @@ class imagezoom extends pluginSedLex {
 		<div class="wrap">
 			<div id="icon-themes" class="icon32"><br></div>
 			<h2><?php echo $this->pluginName ?></h2>
+		</div>
+		<div style="padding:20px;">
 			<?php echo $this->signature ; ?>
 			
 			<!--debut de personnalisation-->
@@ -202,10 +204,17 @@ class imagezoom extends pluginSedLex {
 			ob_start() ; 
 				echo __('This form is an easy way to contact the author and to discuss issues / incompatibilities / etc.',  $this->pluginID) ; 
 				$plugin = str_replace("/","",str_replace(basename(__FILE__),"",plugin_basename( __FILE__))) ; 
-				$trans = new feedbackSL($plugin) ; 
+				$trans = new feedbackSL($plugin,  $this->pluginID) ; 
 				$trans->enable_feedback() ; 
 			$tabs->add_tab(__('Give feedback',  $this->pluginID), ob_get_clean() ) ; 	
 			
+			ob_start() ; 
+				echo "<p>".__('Here is the plugins developped by the author',  $this->pluginID) ."</p>" ; 
+				$trans = new otherPlugins("sedLex", array('wp-pirates-search')) ; 
+				$trans->list_plugins() ; 
+			$tabs->add_tab(__('Other possible plugins',  $this->pluginID), ob_get_clean() ) ; 	
+			
+
 			echo $tabs->flush() ; 
 			
 			echo $this->signature ; ?>
