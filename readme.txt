@@ -31,6 +31,9 @@ This plugin implements the highslide javascript library.
 
 == Changelog ==
 
+= 1.0.6 =
+* Ensure that folders and files permissions are correct for an adequate behavior
+
 = 1.0.5 =
 * Enhance the framework (feedback, other plugins, translations)
 
@@ -59,4 +62,4 @@ This plugin implements the highslide javascript library.
 Visit http://www.sedlex.fr/cote_geek/
 
  
-InfoVersion:9a66e1d8bfff1f3aa5128099e2b43718
+InfoVersion:4dfa7350a023288e17b895b7c034ccef
