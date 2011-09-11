@@ -31,6 +31,9 @@ This plugin implements the highslide javascript library.
 
 == Changelog ==
 
+= 1.0.7 =
+* ZipArchive class has been suppressed and pclzip is used instead
+
 = 1.0.6 =
 * Ensure that folders and files permissions are correct for an adequate behavior
 
@@ -62,4 +65,4 @@ This plugin implements the highslide javascript library.
 Visit http://www.sedlex.fr/cote_geek/
 
  
-InfoVersion:4dfa7350a023288e17b895b7c034ccef
+InfoVersion:dba8c93b43f20b82d76029b347e60d10
