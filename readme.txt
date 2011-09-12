@@ -31,6 +31,9 @@ This plugin implements the highslide javascript library.
 
 == Changelog ==
 
+= 1.0.8 =
+* New translation for Spanish made by genteblackberry 
+
 = 1.0.7 =
 * ZipArchive class has been suppressed and pclzip is used instead
 
@@ -65,4 +68,4 @@ This plugin implements the highslide javascript library.
 Visit http://www.sedlex.fr/cote_geek/
 
  
-InfoVersion:dba8c93b43f20b82d76029b347e60d10
+InfoVersion:efd33b89fec17c58065e616f23ce753f
