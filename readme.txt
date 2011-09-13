@@ -31,6 +31,9 @@ This plugin implements the highslide javascript library.
 
 == Changelog ==
 
+= 1.0.9 =
+* New translation for German made by Frutte
+
 = 1.0.8 =
 * New translation for Spanish made by genteblackberry 
 
@@ -68,4 +71,4 @@ This plugin implements the highslide javascript library.
 Visit http://www.sedlex.fr/cote_geek/
 
  
-InfoVersion:efd33b89fec17c58065e616f23ce753f
+InfoVersion:84124223a90f3047c73e1a3ef2f9f3b3
