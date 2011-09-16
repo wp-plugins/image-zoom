@@ -1,0 +1,67 @@
+msgid ""
+msgstr ""
+"Generated: SL Framework (http://www.sedlex.fr)\n"
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2011-09-16T07:48:02+00:00\n"
+"Last-Translator: Sprigin <Sprigin.ru>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%100/10==1 ? 2 : n%10==1 ? 0 : (n+9)%10>3 ? 2 : 1;\n"
+"X-Poedit-Language: Russian\n"
+"X-Poedit-Country: Russia\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;\n"
+"X-Poedit-Basepath: \n"
+"X-Poedit-Bookmarks: \n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Textdomain-Support: yes\n"
+
+msgid "This plugin allows a dynamic zoom on the images (based on the highslide javascript library)"
+msgstr "Этот плагин позволяет зумировать изображения (на основе Highslide JavaScript библиотеки)"
+
+msgid "Here is the parameters of the plugin. Please modify them at your convenience."
+msgstr "Это параметры плагина. Вы можете их изменить."
+
+msgid "What is the clipped dimensions of the zoomed image?"
+msgstr "Что такое обрезанный размер увеличенного изображения?"
+
+msgid "Max width:"
+msgstr "Максимальная ширина:"
+
+msgid "Max height:"
+msgstr "Максимальная высота:"
+
+msgid "What is the other parameters?"
+msgstr "Что такое другие параметры?"
+
+msgid "Transition time if the slideshow is on:"
+msgstr "Время перелистывания при слайд-шоу"
+
+msgid "The position of the button (play, next, ...) (e.g top center):"
+msgstr "Положение кнопок (воспроизведение, следующий, ...) (например, вверху в центре):"
+
+msgid "The opacity of the background:"
+msgstr "Прозрачность фона:"
+
+msgid "Parameters"
+msgstr "Параметры"
+
+msgid "Manage translations"
+msgstr "Управление переводом"
+
+msgid "This form is an easy way to contact the author and to discuss issues / incompatibilities / etc."
+msgstr "Форма обратной связи для обсуждения с автором вопросов о не совмести или иным вопросам"
+
+msgid "Give feedback"
+msgstr "Обратная связь"
+
+msgid "Here is the plugins developped by the author"
+msgstr "Вот плагины разработанные автором"
+
+msgid "Other possible plugins"
+msgstr "Другие возможные плагины"
+
