@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2011-09-16T07:48:02+00:00\n"
+"PO-Revision-Date: 2011-09-19T13:45:50+00:00\n"
 "Last-Translator: Sprigin <Sprigin.ru>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -27,7 +27,7 @@ msgid "Here is the parameters of the plugin. Please modify them at your convenie
 msgstr "Это параметры плагина. Вы можете их изменить."
 
 msgid "What is the clipped dimensions of the zoomed image?"
-msgstr "Что такое обрезанный размер увеличенного изображения?"
+msgstr "Размер изображения, отображающийся при зуме"
 
 msgid "Max width:"
 msgstr "Максимальная ширина:"
@@ -36,7 +36,7 @@ msgid "Max height:"
 msgstr "Максимальная высота:"
 
 msgid "What is the other parameters?"
-msgstr "Что такое другие параметры?"
+msgstr "другие параметры"
 
 msgid "Transition time if the slideshow is on:"
 msgstr "Время перелистывания при слайд-шоу"

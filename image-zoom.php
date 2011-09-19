@@ -2,7 +2,7 @@
 /*
 Plugin Name: Image Zoom
 Description: <p>Allow to zoom dynamically on images in posts/pages/... </p><p>This plugin implements the highslide javascript library. </p><p>Plugin developped from the orginal plugin <a href="http://wordpress.org/extend/plugins/zoom-highslide/">Zoom-Hishslide</a>. </p><p>This plugin is under GPL licence (please note that the <a href="http://highslide.com/">highslide library</a> is not under GPL licence but under Creative Commons Attribution-NonCommercial 2.5 License. This means you need the author's permission to use Highslide JS on commercial websites.) </p>
-Version: 1.1.0
+Version: 1.1.1
 Author: SedLex
 Author Email: sedlex@sedlex.fr
 Framework Email: sedlex@sedlex.fr
@@ -24,11 +24,12 @@ class imagezoom extends pluginSedLex {
 	
 	var $image_type ;
 
-
 	protected function _init() {
 		// Configuration
 		$this->pluginName = 'Image Zoom' ; 
 		$this->tableSQL = "" ; 
+		$this->table_name = $wpdb->prefix . "pluginSL_" . get_class() ; 
+		
 		$this->path = __FILE__ ; 
 		$this->pluginID = get_class() ; 
 		
@@ -147,8 +148,6 @@ class imagezoom extends pluginSedLex {
 		return preg_replace($pattern, $replacement, $string);
 	}
 
-
-
 	/** ====================================================================================================================================================
 	* The configuration page
 	* 
@@ -156,7 +155,6 @@ class imagezoom extends pluginSedLex {
 	*/
 	function configuration_page() {
 		global $wpdb;
-		$table_name = $wpdb->prefix . $this->pluginID;
 	
 		?>
 		<div class="wrap">

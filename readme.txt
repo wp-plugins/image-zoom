@@ -31,6 +31,10 @@ This plugin implements the highslide javascript library.
 
 == Changelog ==
 
+= 1.1.1 =
+* Update of the core plugin
+* Update of the russian translation by Sprigin
+
 = 1.1.0 =
 * New translation for Russian made by Sprigin 
 
@@ -74,4 +78,4 @@ This plugin implements the highslide javascript library.
 Visit http://www.sedlex.fr/cote_geek/
 
  
-InfoVersion:e2224e6abd4764f489cfe0d290bedbc5
+InfoVersion:9e4189068e0956100e4452493ce3a72c
