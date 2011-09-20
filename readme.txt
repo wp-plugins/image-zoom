@@ -3,18 +3,45 @@
 Contributors: SedLex
 Author URI: http://www.sedlex.fr/
 Plugin URI: http://wordpress.org/extend/plugins/image-zoom/
-Tags: plugin, image, highslide
+Tags: plugin, image, highslide, zoom, scale, picture
 Requires at least: 3.0
 Tested up to: 3.2
 Stable tag: trunk
 
-Allow to zoom dynamically on images in posts/pages/... 
+Allow to zoom dynamically on images in posts / pages / etc.
 
 == Description ==
 
-Allow to zoom dynamically on images in posts/pages/... 
+Allow to zoom dynamically on images in posts / pages / etc.
 
-This plugin implements the highslide javascript library. 
+When clicked, the image will dynamically scale-up. Please note that you have to insert image normally with the wordpress embedded editor.
+
+If the image does not scale-up, please verify that the HTML looks like the following : <a href=' '><img src=' '></a>.
+
+This plugin implements the highslide javascript library.
+
+Plugin developped from the orginal plugin Zoom-Hishslide.
+
+= Localizations =
+
+* Russian translation (by Sprigin)
+* German translation (by Frutte)
+* Spanish translation (by genteblackberry)
+* French translation (by me)
+
+= Features of the framework = 
+
+This plugin use SL framework.
+
+You may translate this plugin with an embedded feature which is very easy to use by any end-users (without any external tools / knowledge).
+
+You may also create a new plugin. You will download, from the plugin, an "hello World" plugin: You just have to fill the blank and follow the comments.
+
+= Licence =
+
+This plugin is under GPL licence 
+
+Please note that the highslide library is not under GPL licence but under Creative Commons Attribution-NonCommercial 2.5 License. This means you need the author’s permission to use Highslide JS on commercial websites.
 
 == Installation ==
 
@@ -30,6 +57,9 @@ This plugin implements the highslide javascript library.
 2. An image zommed
 
 == Changelog ==
+
+= 1.1.2 =
+* Update of the core plugin (bug correction on the hash of the plugin/core)
 
 = 1.1.1 =
 * Update of the core plugin
@@ -78,4 +108,4 @@ This plugin implements the highslide javascript library.
 Visit http://www.sedlex.fr/cote_geek/
 
  
-InfoVersion:9e4189068e0956100e4452493ce3a72c
+InfoVersion:a720be297f1db9e93605d041f6b68902

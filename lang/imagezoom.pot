@@ -1,80 +1,86 @@
 Content-Transfer-Encoding: 8bit
 
-#: image-zoom.php:184
+#: image-zoom.php:182
 #@ imagezoom
 msgid "This plugin allows a dynamic zoom on the images (based on the highslide javascript library)"
 msgstr ""
 
-#: image-zoom.php:186
+#: image-zoom.php:184
 #@ imagezoom
 msgid "Here is the parameters of the plugin. Please modify them at your convenience."
 msgstr ""
 
-#: image-zoom.php:188
+#: image-zoom.php:186
 #@ imagezoom
 msgid "What is the clipped dimensions of the zoomed image?"
 msgstr ""
 
-#: image-zoom.php:189
+#: image-zoom.php:187
 #@ imagezoom
 msgid "Max width:"
 msgstr ""
 
-#: image-zoom.php:190
+#: image-zoom.php:188
 #@ imagezoom
 msgid "Max height:"
 msgstr ""
 
-#: image-zoom.php:192
+#: image-zoom.php:190
 #@ imagezoom
 msgid "What is the other parameters?"
 msgstr ""
 
-#: image-zoom.php:193
+#: image-zoom.php:191
 #@ imagezoom
 msgid "Transition time if the slideshow is on:"
 msgstr ""
 
-#: image-zoom.php:194
+#: image-zoom.php:192
 #@ imagezoom
 msgid "The position of the button (play, next, ...) (e.g top center):"
 msgstr ""
 
-#: image-zoom.php:195
+#: image-zoom.php:193
 #@ imagezoom
 msgid "The opacity of the background:"
 msgstr ""
 
-#: image-zoom.php:198
+#: image-zoom.php:196
 #@ imagezoom
 msgid "Parameters"
 msgstr ""
 
-#: image-zoom.php:205
-#: core/templates/my-plugin.php:212
+#: image-zoom.php:203
+#: core/templates/my-plugin.php:227
 #@ imagezoom
 msgid "Manage translations"
 msgstr ""
 
-#: image-zoom.php:208
-#: core/templates/my-plugin.php:215
+#: image-zoom.php:206
+#: core/templates/my-plugin.php:230
 #@ imagezoom
 msgid "This form is an easy way to contact the author and to discuss issues / incompatibilities / etc."
 msgstr ""
 
-#: image-zoom.php:212
-#: core/templates/my-plugin.php:219
+#: image-zoom.php:210
+#: core/templates/my-plugin.php:234
 #@ imagezoom
 msgid "Give feedback"
 msgstr ""
 
-#: image-zoom.php:215
+#: image-zoom.php:213
 #@ imagezoom
 msgid "Here is the plugins developped by the author"
 msgstr ""
 
-#: image-zoom.php:218
+#: image-zoom.php:216
+#: core/templates/my-plugin.php:243
 #@ imagezoom
 msgid "Other possible plugins"
+msgstr ""
+
+#: core/templates/my-plugin.php:237
+#@ imagezoom
+msgid "Here is the plugins developped by the author:"
 msgstr ""
 
