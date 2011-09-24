@@ -58,12 +58,15 @@ Please note that the highslide library is not under GPL licence but under Creati
 
 == Changelog ==
 
+= 1.1.3 =
+* Update of the German translation by Frutte
+
 = 1.1.2 =
 * Update of the core plugin (bug correction on the hash of the plugin/core)
 
 = 1.1.1 =
 * Update of the core plugin
-* Update of the russian translation by Sprigin
+* Update of the Russian translation by Sprigin
 
 = 1.1.0 =
 * New translation for Russian made by Sprigin 
@@ -108,4 +111,4 @@ Please note that the highslide library is not under GPL licence but under Creati
 Visit http://www.sedlex.fr/cote_geek/
 
  
-InfoVersion:a720be297f1db9e93605d041f6b68902
+InfoVersion:de2ae5007e644db00f2e1520641c3609

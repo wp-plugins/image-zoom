@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2011-09-13T12:46:34+00:00\n"
+"PO-Revision-Date: 2011-09-20T15:38:58+00:00\n"
 "Last-Translator: Frutte <http://www.figaros-netzwerk.de>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -64,3 +64,7 @@ msgstr "Dieses Plugin wurde entwickelt von "
 
 msgid "Other possible plugins"
 msgstr "Andere mögliche Plugins"
+
+msgid "Here is the plugins developped by the author:"
+msgstr "Diese Plugin ist entwickelt vom Autor:"
+
