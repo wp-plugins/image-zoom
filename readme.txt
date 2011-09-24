@@ -111,4 +111,4 @@ Please note that the highslide library is not under GPL licence but under Creati
 Visit http://www.sedlex.fr/cote_geek/
 
  
-InfoVersion:de2ae5007e644db00f2e1520641c3609
+InfoVersion:b5064ca5e55603a45d57484b921d3aa1
