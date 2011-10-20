@@ -2,7 +2,7 @@
 /*
 Plugin Name: Image Zoom
 Description: <p>Allow to zoom dynamically on images in posts/pages/... </p><p>This plugin implements the highslide javascript library. </p><p>Plugin developped from the orginal plugin <a href="http://wordpress.org/extend/plugins/zoom-highslide/">Zoom-Hishslide</a>. </p><p>This plugin is under GPL licence (please note that the <a href="http://highslide.com/">highslide library</a> is not under GPL licence but under Creative Commons Attribution-NonCommercial 2.5 License. This means you need the author's permission to use Highslide JS on commercial websites.) </p>
-Version: 1.1.2
+Version: 1.2.0
 Author: SedLex
 Author Email: sedlex@sedlex.fr
 Framework Email: sedlex@sedlex.fr
@@ -38,7 +38,6 @@ class imagezoom extends pluginSedLex {
 		register_deactivation_hook(__FILE__, array($this,'uninstall'));
 		
 		//Paramètres supplementaires
-		add_action('init', array($this,'zoom_highslide_javascript'));
 		add_action('wp_print_scripts', array($this,'header_init'));
 		add_filter('the_excerpt', array($this,'zoom'),100);
 		add_filter('the_content', array($this,'zoom'),100);
@@ -73,17 +72,6 @@ class imagezoom extends pluginSedLex {
 			case 'background_opacity'		: return "0.8" ; break ; 
 		}
 		return null ;
-	}
-	
-	/** ====================================================================================================================================================
-	* Load the javascript
-	* 
-	* @return variant of the option
-	*/
-	function zoom_highslide_javascript() {
-		if ( !function_exists('wp_enqueue_script') || is_admin() ) return;
-		wp_enqueue_script('prototype');
-		wp_enqueue_script('scriptaculous-effects');
 	}
 	
 	/** ====================================================================================================================================================

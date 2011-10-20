@@ -27,6 +27,7 @@ Plugin developped from the orginal plugin Zoom-Hishslide.
 * Russian translation (by Sprigin)
 * German translation (by Frutte)
 * Spanish translation (by genteblackberry)
+* Czech translation (by jurajh) 
 * French translation (by me)
 
 = Features of the framework = 
@@ -36,6 +37,13 @@ This plugin use SL framework.
 You may translate this plugin with an embedded feature which is very easy to use by any end-users (without any external tools / knowledge).
 
 You may also create a new plugin. You will download, from the plugin, an "hello World" plugin: You just have to fill the blank and follow the comments.
+
+Moreover, all the plugins developped with this framework is able to use astonishing tools, such as :
+
+* embedded SVN client (subversion) to easily commit/update the plugin in wordpress.org repository ; 
+* detailled documentation of all available classes and methodes ; 
+* updating the core with a single click ; 
+* etc.
 
 = Licence =
 
@@ -58,8 +66,13 @@ Please note that the highslide library is not under GPL licence but under Creati
 
 == Changelog ==
 
+= 1.2.0 =
+* SVN support for committing changes
+
 = 1.1.3 =
+* Bug correction (conflict between prototype library and jQuery library)
 * Update of the German translation by Frutte
+* Czech translation (by jurajh) 
 
 = 1.1.2 =
 * Update of the core plugin (bug correction on the hash of the plugin/core)
@@ -111,4 +124,4 @@ Please note that the highslide library is not under GPL licence but under Creati
 Visit http://www.sedlex.fr/cote_geek/
 
  
-InfoVersion:de2ae5007e644db00f2e1520641c3609
+InfoVersion:99fbf666c94f0f8267ddd93728a2c15d
