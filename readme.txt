@@ -49,7 +49,7 @@ Moreover, all the plugins developped with this framework is able to use astonish
 
 This plugin is under GPL licence 
 
-Please note that the highslide library is not under GPL licence but under Creative Commons Attribution-NonCommercial 2.5 License. This means you need the author’s permission to use Highslide JS on commercial websites.
+Please note that the highslide library is not under GPL licence but under Creative Commons Attribution-NonCommercial 2.5 License. This means you need the author's permission to use Highslide JS on commercial websites.
 
 == Installation ==
 
