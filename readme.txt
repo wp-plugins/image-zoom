@@ -16,7 +16,7 @@ Allow to zoom dynamically on images in posts / pages / etc.
 
 When clicked, the image will dynamically scale-up. Please note that you have to insert image normally with the wordpress embedded editor.
 
-If the image does not scale-up, please verify that the HTML looks like the following : <a href=' '><img src=' '></a>.
+If the image does not scale-up, please verify that the HTML looks like the following : &lt;a href=' '&gt;&lt;img src=' '&gt;&lt;/a&gt;.
 
 This plugin implements the highslide javascript library.
 
