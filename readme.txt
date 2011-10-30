@@ -51,6 +51,8 @@ This plugin is under GPL licence
 
 Please note that the highslide library is not under GPL licence but under Creative Commons Attribution-NonCommercial 2.5 License. This means you need the author's permission to use Highslide JS on commercial websites.
 
+1
+
 == Installation ==
 
 1. Upload this folder to your plugin directory (for instance '/wp-content/plugins/')
@@ -58,6 +60,8 @@ Please note that the highslide library is not under GPL licence but under Creati
 3. Navigate to the 'SL plugins' box
 4. All plugins developed with the SL core will be listed in this box
 5. Enjoy !
+
+2
 
 == Screenshots ==
 
@@ -117,11 +121,14 @@ Please note that the highslide library is not under GPL licence but under Creati
 = 1.0.1 =
 * First release in the wild web (enjoy)
 
+4
+
 == Frequently Asked Questions ==
 
 * Where can I read more?
 
 Visit http://www.sedlex.fr/cote_geek/
 
+5
  
 InfoVersion:99fbf666c94f0f8267ddd93728a2c15d
