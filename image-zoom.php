@@ -2,7 +2,7 @@
 /*
 Plugin Name: Image Zoom
 Description: <p>Allow to zoom dynamically on images in posts/pages/... </p><p>This plugin implements the highslide javascript library. </p><p>Plugin developped from the orginal plugin <a href="http://wordpress.org/extend/plugins/zoom-highslide/">Zoom-Hishslide</a>. </p><p>This plugin is under GPL licence (please note that the <a href="http://highslide.com/">highslide library</a> is not under GPL licence but under Creative Commons Attribution-NonCommercial 2.5 License. This means you need the author's permission to use Highslide JS on commercial websites.) </p>
-Version: 1.2.0
+Version: 1.2.1
 Author: SedLex
 Author Email: sedlex@sedlex.fr
 Framework Email: sedlex@sedlex.fr
@@ -70,6 +70,7 @@ class imagezoom extends pluginSedLex {
 			case 'show_interval'		 	: return 5000 	; break ; 
 			case 'controler_position'		: return 'top center' 	; break ; 
 			case 'background_opacity'		: return "0.8" ; break ; 
+			case 'slideshow_autostart'		: return false ; break ; 
 		}
 		return null ;
 	}
@@ -102,7 +103,6 @@ class imagezoom extends pluginSedLex {
 		
 			// Add the controlbar
 			hs.addSlideshow({
-				//slideshowGroup: 'group1',
 				interval: <?php echo $this->get_param('show_interval');?>,
 				repeat: true,
 				useControls: true,
@@ -119,10 +119,6 @@ class imagezoom extends pluginSedLex {
 	<?php 
 		$content = ob_get_clean() ; 
 		$this->add_inline_js($content) ; 
-		//echo '<script type="text/javascript">' ; 
-		//echo $content ;
-		//echo '</script>' ; 
-
 	}
 	
 	/** ====================================================================================================================================================
@@ -132,7 +128,11 @@ class imagezoom extends pluginSedLex {
 	*/
 	function zoom($string) {
 		$pattern = '/(<a href="([^"]*.)'.$this->image_type.'"><img(.*?)src="([^"]*.)'.$this->image_type.'"(.*?)\><\/a>)/ie';
-		$replacement = 'stripslashes("<a href=\"\2\3\" class=\"highslide\" onclick=\"return hs.expand(this , { maxWidth: '.$this->get_param('widthRestriction').', maxHeight: '.$this->get_param('heightRestriction').' });\"><img\4src=\"\5\6\" \7></a>")';
+		$autostart = "false" ; 
+		if ( $this->get_param('slideshow_autostart') ) {
+			$autostart = "true" ; 
+		}
+		$replacement = 'stripslashes("<a href=\"\2\3\" class=\"highslide\" onclick=\"return hs.expand(this , { maxWidth: '.$this->get_param('widthRestriction').', maxHeight: '.$this->get_param('heightRestriction').', autoplay: '.$autostart.' });\"><img\4src=\"\5\6\" \7></a>")';
 		return preg_replace($pattern, $replacement, $string);
 	}
 
@@ -177,6 +177,7 @@ class imagezoom extends pluginSedLex {
 				
 				$params->add_title(__('What is the other parameters?',$this->pluginID)) ; 
 				$params->add_param('show_interval', __('Transition time if the slideshow is on:',$this->pluginID)) ; 
+				$params->add_param('slideshow_autostart', __('Auto-start the slideshow when launched:',$this->pluginID)) ; 
 				$params->add_param('controler_position', __('The position of the button (play, next, ...) (e.g top center):',$this->pluginID)) ; 
 				$params->add_param('background_opacity', __('The opacity of the background:',$this->pluginID)) ; 
 					

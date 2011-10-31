@@ -37,43 +37,48 @@ msgstr ""
 
 #: image-zoom.php:180
 #@ imagezoom
-msgid "The position of the button (play, next, ...) (e.g top center):"
+msgid "Auto-start the slideshow when launched:"
 msgstr ""
 
 #: image-zoom.php:181
 #@ imagezoom
+msgid "The position of the button (play, next, ...) (e.g top center):"
+msgstr ""
+
+#: image-zoom.php:182
+#@ imagezoom
 msgid "The opacity of the background:"
 msgstr ""
 
-#: image-zoom.php:184
+#: image-zoom.php:185
 #@ imagezoom
 msgid "Parameters"
 msgstr ""
 
-#: image-zoom.php:191
+#: image-zoom.php:192
 #: core/templates/my-plugin.php:227
 #@ imagezoom
 msgid "Manage translations"
 msgstr ""
 
-#: image-zoom.php:194
+#: image-zoom.php:195
 #: core/templates/my-plugin.php:230
 #@ imagezoom
 msgid "This form is an easy way to contact the author and to discuss issues / incompatibilities / etc."
 msgstr ""
 
-#: image-zoom.php:198
+#: image-zoom.php:199
 #: core/templates/my-plugin.php:234
 #@ imagezoom
 msgid "Give feedback"
 msgstr ""
 
-#: image-zoom.php:201
+#: image-zoom.php:202
 #@ imagezoom
 msgid "Here is the plugins developped by the author"
 msgstr ""
 
-#: image-zoom.php:204
+#: image-zoom.php:205
 #: core/templates/my-plugin.php:243
 #@ imagezoom
 msgid "Other possible plugins"
