@@ -32,6 +32,7 @@ Plugin developped from the orginal plugin Zoom-Hishslide.
 
 = Localizations =
 
+* Hungarian translation (by Metoyou and DvnyiFerenc)
 * Russian translation (by Sprigin)
 * German translation (by Frutte)
 * Spanish translation (by genteblackberry)
@@ -74,7 +75,10 @@ Please note that the highslide library is not under GPL licence but under Creati
 
 == Changelog ==
 
-= 1.2.0 =
+= 1.2.2 =
+* Hungarian translation (by Metoyou and DvnyiFerenc)
+
+= 1.2.1 =
 * It is possible to activate the slideshow upon start (auto-start)
 
 = 1.2.0 =
@@ -135,4 +139,4 @@ Please note that the highslide library is not under GPL licence but under Creati
 Visit http://www.sedlex.fr/cote_geek/
  
  
-InfoVersion:8efa5c1497bf723e0079893ea019024b
+InfoVersion:8801ab56bd1e736457e9a50cdc6da972
