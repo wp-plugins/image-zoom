@@ -1,91 +1,117 @@
 Content-Transfer-Encoding: 8bit
 
-#: image-zoom.php:170
+#: image-zoom.php:197
 #@ imagezoom
 msgid "This plugin allows a dynamic zoom on the images (based on the highslide javascript library)"
 msgstr ""
 
-#: image-zoom.php:172
+#: image-zoom.php:200
 #@ imagezoom
-msgid "Here is the parameters of the plugin. Please modify them at your convenience."
+msgid "What are the clipped dimensions of the zoomed image?"
 msgstr ""
 
-#: image-zoom.php:174
-#@ imagezoom
-msgid "What is the clipped dimensions of the zoomed image?"
-msgstr ""
-
-#: image-zoom.php:175
+#: image-zoom.php:201
 #@ imagezoom
 msgid "Max width:"
 msgstr ""
 
-#: image-zoom.php:176
+#: image-zoom.php:202
 #@ imagezoom
 msgid "Max height:"
 msgstr ""
 
-#: image-zoom.php:178
+#: image-zoom.php:204
 #@ imagezoom
-msgid "What is the other parameters?"
+msgid "What is the text for the frontend?"
 msgstr ""
 
-#: image-zoom.php:179
+#: image-zoom.php:205
+#@ imagezoom
+msgid "Load:"
+msgstr ""
+
+#: image-zoom.php:206
+#@ imagezoom
+msgid "Expand:"
+msgstr ""
+
+#: image-zoom.php:207
+#@ imagezoom
+msgid "Previous:"
+msgstr ""
+
+#: image-zoom.php:208
+#@ imagezoom
+msgid "Next:"
+msgstr ""
+
+#: image-zoom.php:209
+#@ imagezoom
+msgid "Move:"
+msgstr ""
+
+#: image-zoom.php:210
+#@ imagezoom
+msgid "Close:"
+msgstr ""
+
+#: image-zoom.php:211
+#@ imagezoom
+msgid "Play:"
+msgstr ""
+
+#: image-zoom.php:212
+#@ imagezoom
+msgid "Pause:"
+msgstr ""
+
+#: image-zoom.php:213
+#@ imagezoom
+msgid "Restore:"
+msgstr ""
+
+#: image-zoom.php:215
+#@ imagezoom
+msgid "What are the other parameters?"
+msgstr ""
+
+#: image-zoom.php:216
 #@ imagezoom
 msgid "Transition time if the slideshow is on:"
 msgstr ""
 
-#: image-zoom.php:180
+#: image-zoom.php:217
 #@ imagezoom
 msgid "Auto-start the slideshow when launched:"
 msgstr ""
 
-#: image-zoom.php:181
+#: image-zoom.php:218
 #@ imagezoom
 msgid "The position of the button (play, next, ...) (e.g top center):"
 msgstr ""
 
-#: image-zoom.php:182
+#: image-zoom.php:219
 #@ imagezoom
 msgid "The opacity of the background:"
 msgstr ""
 
-#: image-zoom.php:185
+#: image-zoom.php:222
 #@ imagezoom
 msgid "Parameters"
 msgstr ""
 
-#: image-zoom.php:192
-#: core/templates/my-plugin.php:227
+#: image-zoom.php:229
 #@ imagezoom
 msgid "Manage translations"
 msgstr ""
 
-#: image-zoom.php:195
-#: core/templates/my-plugin.php:230
-#@ imagezoom
-msgid "This form is an easy way to contact the author and to discuss issues / incompatibilities / etc."
-msgstr ""
-
-#: image-zoom.php:199
-#: core/templates/my-plugin.php:234
+#: image-zoom.php:235
 #@ imagezoom
 msgid "Give feedback"
 msgstr ""
 
-#: image-zoom.php:202
+#: image-zoom.php:240
 #@ imagezoom
-msgid "Here is the plugins developped by the author"
-msgstr ""
-
-#: image-zoom.php:205
-#: core/templates/my-plugin.php:243
-#@ imagezoom
-msgid "Other possible plugins"
-msgstr ""
-
-#: core/templates/my-plugin.php:237
-#@ imagezoom
-msgid "Here is the plugins developped by the author:"
+msgid "Other plugins"
 msgstr ""
 

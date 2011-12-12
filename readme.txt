@@ -75,6 +75,11 @@ Please note that the highslide library is not under GPL licence but under Creati
 
 == Changelog ==
 
+= 1.3.0 =
+* Major Update of the core
+* Improve the look and feel
+* Now you may modify the text displayed in the frontend (Features requested by Rene)
+
 = 1.2.2 =
 * Hungarian translation (by Metoyou and DvnyiFerenc)
 
@@ -139,4 +144,4 @@ Please note that the highslide library is not under GPL licence but under Creati
 Visit http://www.sedlex.fr/cote_geek/
  
  
-InfoVersion:8801ab56bd1e736457e9a50cdc6da972
+InfoVersion:60856958fdb0408e6d793e07d2fe6877

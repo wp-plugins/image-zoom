@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2011-10-31T19:40:35+00:00\n"
+"PO-Revision-Date: 2011-12-12T14:28:56+00:00\n"
 "Last-Translator: SedLex <http://www.sedlex.fr/>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -23,11 +23,8 @@ msgstr ""
 msgid "This plugin allows a dynamic zoom on the images (based on the highslide javascript library)"
 msgstr "Ce plugin vous permet de zoomer dynamiquement sur les images (utilise la librairie javascript highslide)"
 
-msgid "Here is the parameters of the plugin. Please modify them at your convenience."
-msgstr "Voici les paramètres du plugin. Vous pouvez les modifier comme bon vous semble."
-
-msgid "What is the clipped dimensions of the zoomed image?"
-msgstr "Quelles sont les dimensions maximales de l&#039;image zoomée ?"
+msgid "What are the clipped dimensions of the zoomed image?"
+msgstr "Quelles sont les dimensions maximales de l&#039;image agrandie ?"
 
 msgid "Max width:"
 msgstr "Largeur maximale : "
@@ -35,8 +32,38 @@ msgstr "Largeur maximale : "
 msgid "Max height:"
 msgstr "Hauteur maximale : "
 
-msgid "What is the other parameters?"
-msgstr "Les autres paramètres ...."
+msgid "What is the text for the frontend?"
+msgstr "Quelle est le texte pour le frontend ?"
+
+msgid "Load:"
+msgstr "Chargement :"
+
+msgid "Expand:"
+msgstr "Agrandissement :"
+
+msgid "Previous:"
+msgstr "Précédent :"
+
+msgid "Next:"
+msgstr "Suivant :"
+
+msgid "Move:"
+msgstr "Déplacer :"
+
+msgid "Close:"
+msgstr "Fermer :"
+
+msgid "Play:"
+msgstr "Lecture :"
+
+msgid "Pause:"
+msgstr "Pause : "
+
+msgid "Restore:"
+msgstr "Restaurer :"
+
+msgid "What are the other parameters?"
+msgstr "Quels sont les autres paramètres ?"
 
 msgid "Transition time if the slideshow is on:"
 msgstr "Durée de transition si le mode panorama est activé :"
@@ -56,18 +83,9 @@ msgstr "Paramètres"
 msgid "Manage translations"
 msgstr "Gérer les traductions"
 
-msgid "This form is an easy way to contact the author and to discuss issues / incompatibilities / etc."
-msgstr "Ce formulaire est un moyen facile de contacter l&#039;auteur afin de discuter de vos problèmes / des incompatibilités / etc."
-
 msgid "Give feedback"
 msgstr "Donner un feedback"
 
-msgid "Here is the plugins developped by the author"
-msgstr "Voici les plugins développés par l&#039;auteur"
-
-msgid "Other possible plugins"
-msgstr "Autres plugins possibles"
-
-msgid "Here is the plugins developped by the author:"
-msgstr "Voici les plugins développés par l&#039;auteur :"
+msgid "Other plugins"
+msgstr "Autres plugins"
 
