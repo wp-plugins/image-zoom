@@ -25,11 +25,13 @@
 	border-color: #FFFFFF;
  border-style: solid;
 }
+
 .highslide-loading {
 	color: black;
 	border: 1px solid black;
-	background-color: white;
-	background-image: url(../img/loader.white.gif);
+	background: black url(../img/loader.gif) no-repeat;
+	width: 16px;
+	height: 16px;
 }
 
 .closebutton {

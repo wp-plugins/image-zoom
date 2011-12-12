@@ -32,6 +32,7 @@ Plugin developped from the orginal plugin Zoom-Hishslide.
 
 = Localizations =
 
+* Croatian translation (by Rene)
 * Hungarian translation (by Metoyou and DvnyiFerenc)
 * Russian translation (by Sprigin)
 * German translation (by Frutte)
@@ -74,6 +75,9 @@ Please note that the highslide library is not under GPL licence but under Creati
 2. An image zommed
 
 == Changelog ==
+
+= 1.3.1 =
+* Croatian translation (by Rene)
 
 = 1.3.0 =
 * Major Update of the core
@@ -144,4 +148,4 @@ Please note that the highslide library is not under GPL licence but under Creati
 Visit http://www.sedlex.fr/cote_geek/
  
  
-InfoVersion:60856958fdb0408e6d793e07d2fe6877
+InfoVersion:a5164714e795fcf6d2eb41b203dc2655
