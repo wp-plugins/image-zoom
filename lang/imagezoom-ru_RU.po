@@ -4,7 +4,8 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2011-09-19T13:45:50+00:00\n"
+"PO-Revision-Date: 2011-12-14T23:19:16+00:00\n"
+"Last-Translator: sever <magadansever.ru>\n"
 "Last-Translator: Sprigin <Sprigin.ru>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -23,11 +24,8 @@ msgstr ""
 msgid "This plugin allows a dynamic zoom on the images (based on the highslide javascript library)"
 msgstr "Этот плагин позволяет зумировать изображения (на основе Highslide JavaScript библиотеки)"
 
-msgid "Here is the parameters of the plugin. Please modify them at your convenience."
-msgstr "Это параметры плагина. Вы можете их изменить."
-
-msgid "What is the clipped dimensions of the zoomed image?"
-msgstr "Размер изображения, отображающийся при зуме"
+msgid "What are the clipped dimensions of the zoomed image?"
+msgstr "Размеры для увеличенного изображения"
 
 msgid "Max width:"
 msgstr "Максимальная ширина:"
@@ -35,11 +33,44 @@ msgstr "Максимальная ширина:"
 msgid "Max height:"
 msgstr "Максимальная высота:"
 
-msgid "What is the other parameters?"
-msgstr "другие параметры"
+msgid "What is the text for the frontend?"
+msgstr "Текст для интерфейса (кнопок)"
+
+msgid "Load:"
+msgstr "Загрузка"
+
+msgid "Expand:"
+msgstr "Растянуть"
+
+msgid "Previous:"
+msgstr "Предыдущая"
+
+msgid "Next:"
+msgstr "Следующая"
+
+msgid "Move:"
+msgstr "Переместить"
+
+msgid "Close:"
+msgstr "Закрыть"
+
+msgid "Play:"
+msgstr "Проиграть"
+
+msgid "Pause:"
+msgstr "Пауза"
+
+msgid "Restore:"
+msgstr "Возобновить"
+
+msgid "What are the other parameters?"
+msgstr "Другие параметры"
 
 msgid "Transition time if the slideshow is on:"
 msgstr "Время перелистывания при слайд-шоу"
+
+msgid "Auto-start the slideshow when launched:"
+msgstr "Автозапуск слайдшоу"
 
 msgid "The position of the button (play, next, ...) (e.g top center):"
 msgstr "Положение кнопок (воспроизведение, следующий, ...) (например, вверху в центре):"
@@ -53,15 +84,9 @@ msgstr "Параметры"
 msgid "Manage translations"
 msgstr "Управление переводом"
 
-msgid "This form is an easy way to contact the author and to discuss issues / incompatibilities / etc."
-msgstr "Форма обратной связи для обсуждения с автором вопросов о не совмести или иным вопросам"
-
 msgid "Give feedback"
 msgstr "Обратная связь"
 
-msgid "Here is the plugins developped by the author"
-msgstr "Вот плагины разработанные автором"
-
-msgid "Other possible plugins"
-msgstr "Другие возможные плагины"
+msgid "Other plugins"
+msgstr "Другие плагины"
 
