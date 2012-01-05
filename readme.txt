@@ -78,6 +78,9 @@ Please note that the highslide library is not under GPL licence but under Creati
 
 == Changelog ==
 
+= 1.3.3 =
+* Conflict with the "Google Analytics for WordPress" plugin
+
 = 1.3.2 =
 * Bulgarian translation (by Vangelov)
 * Vietnamese translation (by Khco) 
@@ -154,4 +157,4 @@ Please note that the highslide library is not under GPL licence but under Creati
 Visit http://www.sedlex.fr/cote_geek/
  
  
-InfoVersion:32d5ae8448754212d46a75a94fe49490
+InfoVersion:971b410c17f4d6762b56c47a3a0b9935

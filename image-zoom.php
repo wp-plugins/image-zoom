@@ -2,7 +2,7 @@
 /*
 Plugin Name: Image Zoom
 Description: <p>Allow to zoom dynamically on images in posts/pages/... </p><p>This plugin implements the highslide javascript library. </p><p>Plugin developped from the orginal plugin <a href="http://wordpress.org/extend/plugins/zoom-highslide/">Zoom-Hishslide</a>. </p><p>This plugin is under GPL licence (please note that the <a href="http://highslide.com/">highslide library</a> is not under GPL licence but under Creative Commons Attribution-NonCommercial 2.5 License. This means you need the author's permission to use Highslide JS on commercial websites.) </p>
-Version: 1.3.2
+Version: 1.3.3
 Author: SedLex
 Author Email: sedlex@sedlex.fr
 Framework Email: sedlex@sedlex.fr
@@ -154,12 +154,12 @@ class imagezoom extends pluginSedLex {
 	* @return variant of the option
 	*/
 	function zoom($string) {
-		$pattern = '/(<a href="([^"]*.)'.$this->image_type.'"><img(.*?)src="([^"]*.)'.$this->image_type.'"(.*?)\><\/a>)/ie';
+		$pattern = '/(<a([^>]*?)href="([^"]*.)'.$this->image_type.'"([^>]*?)><img([^>]*?)src="([^"]*.)'.$this->image_type.'"([^>]*?)\><\/a>)/ie';
 		$autostart = "false" ; 
 		if ( $this->get_param('slideshow_autostart') ) {
 			$autostart = "true" ; 
 		}
-		$replacement = 'stripslashes("<a href=\"\2\3\" class=\"highslide\" onclick=\"return hs.expand(this , { maxWidth: '.$this->get_param('widthRestriction').', maxHeight: '.$this->get_param('heightRestriction').', autoplay: '.$autostart.' });\"><img\4src=\"\5\6\" \7></a>")';
+		$replacement = 'stripslashes("<a\2href=\"\3\4\" class=\"highslide\" onclick=\"return hs.expand(this , { maxWidth: '.$this->get_param('widthRestriction').', maxHeight: '.$this->get_param('heightRestriction').', autoplay: '.$autostart.' });\"\5><img\6src=\"\7\8\" \9></a>")';
 		return preg_replace($pattern, $replacement, $string);
 	}
 
