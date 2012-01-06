@@ -4,7 +4,9 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2011-09-20T15:38:58+00:00\n"
+"PO-Revision-Date: 2012-01-05T20:46:29+00:00\n"
+"Last-Translator: tcp443 <www.tcp443.de>\n"
+"Last-Translator: B.Klein <www.kpowered.de>\n"
 "Last-Translator: Frutte <http://www.figaros-netzwerk.de>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -23,11 +25,8 @@ msgstr ""
 msgid "This plugin allows a dynamic zoom on the images (based on the highslide javascript library)"
 msgstr "Dieses Plugin ermöglicht einen dynamischen Zoom auf die Bilder (basierend auf der Highslide-Javascript-Bibliothek)"
 
-msgid "Here is the parameters of the plugin. Please modify them at your convenience."
-msgstr "Hier sind die Einstellungen des Plugins. Bitte ändern Sie die zu ihren Gusten."
-
-msgid "What is the clipped dimensions of the zoomed image?"
-msgstr "Welche Dimensionen hat des vergrößerte Bild?"
+msgid "What are the clipped dimensions of the zoomed image?"
+msgstr "Wie groß soll der Ausschnitt des gezoomten Bildes sein?"
 
 msgid "Max width:"
 msgstr "Maximale Breite:"
@@ -35,11 +34,44 @@ msgstr "Maximale Breite:"
 msgid "Max height:"
 msgstr "Maximale Höhe:"
 
-msgid "What is the other parameters?"
-msgstr "Was sind die anderen Einstellungen?"
+msgid "What is the text for the frontend?"
+msgstr "Wie lautet der Frontend-Text?"
+
+msgid "Load:"
+msgstr "Laden:"
+
+msgid "Expand:"
+msgstr "Erweitern:"
+
+msgid "Previous:"
+msgstr "Vorheriges:"
+
+msgid "Next:"
+msgstr "Nächstes:"
+
+msgid "Move:"
+msgstr "Verschieben:"
+
+msgid "Close:"
+msgstr "Schließen:"
+
+msgid "Play:"
+msgstr "Abspielen:"
+
+msgid "Pause:"
+msgstr "Pause:"
+
+msgid "Restore:"
+msgstr "Wiederherstellen:"
+
+msgid "What are the other parameters?"
+msgstr "Weitere Parameter?"
 
 msgid "Transition time if the slideshow is on:"
 msgstr "Wartezeit der Slideshow:"
+
+msgid "Auto-start the slideshow when launched:"
+msgstr "Autostart der Slideshow nach dem Aufruf:"
 
 msgid "The position of the button (play, next, ...) (e.g top center):"
 msgstr "Position der Buttons (Play, Next, ...) (z. B. top center):"
@@ -53,18 +85,9 @@ msgstr "Einstellungen"
 msgid "Manage translations"
 msgstr "Übersetzungen verwalten"
 
-msgid "This form is an easy way to contact the author and to discuss issues / incompatibilities / etc."
-msgstr "Dieses Formular ist eine einfache Möglichkeit den Autor zu kontaktieren, um Fragen / Probleme / etc. zu diskutieren."
-
 msgid "Give feedback"
 msgstr "Feedback"
 
-msgid "Here is the plugins developped by the author"
-msgstr "Dieses Plugin wurde entwickelt von "
-
-msgid "Other possible plugins"
-msgstr "Andere mögliche Plugins"
-
-msgid "Here is the plugins developped by the author:"
-msgstr "Diese Plugin ist entwickelt vom Autor:"
+msgid "Other plugins"
+msgstr "weitere Plugins"
 

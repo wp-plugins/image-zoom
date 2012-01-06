@@ -37,7 +37,7 @@ Plugin developped from the orginal plugin Zoom-Hishslide.
 * Croatian translation (by Rene)
 * Hungarian translation (by Metoyou and DvnyiFerenc)
 * Russian translation (by Sprigin and Sever)
-* German translation (by Frutte)
+* German translation (by tcp443, Frutte and B.Klein)
 * Spanish translation (by genteblackberry)
 * Czech translation (by jurajh) 
 * French translation (by me)
@@ -77,6 +77,9 @@ Please note that the highslide library is not under GPL licence but under Creati
 2. An image zommed
 
 == Changelog ==
+
+= 1.3.4 =
+* Update of the German translations
 
 = 1.3.3 =
 * Conflict with the "Google Analytics for WordPress" plugin
@@ -157,4 +160,4 @@ Please note that the highslide library is not under GPL licence but under Creati
 Visit http://www.sedlex.fr/cote_geek/
  
  
-InfoVersion:971b410c17f4d6762b56c47a3a0b9935
+InfoVersion:7e76d80721eddf302e07385d70edf210
