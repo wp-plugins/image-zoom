@@ -1,8 +1,9 @@
 <?php
 /*
 Plugin Name: Image Zoom
-Description: <p>Allow to zoom dynamically on images in posts/pages/... </p><p>This plugin implements the highslide javascript library. </p><p>Plugin developped from the orginal plugin <a href="http://wordpress.org/extend/plugins/zoom-highslide/">Zoom-Hishslide</a>. </p><p>This plugin is under GPL licence (please note that the <a href="http://highslide.com/">highslide library</a> is not under GPL licence but under Creative Commons Attribution-NonCommercial 2.5 License. This means you need the author's permission to use Highslide JS on commercial websites.) </p>
-Version: 1.3.4
+Plugin Name: zoom, highslide, image, panorama
+Description: <p>Allow to dynamically zoom on images in posts/pages/... </p><p>When clicked, the image will dynamically scale-up. Please note that you have to insert image normally with the wordpress embedded editor.</p><p>You may configure :</p><ul><li>The max width/height of the image;</li><li>The transition delay </li><li>The position of the buttons</li><li>The auto-start of the slideshow</li><li>the opacity of the background</li></ul><p>If the image does not scale-up, please verify that the HTML looks like the following : &lt;a href=' '&gt;&lt;img src=' '&gt;&lt;/a&gt;.</p><p>This plugin implements the highslide javascript library. </p><p>Plugin developped from the orginal plugin <a href="http://wordpress.org/extend/plugins/zoom-highslide/">Zoom-Hishslide</a>. </p><p>This plugin is under GPL licence (please note that the <a href="http://highslide.com/">highslide library</a> is not under GPL licence but under Creative Commons Attribution-NonCommercial 2.5 License. This means you need the author's permission to use Highslide JS on commercial websites.) </p>
+Version: 1.4.0
 Author: SedLex
 Author Email: sedlex@sedlex.fr
 Framework Email: sedlex@sedlex.fr

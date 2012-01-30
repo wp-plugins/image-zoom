@@ -1,67 +1,63 @@
 === Image Zoom ===
 
+Author: SedLex
 Contributors: SedLex
 Author URI: http://www.sedlex.fr/
 Plugin URI: http://wordpress.org/extend/plugins/image-zoom/
-Tags: plugin, image, highslide, zoom, scale, picture
+Tags: 
 Requires at least: 3.0
-Tested up to: 3.2
+Tested up to: 3.3.1
 Stable tag: trunk
 
-Allow to zoom dynamically on images in posts / pages / etc.
+Allow to dynamically zoom on images in posts/pages/â¦ 
 
 == Description ==
 
-Allow to zoom dynamically on images in posts / pages / etc.
+Allow to dynamically zoom on images in posts/pages/â¦ 
 
 When clicked, the image will dynamically scale-up. Please note that you have to insert image normally with the wordpress embedded editor.
 
 You may configure :
 
-* The max width/height of the image
+* The max width/height of the image;
 * The transition delay 
 * The position of the buttons
 * The auto-start of the slideshow
 * the opacity of the background
 
-If the image does not scale-up, please verify that the HTML looks like the following : &lt;a href=' '&gt;&lt;img src=' '&gt;&lt;/a&gt;.
+If the image does not scale-up, please verify that the HTML looks like the following : &lt;a href=â â&gt;&lt;img src=â â&gt;&lt;/a&gt;.
 
-This plugin implements the highslide javascript library.
+This plugin implements the highslide javascript library. 
 
-Plugin developped from the orginal plugin Zoom-Hishslide.
+Plugin developped from the orginal plugin Zoom-Hishslide. 
 
-= Localizations =
+This plugin is under GPL licence (please note that the highslide library is not under GPL licence but under Creative Commons Attribution-NonCommercial 2.5 License. This means you need the authorâs permission to use Highslide JS on commercial websites.) 
 
-* Bulgarian translation (by Vangelov)
-* Vietnamese translation (by Khco) 
-* Croatian translation (by Rene)
-* Hungarian translation (by Metoyou and DvnyiFerenc)
-* Russian translation (by Sprigin and Sever)
-* German translation (by tcp443, Frutte and B.Klein)
-* Spanish translation (by genteblackberry)
-* Czech translation (by jurajh) 
-* French translation (by me)
+= Localization =
 
-= Features of the framework = 
+* Bulgarian (Bulgaria) translation provided by Vangelov
+* Czech (Czech Republic) translation provided by jurajh
+* German (Germany) translation provided by tcp443, B.Klein, Frutte
+* English (United States), default language
+* Spanish (Spain) translation provided by genteblackberry
+* French (France) translation provided by SedLex
+* Croatian (Croatia) translation provided by Rene
+* Hungarian (Hungary) translation provided by Metoyou, DvnyiFerenc
+* Russian (Russia) translation provided by sever, Sprigin
+* Vietnamese (Viet Nam) translation provided by Khco
 
-This plugin use SL framework.
+= Features of the framework =
 
-You may translate this plugin with an embedded feature which is very easy to use by any end-users (without any external tools / knowledge).
+This plugin uses the SL framework. This framework eases the creation of new plugins by providing incredible tools and frames.
 
-You may also create a new plugin. You will download, from the plugin, an "hello World" plugin: You just have to fill the blank and follow the comments.
+For instance, a new created plugin comes with
 
-Moreover, all the plugins developped with this framework is able to use astonishing tools, such as :
-
-* embedded SVN client (subversion) to easily commit/update the plugin in wordpress.org repository ; 
-* detailled documentation of all available classes and methodes ; 
-* updating the core with a single click ; 
+* A translation interface to simplify the localization of the text of the plugin ; 
+* An embedded SVN client (subversion) to easily commit/update the plugin in wordpress.org repository ; 
+* A detailled documentation of all available classes and methodes ; 
 * etc.
 
-= Licence =
-
-This plugin is under GPL licence 
-
-Please note that the highslide library is not under GPL licence but under Creative Commons Attribution-NonCommercial 2.5 License. This means you need the author's permission to use Highslide JS on commercial websites.
+Have fun !
 
 == Installation ==
 
@@ -77,6 +73,9 @@ Please note that the highslide library is not under GPL licence but under Creati
 2. An image zommed
 
 == Changelog ==
+
+= 1.4.0 =
+* Major update of the framework
 
 = 1.3.4 =
 * Update of the German translations
@@ -160,4 +159,4 @@ Please note that the highslide library is not under GPL licence but under Creati
 Visit http://www.sedlex.fr/cote_geek/
  
  
-InfoVersion:7e76d80721eddf302e07385d70edf210
+InfoVersion:211f814658052fc82424476553738ce1
