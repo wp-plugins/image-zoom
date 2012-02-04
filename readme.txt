@@ -9,11 +9,11 @@ Requires at least: 3.0
 Tested up to: 3.3.1
 Stable tag: trunk
 
-Allow to dynamically zoom on images in posts/pages/â¦ 
+Allow to dynamically zoom on images in posts/pages/... 
 
 == Description ==
 
-Allow to dynamically zoom on images in posts/pages/â¦ 
+Allow to dynamically zoom on images in posts/pages/... 
 
 When clicked, the image will dynamically scale-up. Please note that you have to insert image normally with the wordpress embedded editor.
 
@@ -25,13 +25,13 @@ You may configure :
 * The auto-start of the slideshow
 * the opacity of the background
 
-If the image does not scale-up, please verify that the HTML looks like the following : &lt;a href=â â&gt;&lt;img src=â â&gt;&lt;/a&gt;.
+If the image does not scale-up, please verify that the HTML looks like the following : &lt;a href=' '&gt;&lt;img src=' '&gt;&lt;/a&gt;.
 
 This plugin implements the highslide javascript library. 
 
 Plugin developped from the orginal plugin Zoom-Hishslide. 
 
-This plugin is under GPL licence (please note that the highslide library is not under GPL licence but under Creative Commons Attribution-NonCommercial 2.5 License. This means you need the authorâs permission to use Highslide JS on commercial websites.) 
+This plugin is under GPL licence (please note that the highslide library is not under GPL licence but under Creative Commons Attribution-NonCommercial 2.5 License. This means you need the author's permission to use Highslide JS on commercial websites.) 
 
 = Localization =
 
@@ -73,6 +73,9 @@ Have fun !
 2. An image zommed
 
 == Changelog ==
+
+= 1.4.1 =
+* The regex has been extended to accept more types of images
 
 = 1.4.0 =
 * Major update of the framework
@@ -159,4 +162,4 @@ Have fun !
 Visit http://www.sedlex.fr/cote_geek/
  
  
-InfoVersion:211f814658052fc82424476553738ce1
+InfoVersion:98834f5c77e3938038f5ae554a763467
