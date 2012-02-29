@@ -27,11 +27,9 @@ You may configure :
 
 If the image does not scale-up, please verify that the HTML looks like the following : &lt;a href=' '&gt;&lt;img src=' '&gt;&lt;/a&gt;.
 
-This plugin implements the highslide javascript library. 
+This plugin implements the colorbox javascript library. 
 
-Plugin developped from the orginal plugin Zoom-Hishslide. 
-
-This plugin is under GPL licence (please note that the highslide library is not under GPL licence but under Creative Commons Attribution-NonCommercial 2.5 License. This means you need the author's permission to use Highslide JS on commercial websites.) 
+This plugin is under GPL licence.
 
 = Localization =
 
@@ -43,6 +41,7 @@ This plugin is under GPL licence (please note that the highslide library is not 
 * French (France) translation provided by SedLex
 * Croatian (Croatia) translation provided by Rene
 * Hungarian (Hungary) translation provided by Metoyou, DvnyiFerenc
+* Lithuanian (Lithuania) translation provided by ydrius
 * Russian (Russia) translation provided by sever, Sprigin
 * Vietnamese (Viet Nam) translation provided by Khco
 
@@ -73,6 +72,9 @@ Have fun !
 2. An image zommed
 
 == Changelog ==
+
+= 1.5.0 =
+* Due to the restriction by Wordpress it is forbidden to include Creative Common code in plugin. So, I was asked to change the javascript code to a GPL code. I am sorry if some features that you used have disapear but the library does not provide exactly the same features ... That's why ! 
 
 = 1.4.1 =
 * The regex has been extended to accept more types of images
@@ -162,4 +164,4 @@ Have fun !
 Visit http://www.sedlex.fr/cote_geek/
  
  
-InfoVersion:98834f5c77e3938038f5ae554a763467
+InfoVersion:5fb4978de1eb9df1adf604cf811d3187

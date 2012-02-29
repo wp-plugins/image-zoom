@@ -1,117 +1,111 @@
 Content-Transfer-Encoding: 8bit
 
-#: image-zoom.php:197
+#: image-zoom.php:165
 #@ imagezoom
 msgid "This plugin allows a dynamic zoom on the images (based on the highslide javascript library)"
 msgstr ""
 
-#: image-zoom.php:200
+#: image-zoom.php:168
 #@ imagezoom
 msgid "What are the clipped dimensions of the zoomed image?"
 msgstr ""
 
-#: image-zoom.php:201
+#: image-zoom.php:169
 #@ imagezoom
 msgid "Max width:"
 msgstr ""
 
-#: image-zoom.php:202
+#: image-zoom.php:170
 #@ imagezoom
 msgid "Max height:"
 msgstr ""
 
-#: image-zoom.php:204
+#: image-zoom.php:172
 #@ imagezoom
 msgid "What is the text for the frontend?"
 msgstr ""
 
-#: image-zoom.php:205
-#@ imagezoom
-msgid "Load:"
-msgstr ""
-
-#: image-zoom.php:206
-#@ imagezoom
-msgid "Expand:"
-msgstr ""
-
-#: image-zoom.php:207
+#: image-zoom.php:173
 #@ imagezoom
 msgid "Previous:"
 msgstr ""
 
-#: image-zoom.php:208
+#: image-zoom.php:174
 #@ imagezoom
 msgid "Next:"
 msgstr ""
 
-#: image-zoom.php:209
-#@ imagezoom
-msgid "Move:"
-msgstr ""
-
-#: image-zoom.php:210
+#: image-zoom.php:175
 #@ imagezoom
 msgid "Close:"
 msgstr ""
 
-#: image-zoom.php:211
+#: image-zoom.php:176
 #@ imagezoom
 msgid "Play:"
 msgstr ""
 
-#: image-zoom.php:212
+#: image-zoom.php:177
 #@ imagezoom
 msgid "Pause:"
 msgstr ""
 
-#: image-zoom.php:213
+#: image-zoom.php:178
 #@ imagezoom
-msgid "Restore:"
+msgid "The image counter:"
 msgstr ""
 
-#: image-zoom.php:215
+#: image-zoom.php:179
+#@ imagezoom
+msgid "The %s will be replace with the index of the image and %s with the total number of images in the page."
+msgstr ""
+
+#: image-zoom.php:181
 #@ imagezoom
 msgid "What are the other parameters?"
 msgstr ""
 
-#: image-zoom.php:216
+#: image-zoom.php:182
 #@ imagezoom
 msgid "Transition time if the slideshow is on:"
 msgstr ""
 
-#: image-zoom.php:217
+#: image-zoom.php:183
 #@ imagezoom
 msgid "Auto-start the slideshow when launched:"
 msgstr ""
 
-#: image-zoom.php:218
-#@ imagezoom
-msgid "The position of the button (play, next, ...) (e.g top center):"
-msgstr ""
-
-#: image-zoom.php:219
+#: image-zoom.php:184
 #@ imagezoom
 msgid "The opacity of the background:"
 msgstr ""
 
-#: image-zoom.php:222
+#: image-zoom.php:187
 #@ imagezoom
 msgid "Parameters"
 msgstr ""
 
-#: image-zoom.php:229
+#: image-zoom.php:194
 #@ imagezoom
 msgid "Manage translations"
 msgstr ""
 
-#: image-zoom.php:235
+#: image-zoom.php:200
 #@ imagezoom
 msgid "Give feedback"
 msgstr ""
 
-#: image-zoom.php:240
+#: image-zoom.php:205
 #@ imagezoom
 msgid "Other plugins"
+msgstr ""
+
+#: core/database.class.php:55
+#: core/database.class.php:101
+#: core/database.class.php:168
+#: core/database.class.php:218
+#: core/database.class.php:221
+#@ imagezoom
+msgid "The file %s cannot be deleted. You should have a problem with file permissions or security restrictions."
 msgstr ""
 

@@ -1,172 +1,126 @@
-.highslide-wrapper, .highslide-outline {
-	background: #FFFFFF;
+.gallery_colorbox {
+	cursor: url(../img/zoomin.cur), pointer; 
 }
 
-.highslide-dimming {
-	background: black;
+#colorbox, #cboxOverlay{
+	position:fixed; 
+	top:0; 
+	left:0; 
+	width:100%; 
+	height:100%; 
+	z-index:9999;
+}
+#cboxWrapper{}
+#cboxOverlay{
+	background:#000;
+}
+#colorbox{
+}
+#cboxContent{
+	margin-top:20px;
+}
+.cboxIframe{
+	background:#fff;
+}
+#cboxError{
+	padding:50px; 
+	border:1px solid #ccc;
+}
+#cboxLoadedContent{
+	border:5px solid #000; 
+	background:#fff;
+}
+#cboxTitle{
+	position:absolute; 
+	top:-20px;
+	left:0;
+	color:#ccc;
+}
+#cboxCurrent{
+	position:absolute; 
+	top:-20px; 
+	right:0px; 
+	color:#ccc;
 }
 
-.highslide img {
-	border: 1px solid #D0D0D0;
+#cboxPrevious{
+	position:absolute; 
+	top:50%; 
+	left:4px; 
+	margin-top:-32px; 
+	background:url(../img/controls.png) no-repeat; 
+	background-position:0px 0px;
+	width:28px; 
+	height:65px; 
+	text-indent:-9999px;
 }
-.highslide:hover img {
-	border-color: #A0A0A0;
+#cboxPrevious:hover{
+	background-position:0px -64px;
 }
-.highslide-image {
-	border: none;
+#cboxNext{
+	position:absolute; 
+	top:50%; 
+	right:5px; 
+	margin-top:-32px; 
+	background:url(../img/controls.png) no-repeat ; 
+	background-position:-70px 0px;
+	width:28px; 
+	height:65px; 
+	text-indent:-9999px;
 }
-.highslide-caption {
-	background-color: #DDDDDD;
-	padding: 5px;
-	border-width: 1px;
-	border-right-width: 0px;
-	border-bottom-width: 1px;
-	border-left-width: 0px;
-	border-color: #FFFFFF;
- border-style: solid;
+#cboxNext:hover{
+	background-position:-70px -64px;
 }
-
-.highslide-loading {
-	color: black;
-	border: 1px solid black;
-	background: black url(../img/loader.gif) no-repeat;
-	width: 16px;
-	height: 16px;
+#cboxLoadingOverlay{
+	background:#000;
 }
-
-.closebutton {
-	position: relative;
-	top: -15px;
-	left: 15px;
-	width: 30px;
-	height: 30px;
-	cursor: pointer;
-	background: url(../img/close.png);
+#cboxLoadingGraphic{
+	background:url(../img/loading.gif) no-repeat center center;
 }
-
-.highslide-controls {
-	position: static !important;
-	margin-bottom: 0;
-	width: 195px !important;
+#cboxClose{
+	position:absolute; 
+	top:5px; 
+	right:-10px; 
+	display:block; 
+	background:url(../img/controls.png) no-repeat ;
+	background-position:-35px 0px; 
+	width:28px; 
+	height:26px; 
+	text-indent:-9999px;
 }
-
-/*****************************************************************************/
-/* Controls for the galleries.											     */
-/*****************************************************************************/
-
-.highslide-controls {
-	width: 165px;
-	height: 40px;
-	background: url(../img/controlbar-white.gif) 0 -90px no-repeat;
-	margin: 20px 15px 10px 0;
+#cboxClose:hover{
+	background-position:-35px -29px; 
 }
 
-.highslide-controls ul {
-	position: relative;
-	left: 15px;
-	height: 40px;
-	list-style: none;
-	margin: 0;
-	padding: 0;
-	background: url(../img/controlbar-white.gif) right -90px no-repeat;
+.cboxSlideshow_off #cboxSlideshow{
+	position:absolute; 
+	bottom:4px; 
+	left: 50%;
+    margin-left: -32px;
+	display:block; 
+	background:url(../img/controls.png) no-repeat ;
+	background-position:-16px -131px; 
+	width:65px; 
+	height:29px; 
+	text-indent:-9999px;
+}
+.cboxSlideshow_off #cboxSlideshow:hover{
+	background-position:-16px -161px; 
 }
 
-.highslide-controls li {
-	float: left;
-	padding: 5px 3px;
-	margin:0;
-	list-style: none;
+.cboxSlideshow_on #cboxSlideshow{
+	position:absolute; 
+	bottom:4px; 
+	left: 50%;
+    margin-left: -32px;
+	display:block; 
+	background:url(../img/controls.png) no-repeat ;
+	background-position:-16px -194px; 
+	width:65px; 
+	height:29px; 
+	text-indent:-9999px;
 }
-
-.highslide-controls a {
-	background-image: url(../img/controlbar-white.gif);
-	display: block;
-	float: left;
-	height: 30px;
-	width: 30px;
-	outline: none;
+.cboxSlideshow_on #cboxSlideshow:hover{
+	background-position:-16px -225px; 
 }
-
-.highslide-controls a.disabled {
-	cursor: default;
-}
-
-.highslide-controls a.disabled span {
-	cursor: default;
-}
-
-.highslide-controls a span {
-	/* hide the text for these graphic buttons */
-	display: none;
-	cursor: pointer;
-}
-
-/* The CSS sprites for the controlbar - see http://www.google.com/search?q=css+sprites */
-
-.highslide-controls .highslide-previous a {
-	background-position: 0 0;
-}
-
-.highslide-controls .highslide-previous a:hover {
-	background-position: 0 -30px;
-}
-
-.highslide-controls .highslide-previous a.disabled {
-	background-position: 0 -60px !important;
-}
-
-.highslide-controls .highslide-play a {
-	background-position: -30px 0;
-}
-
-.highslide-controls .highslide-play a:hover {
-	background-position: -30px -30px;
-}
-
-.highslide-controls .highslide-play a.disabled {
-	background-position: -30px -60px !important;
-}
-
-.highslide-controls .highslide-pause a {
-	background-position: -60px 0;
-}
-
-.highslide-controls .highslide-pause a:hover {
-	background-position: -60px -30px;
-}
-
-.highslide-controls .highslide-next a {
-	background-position: -90px 0;
-}
-
-.highslide-controls .highslide-next a:hover {
-	background-position: -90px -30px;
-}
-
-.highslide-controls .highslide-next a.disabled {
-	background-position: -90px -60px !important;
-}
-
-.highslide-controls .highslide-move a {
-	background-position: -120px 0;
-}
-
-.highslide-controls .highslide-move a:hover {
-	background-position: -120px -30px;
-}
-
-.highslide-controls .highslide-full-expand a {
-	background-position: -150px 0;
-}
-
-.highslide-controls .highslide-full-expand a:hover {
-	background-position: -150px -30px;
-}
-
-.highslide-controls .highslide-full-expand a.disabled {
-	background-position: -150px -60px !important;
-}
-
-.highslide-controls .highslide-close {
-	display: none ; 
-}
+	
