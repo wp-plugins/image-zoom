@@ -73,6 +73,9 @@ Have fun !
 
 == Changelog ==
 
+= 1.5.1 =
+* Remove the title displayed at the top of the image (will be possible in next release optionally)
+
 = 1.5.0 =
 * Due to the restriction by Wordpress it is forbidden to include Creative Common code in plugin. So, I was asked to change the javascript code to a GPL code. I am sorry if some features that you used have disapear but the library does not provide exactly the same features ... That's why ! 
 
@@ -164,4 +167,4 @@ Have fun !
 Visit http://www.sedlex.fr/cote_geek/
  
  
-InfoVersion:5fb4978de1eb9df1adf604cf811d3187
+InfoVersion:21670229ac327f6e6fa562a5433b466b
