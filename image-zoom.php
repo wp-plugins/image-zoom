@@ -3,7 +3,7 @@
 Plugin Name: Image Zoom
 Plugin Name: zoom, highslide, image, panorama
 Description: <p>Allow to dynamically zoom on images in posts/pages/... </p><p>When clicked, the image will dynamically scale-up. Please note that you have to insert image normally with the wordpress embedded editor.</p><p>You may configure :</p><ul><li>The max width/height of the image;</li><li>The transition delay </li><li>The position of the buttons</li><li>The auto-start of the slideshow</li><li>the opacity of the background</li></ul><p>If the image does not scale-up, please verify that the HTML looks like the following : &lt;a href=' '&gt;&lt;img src=' '&gt;&lt;/a&gt;.</p><p>This plugin implements the colorbox javascript library. </p><p>This plugin is under GPL licence.</p>
-Version: 1.5.1
+Version: 1.5.2
 Author: SedLex
 Author Email: sedlex@sedlex.fr
 Framework Email: sedlex@sedlex.fr
@@ -38,12 +38,15 @@ class imagezoom extends pluginSedLex {
 		register_activation_hook(__FILE__, array($this,'install'));
 		register_deactivation_hook(__FILE__, array($this,'uninstall'));
 		
-		//Paramètres supplementaires
+		//Parametres supplementaires
+		add_action('wp_print_styles', array($this,'header_init_style'));
 		add_action('wp_print_scripts', array($this,'header_init'));
 		add_filter('the_excerpt', array($this,'zoom'),100);
 		add_filter('the_content', array($this,'zoom'),100);
 		
 		$this->image_type = "(bmp|gif|jpeg|jpg|png)" ;
+		
+		//$this->set_param('theme', $this->get_default_option('theme'))  ; 
 	}
 	
 	/**
@@ -77,8 +80,37 @@ class imagezoom extends pluginSedLex {
 			case 'tra_close'		: return "Close" ; break ; 
 			case 'tra_play'			: return "Play" ; break ; 
 			case 'tra_pause'		: return "Pause" ; break ; 
+
+			case 'theme'		: return array(		array("*".__("Theme 01", $this->pluginID), "th01"), 
+											array(__("Theme 02", $this->pluginID), "th02"),											
+											array(__("Theme 03", $this->pluginID), "th03"),
+									   ) ; break ; 
 		}
 		return null ;
+	}
+	
+
+
+	/** ====================================================================================================================================================
+	* Load the configuration of the javascript in the header
+	* 
+	* @return variant of the option
+	*/
+	function header_init_style() {
+		$theme = $this->get_param('theme') ; 
+		foreach ($theme as $t) {
+			if ($t[0]!=str_replace("*", "", $t[0])) {
+				if ($t[1]=="th01") {
+					$this->add_css(WP_PLUGIN_URL.'/'.str_replace(basename(__FILE__),"",plugin_basename(__FILE__))."css/theme1.css") ; 
+				}
+				if ($t[1]=="th02") {
+					$this->add_css(WP_PLUGIN_URL.'/'.str_replace(basename(__FILE__),"",plugin_basename(__FILE__))."css/theme2.css") ; 
+				}
+				if ($t[1]=="th03") {
+					$this->add_css(WP_PLUGIN_URL.'/'.str_replace(basename(__FILE__),"",plugin_basename(__FILE__))."css/theme3.css") ; 
+				}
+			}
+		}
 	}
 	
 	/** ====================================================================================================================================================
@@ -178,6 +210,12 @@ class imagezoom extends pluginSedLex {
 				$params->add_param('tra_pause', __('Pause:',$this->pluginID)) ; 
 				$params->add_param('tra_image', __('The image counter:',$this->pluginID)) ; 
 				$params->add_comment(sprintf(__('The %s will be replace with the index of the image and %s with the total number of images in the page.',$this->pluginID), "<code>{current}</code>", "<code>{total}</code>")) ; 
+				
+				$params->add_title(__('What is the theme?',$this->pluginID)) ; 
+				$params->add_param('theme', __('Choose the theme:',$this->pluginID)) ; 
+				$params->add_comment(sprintf(__('Theme 01 is : %s.',$this->pluginID), "<img src='".WP_PLUGIN_URL.'/'.str_replace(basename(__FILE__),"",plugin_basename(__FILE__))."img/theme1_illustr.jpg"."'/>")) ; 
+				$params->add_comment(sprintf(__('Theme 02 is : %s.',$this->pluginID), "<img src='".WP_PLUGIN_URL.'/'.str_replace(basename(__FILE__),"",plugin_basename(__FILE__))."img/theme2_illustr.jpg"."'/>")) ; 
+				$params->add_comment(sprintf(__('Theme 03 is : %s.',$this->pluginID), "<img src='".WP_PLUGIN_URL.'/'.str_replace(basename(__FILE__),"",plugin_basename(__FILE__))."img/theme3_illustr.jpg"."'/>")) ; 
 				
 				$params->add_title(__('What are the other parameters?',$this->pluginID)) ; 
 				$params->add_param('show_interval', __('Transition time if the slideshow is on:',$this->pluginID)) ; 

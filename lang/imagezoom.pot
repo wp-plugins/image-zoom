@@ -1,101 +1,141 @@
 Content-Transfer-Encoding: 8bit
 
-#: image-zoom.php:165
+#: image-zoom.php:84
+#@ imagezoom
+msgid "Theme 01"
+msgstr ""
+
+#: image-zoom.php:85
+#@ imagezoom
+msgid "Theme 02"
+msgstr ""
+
+#: image-zoom.php:86
+#@ imagezoom
+msgid "Theme 03"
+msgstr ""
+
+#: image-zoom.php:198
 #@ imagezoom
 msgid "This plugin allows a dynamic zoom on the images (based on the highslide javascript library)"
 msgstr ""
 
-#: image-zoom.php:168
+#: image-zoom.php:201
 #@ imagezoom
 msgid "What are the clipped dimensions of the zoomed image?"
 msgstr ""
 
-#: image-zoom.php:169
+#: image-zoom.php:202
 #@ imagezoom
 msgid "Max width:"
 msgstr ""
 
-#: image-zoom.php:170
+#: image-zoom.php:203
 #@ imagezoom
 msgid "Max height:"
 msgstr ""
 
-#: image-zoom.php:172
+#: image-zoom.php:205
 #@ imagezoom
 msgid "What is the text for the frontend?"
 msgstr ""
 
-#: image-zoom.php:173
+#: image-zoom.php:206
 #@ imagezoom
 msgid "Previous:"
 msgstr ""
 
-#: image-zoom.php:174
+#: image-zoom.php:207
 #@ imagezoom
 msgid "Next:"
 msgstr ""
 
-#: image-zoom.php:175
+#: image-zoom.php:208
 #@ imagezoom
 msgid "Close:"
 msgstr ""
 
-#: image-zoom.php:176
+#: image-zoom.php:209
 #@ imagezoom
 msgid "Play:"
 msgstr ""
 
-#: image-zoom.php:177
+#: image-zoom.php:210
 #@ imagezoom
 msgid "Pause:"
 msgstr ""
 
-#: image-zoom.php:178
+#: image-zoom.php:211
 #@ imagezoom
 msgid "The image counter:"
 msgstr ""
 
-#: image-zoom.php:179
+#: image-zoom.php:212
 #@ imagezoom
 msgid "The %s will be replace with the index of the image and %s with the total number of images in the page."
 msgstr ""
 
-#: image-zoom.php:181
+#: image-zoom.php:214
+#@ imagezoom
+msgid "What is the theme?"
+msgstr ""
+
+#: image-zoom.php:215
+#@ imagezoom
+msgid "Choose the theme:"
+msgstr ""
+
+#: image-zoom.php:216
+#@ imagezoom
+msgid "Theme 01 is : %s."
+msgstr ""
+
+#: image-zoom.php:217
+#@ imagezoom
+msgid "Theme 02 is : %s."
+msgstr ""
+
+#: image-zoom.php:218
+#@ imagezoom
+msgid "Theme 03 is : %s."
+msgstr ""
+
+#: image-zoom.php:220
 #@ imagezoom
 msgid "What are the other parameters?"
 msgstr ""
 
-#: image-zoom.php:182
+#: image-zoom.php:221
 #@ imagezoom
 msgid "Transition time if the slideshow is on:"
 msgstr ""
 
-#: image-zoom.php:183
+#: image-zoom.php:222
 #@ imagezoom
 msgid "Auto-start the slideshow when launched:"
 msgstr ""
 
-#: image-zoom.php:184
+#: image-zoom.php:223
 #@ imagezoom
 msgid "The opacity of the background:"
 msgstr ""
 
-#: image-zoom.php:187
+#: image-zoom.php:226
 #@ imagezoom
 msgid "Parameters"
 msgstr ""
 
-#: image-zoom.php:194
+#: image-zoom.php:233
 #@ imagezoom
 msgid "Manage translations"
 msgstr ""
 
-#: image-zoom.php:200
+#: image-zoom.php:239
 #@ imagezoom
 msgid "Give feedback"
 msgstr ""
 
-#: image-zoom.php:205
+#: image-zoom.php:244
 #@ imagezoom
 msgid "Other plugins"
 msgstr ""

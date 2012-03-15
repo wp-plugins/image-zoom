@@ -73,6 +73,9 @@ Have fun !
 
 == Changelog ==
 
+= 1.5.2 =
+* Three themes added
+
 = 1.5.1 =
 * Remove the title displayed at the top of the image (will be possible in next release optionally)
 
@@ -167,4 +170,4 @@ Have fun !
 Visit http://www.sedlex.fr/cote_geek/
  
  
-InfoVersion:21670229ac327f6e6fa562a5433b466b
+InfoVersion:7efdfa2e903b593648de0333c4293d32
