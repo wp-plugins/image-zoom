@@ -42,6 +42,7 @@ This plugin is under GPL licence.
 * Croatian (Croatia) translation provided by Rene
 * Hungarian (Hungary) translation provided by Metoyou, DvnyiFerenc
 * Lithuanian (Lithuania) translation provided by ydrius
+* Polish (Poland) translation provided by rzuf
 * Russian (Russia) translation provided by sever, Sprigin
 * Vietnamese (Viet Nam) translation provided by Khco
 
@@ -72,6 +73,9 @@ Have fun !
 2. An image zommed
 
 == Changelog ==
+
+= 1.5.3 =
+* Add a warnig if the header contains a jquery reference
 
 = 1.5.2 =
 * Three themes added
@@ -170,4 +174,4 @@ Have fun !
 Visit http://www.sedlex.fr/cote_geek/
  
  
-InfoVersion:7efdfa2e903b593648de0333c4293d32
+InfoVersion:30f287bef34124f3d075d32b99e3d0e0
