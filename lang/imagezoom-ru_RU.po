@@ -4,9 +4,10 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2011-12-14T23:19:16+00:00\n"
+"PO-Revision-Date: 2012-04-21T19:22:53+00:00\n"
 "Last-Translator: sever <magadansever.ru>\n"
 "Last-Translator: Sprigin <Sprigin.ru>\n"
+"Last-Translator: vyachek <vyachek@op.pl>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -89,4 +90,31 @@ msgstr "Обратная связь"
 
 msgid "Other plugins"
 msgstr "Другие плагины"
+
+msgid "Theme 01"
+msgstr "Тема 01"
+
+msgid "Theme 02"
+msgstr "Тема 02"
+
+msgid "Theme 03"
+msgstr "Тема 03"
+
+msgid "The image counter:"
+msgstr "Счетчик фото:"
+
+msgid "What is the theme?"
+msgstr "Какая тема?"
+
+msgid "Choose the theme:"
+msgstr "Выбери тему:"
+
+msgid "Theme 01 is : %s."
+msgstr "Тема 01: %"
+
+msgid "Theme 02 is : %s."
+msgstr "Тема 02: %"
+
+msgid "Theme 03 is : %s."
+msgstr "Тема 03: %"
 

@@ -4,8 +4,9 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2011-12-15T09:12:01+00:00\n"
+"PO-Revision-Date: 2012-05-26T14:15:29+00:00\n"
 "Last-Translator: Vangelov <vangelov@stselectronics.eu>\n"
+"Last-Translator: KalinLynnDimitrov <cassidycornell@abv.bg>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -88,4 +89,40 @@ msgstr "Изпратете отзиви"
 
 msgid "Other plugins"
 msgstr "Други плъгини"
+
+msgid "Theme 01"
+msgstr "Тема 01"
+
+msgid "Theme 02"
+msgstr "Тема 02"
+
+msgid "Theme 03"
+msgstr "Тема 03"
+
+msgid "Your theme contains (i.e. in %s file) a hardcoded reference to the jQuery javascript library."
+msgstr "Вашата тема съдържа код връзка към jQuery javascript библиотека."
+
+msgid "This reference may break the plugin. So, if the plugin does not work, please either delete this reference or move it just after the %s declaration."
+msgstr "Тази връзка може да повреди плъгина. Затова, ако плъгина не работи, моля, или изтрийте тази връзка или я преместете точно след %s декларацията."
+
+msgid "The image counter:"
+msgstr "Изображение броят:"
+
+msgid "The %s will be replace with the index of the image and %s with the total number of images in the page."
+msgstr "%s ще бъде заменен с индекс на изображението и %s с общия брой изображения на страница."
+
+msgid "What is the theme?"
+msgstr "Каква е темата?"
+
+msgid "Choose the theme:"
+msgstr "Избери темата:"
+
+msgid "Theme 01 is : %s."
+msgstr "Тема 01 е: %s"
+
+msgid "Theme 02 is : %s."
+msgstr "Тема 02 е: %s"
+
+msgid "Theme 03 is : %s."
+msgstr "Тема 03 е: %s"
 

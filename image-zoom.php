@@ -3,7 +3,8 @@
 Plugin Name: Image Zoom
 Plugin Name: zoom, highslide, image, panorama
 Description: <p>Allow to dynamically zoom on images in posts/pages/... </p><p>When clicked, the image will dynamically scale-up. Please note that you have to insert image normally with the wordpress embedded editor.</p><p>You may configure :</p><ul><li>The max width/height of the image;</li><li>The transition delay </li><li>The position of the buttons</li><li>The auto-start of the slideshow</li><li>the opacity of the background</li></ul><p>If the image does not scale-up, please verify that the HTML looks like the following : &lt;a href=' '&gt;&lt;img src=' '&gt;&lt;/a&gt;.</p><p>This plugin implements the colorbox javascript library. </p><p>This plugin is under GPL licence.</p>
-Version: 1.5.3
+Version: 1.5.4
+
 Author: SedLex
 Author Email: sedlex@sedlex.fr
 Framework Email: sedlex@sedlex.fr
@@ -36,7 +37,8 @@ class imagezoom extends pluginSedLex {
 		
 		//Init et des-init
 		register_activation_hook(__FILE__, array($this,'install'));
-		register_deactivation_hook(__FILE__, array($this,'uninstall'));
+		register_deactivation_hook(__FILE__, array($this,'deactivate'));
+		register_uninstall_hook(__FILE__, array($this,'uninstall'));
 		
 		//Parametres supplementaires
 		add_action('wp_print_styles', array($this,'header_init_style'));
@@ -159,7 +161,7 @@ class imagezoom extends pluginSedLex {
 	* @return variant of the option
 	*/
 	function zoom($string) {
-		$pattern = '/(<a([^>]*?)href="([^"]*[.])'.$this->image_type.'"([^>]*?)>([^<]|<br)*<img([^>]*?)src="([^"]*[.])'.$this->image_type.'"([^>]*?)\>([^<]|<br)*<\/a>)/iesU';
+		$pattern = '/(<a([^>]*?)href="([^"]*[.])'.$this->image_type.'"([^>]*?)>((?:[^<]|<br)*)<img([^>]*?)src="([^"]*[.])'.$this->image_type.'"([^>]*?)\>([^<]|<br)*<\/a>)/iesU';
 		$replacement = 'stripslashes("<a\2href=\"\3\4\" class=\"gallery_colorbox\"\5>\6<img\7src=\"\8\9\" \10>\11</a>")';
 		return preg_replace($pattern, $replacement, $string);
 	}
