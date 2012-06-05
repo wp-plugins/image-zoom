@@ -2,8 +2,8 @@
 /*
 Plugin Name: Image Zoom
 Plugin Name: zoom, highslide, image, panorama
-Description: <p>Allow to dynamically zoom on images in posts/pages/... </p><p>When clicked, the image will dynamically scale-up. Please note that you have to insert image normally with the wordpress embedded editor.</p><p>You may configure :</p><ul><li>The max width/height of the image;</li><li>The transition delay </li><li>The position of the buttons</li><li>The auto-start of the slideshow</li><li>the opacity of the background</li></ul><p>If the image does not scale-up, please verify that the HTML looks like the following : &lt;a href=' '&gt;&lt;img src=' '&gt;&lt;/a&gt;.</p><p>This plugin implements the colorbox javascript library. </p><p>This plugin is under GPL licence.</p>
-Version: 1.5.4
+Description: <p>Allow to dynamically zoom on images in posts/pages/... </p><p>When clicked, the image will dynamically scale-up. Please note that you have to insert image normally with the wordpress embedded editor.</p><p>You may configure:</p><ul><li>The max width/height of the image; </li><li>The transition delay; </li><li>The position of the buttons; </li><li>The auto-start of the slideshow; </li><li>the opacity of the background; </li><li>the pages to be excluded. </li></ul><p>If the image does not scale-up, please verify that the HTML looks like the following : &lt;a href=' '&gt;&lt;img src=' '&gt;&lt;/a&gt;.</p><p>This plugin implements the colorbox javascript library. </p><p>This plugin is under GPL licence.</p>
+Version: 1.5.5
 
 Author: SedLex
 Author Email: sedlex@sedlex.fr
@@ -82,6 +82,7 @@ class imagezoom extends pluginSedLex {
 			case 'tra_close'		: return "Close" ; break ; 
 			case 'tra_play'			: return "Play" ; break ; 
 			case 'tra_pause'		: return "Pause" ; break ; 
+			case 'exclu'		: return "*" ; break ; 
 
 			case 'theme'		: return array(		array("*".__("Theme 01", $this->pluginID), "th01"), 
 											array(__("Theme 02", $this->pluginID), "th02"),											
@@ -99,6 +100,20 @@ class imagezoom extends pluginSedLex {
 	* @return variant of the option
 	*/
 	function header_init_style() {
+		// We check that there is no exclusion
+		$exclu = $this->get_param('exclu') ;
+		$exclu = explode("\n", $exclu) ;
+		foreach ($exclu as $e) {
+			$e = trim(str_replace("\r", "", $e)) ; 
+			if ($e!="") {
+				$e = "@".$e."@i"; 
+				if (preg_match($e, $_SERVER['REQUEST_URI'])) {
+					
+					return ; 
+				}
+			}
+		}
+		
 		$theme = $this->get_param('theme') ; 
 		foreach ($theme as $t) {
 			if ($t[0]!=str_replace("*", "", $t[0])) {
@@ -123,8 +138,20 @@ class imagezoom extends pluginSedLex {
 	function header_init() {
 		wp_enqueue_script('jquery');   
 		
+		// We check that there is no exclusion
+		$exclu = $this->get_param('exclu') ;
+		$exclu = explode("\n", $exclu) ;
+		foreach ($exclu as $e) {
+			$e = trim(str_replace("\r", "", $e)) ; 
+			if ($e!="") {
+				$e = "@".$e."@i"; 
+				if (preg_match($e, $_SERVER['REQUEST_URI'])) {
+					return ; 
+				}
+			}
+		}
+		
 		ob_start() ; 
-		//http://jacklmoore.com/colorbox/
 	?>
 		jQuery(document).ready(function () {
 			jQuery('a.gallery_colorbox').colorbox({ 
@@ -161,6 +188,19 @@ class imagezoom extends pluginSedLex {
 	* @return variant of the option
 	*/
 	function zoom($string) {
+		// We check that there is no exclusion
+		$exclu = $this->get_param('exclu') ;
+		$exclu = explode("\n", $exclu) ;
+		foreach ($exclu as $e) {
+			$e = trim(str_replace("\r", "", $e)) ; 
+			if ($e!="") {
+				$e = "@".$e."@i"; 
+				if (preg_match($e, $_SERVER['REQUEST_URI'])) {
+					return $string; 
+				}
+			}
+		}
+		
 		$pattern = '/(<a([^>]*?)href="([^"]*[.])'.$this->image_type.'"([^>]*?)>((?:[^<]|<br)*)<img([^>]*?)src="([^"]*[.])'.$this->image_type.'"([^>]*?)\>([^<]|<br)*<\/a>)/iesU';
 		$replacement = 'stripslashes("<a\2href=\"\3\4\" class=\"gallery_colorbox\"\5>\6<img\7src=\"\8\9\" \10>\11</a>")';
 		return preg_replace($pattern, $replacement, $string);
@@ -231,6 +271,11 @@ class imagezoom extends pluginSedLex {
 				$params->add_param('show_interval', __('Transition time if the slideshow is on:',$this->pluginID)) ; 
 				$params->add_param('slideshow_autostart', __('Auto-start the slideshow when launched:',$this->pluginID)) ; 
 				$params->add_param('background_opacity', __('The opacity of the background:',$this->pluginID)) ; 
+				
+				$params->add_title(__('Advanced parameters?',$this->pluginID)) ; 
+				$params->add_param('exclu', __('List of page exclusions:',$this->pluginID)) ; 
+				$params->add_comment(sprintf(__('For instance, you may exclude page with URL like %s by setting this option to %s. Please add one regular expressions by line',$this->pluginID), "<code>http://yourdomain.tld/portfolio/</code>", "<code>portfolio</code>")) ; 
+				$params->add_comment(sprintf(__('Please, do not use the %s characters in the regular expression but instead %s or %s',$this->pluginID), "<code>*</code>", "<code>+</code>", "<code>{0,}</code>")) ; 
 				
 				$params->flush() ; 
 			$tabs->add_tab(__('Parameters',  $this->pluginID), ob_get_clean() , WP_PLUGIN_URL.'/'.str_replace(basename(__FILE__),"",plugin_basename(__FILE__))."core/img/tab_param.png") ; 	

@@ -17,13 +17,14 @@ Allow to dynamically zoom on images in posts/pages/...
 
 When clicked, the image will dynamically scale-up. Please note that you have to insert image normally with the wordpress embedded editor.
 
-You may configure :
+You may configure:
 
-* The max width/height of the image;
-* The transition delay 
-* The position of the buttons
-* The auto-start of the slideshow
-* the opacity of the background
+* The max width/height of the image; 
+* The transition delay; 
+* The position of the buttons; 
+* The auto-start of the slideshow; 
+* the opacity of the background; 
+* the pages to be excluded. 
 
 If the image does not scale-up, please verify that the HTML looks like the following : &lt;a href=' '&gt;&lt;img src=' '&gt;&lt;/a&gt;.
 
@@ -78,6 +79,9 @@ Have fun !
 2. An image zommed
 
 == Changelog ==
+
+= 1.5.5 =
+* Some pages may be excluded thanks to a plurality of regexps
 
 = 1.5.4 =
 * Debug and multisite support
@@ -148,4 +152,4 @@ Have fun !
 Visit http://www.sedlex.fr/cote_geek/
  
  
-InfoVersion:ba4f510ff8733e8d596bbd152b636503
+InfoVersion:3b1e25ee59f70b3d8bdc1ddc0bd89636
