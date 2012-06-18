@@ -4,8 +4,9 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2011-12-12T14:28:56+00:00\n"
+"PO-Revision-Date: 2012-06-17T21:17:56+00:00\n"
 "Last-Translator: SedLex <http://www.sedlex.fr/>\n"
+"Last-Translator: mediacop <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -27,10 +28,10 @@ msgid "What are the clipped dimensions of the zoomed image?"
 msgstr "Quelles sont les dimensions maximales de l&#039;image agrandie ?"
 
 msgid "Max width:"
-msgstr "Largeur maximale : "
+msgstr "Largeur maximale :"
 
 msgid "Max height:"
-msgstr "Hauteur maximale : "
+msgstr "Hauteur maximale :"
 
 msgid "What is the text for the frontend?"
 msgstr "Quelle est le texte pour le frontend ?"
@@ -57,7 +58,7 @@ msgid "Play:"
 msgstr "Lecture :"
 
 msgid "Pause:"
-msgstr "Pause : "
+msgstr "Pause :"
 
 msgid "Restore:"
 msgstr "Restaurer :"
@@ -88,4 +89,52 @@ msgstr "Donner un feedback"
 
 msgid "Other plugins"
 msgstr "Autres plugins"
+
+msgid "Theme 01"
+msgstr "Theme 01"
+
+msgid "Theme 02"
+msgstr "Theme 02"
+
+msgid "Theme 03"
+msgstr "Theme 03"
+
+msgid "Your theme contains (i.e. in %s file) a hardcoded reference to the jQuery javascript library."
+msgstr "Votre thème contient (dans %s fichier) une référence codée en dur dans la bibliothèque javascript jQuery."
+
+msgid "This reference may break the plugin. So, if the plugin does not work, please either delete this reference or move it just after the %s declaration."
+msgstr "Cette référence peut casser le plugin. Donc, si le plugin ne fonctionne pas, s&#039;il vous plaît, soit supprimer cette référence ou le déplacer juste après la %s déclaration."
+
+msgid "The image counter:"
+msgstr "Le compteur d&#039;images:"
+
+msgid "The %s will be replace with the index of the image and %s with the total number of images in the page."
+msgstr "Le %s sera remplacer par l&#039;indice de l&#039;image et %s avec le nombre total d&#039;images dans la page."
+
+msgid "What is the theme?"
+msgstr "Quel est le thème?"
+
+msgid "Choose the theme:"
+msgstr "Choisissez le thème:"
+
+msgid "Theme 01 is : %s."
+msgstr "Thème 01 est : %s."
+
+msgid "Theme 02 is : %s."
+msgstr "Thème 02 est : %s."
+
+msgid "Theme 03 is : %s."
+msgstr "Thème 03 est : %s."
+
+msgid "Advanced parameters?"
+msgstr "Les paramètres avancés?"
+
+msgid "List of page exclusions:"
+msgstr "Liste des exclusions de page:"
+
+msgid "For instance, you may exclude page with URL like %s by setting this option to %s. Please add one regular expressions by line"
+msgstr "Par exemple, vous pouvez exclure la page avec l&#039;URL %s en mettant cette option à %s. S&#039;il vous plaît, ajouter un expressions régulières par ligne"
+
+msgid "Please, do not use the %s characters in the regular expression but instead %s or %s"
+msgstr "S&#039;il vous plaît, n&#039;utilisez pas de %s caractères dans l&#039;expression régulière, mais au lieu de %s ou %s"
 

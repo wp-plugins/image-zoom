@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2012-04-23T19:21:29+00:00\n"
+"PO-Revision-Date: 2012-06-18T11:57:53+00:00\n"
 "Last-Translator: PC-Rider <annodevries@gmail.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -109,4 +109,16 @@ msgstr "Geef feedback"
 
 msgid "Other plugins"
 msgstr "andere plugins"
+
+msgid "Advanced parameters?"
+msgstr "Geavanceerde instellingen"
+
+msgid "List of page exclusions:"
+msgstr "Lijst van uitgesloten pagina&#039;s"
+
+msgid "For instance, you may exclude page with URL like %s by setting this option to %s. Please add one regular expressions by line"
+msgstr "Bijvoorbeeld kun je pagina&#039;s uitsluiten meet een URL als: %s door deze optie op %s te zetten. Voeg a.u.b één reguliere expressie per regel toe."
+
+msgid "Please, do not use the %s characters in the regular expression but instead %s or %s"
+msgstr "A.u.b gebruik de %s characters niet in de reguliere expressie maar %s of %s."
 
