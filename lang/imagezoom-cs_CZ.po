@@ -4,8 +4,9 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2011-10-08T22:28:03+00:00\n"
+"PO-Revision-Date: 2012-09-02T10:32:06+00:00\n"
 "Last-Translator: jurajh <>\n"
+"Last-Translator: LukasProkop <http://lukasp.eu>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -67,4 +68,55 @@ msgstr "Další pluginy"
 
 msgid "Here is the plugins developped by the author:"
 msgstr "Další pluginy autora:"
+
+msgid "Theme 01"
+msgstr "Vzhled 01"
+
+msgid "Theme 02"
+msgstr "Vzhled 02"
+
+msgid "Theme 03"
+msgstr "Vzhled 03"
+
+msgid "Previous:"
+msgstr "Předchozí"
+
+msgid "Next:"
+msgstr "Další"
+
+msgid "Close:"
+msgstr "Zavřít"
+
+msgid "Play:"
+msgstr "Spustit"
+
+msgid "Pause:"
+msgstr "Pauza"
+
+msgid "What is the theme?"
+msgstr "Jaký je vzhled?"
+
+msgid "Choose the theme:"
+msgstr "Vyber si vzhled:"
+
+msgid "Theme 01 is : %s."
+msgstr "Vzhled 01 je: %s"
+
+msgid "Theme 02 is : %s."
+msgstr "Vzhled 02 je: %s"
+
+msgid "Theme 03 is : %s."
+msgstr "Vzhled 03 je: %s"
+
+msgid "What are the other parameters?"
+msgstr "Jaké jsou ostatní parametry?"
+
+msgid "Auto-start the slideshow when launched:"
+msgstr "Automaticky spustit prezentaci, když se spustí galerie:"
+
+msgid "Advanced parameters?"
+msgstr "Další parametry?"
+
+msgid "Other plugins"
+msgstr "Ostatní pluginy"
 
