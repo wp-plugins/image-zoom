@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2012-04-21T19:22:53+00:00\n"
+"PO-Revision-Date: 2012-10-09T07:33:40+00:00\n"
 "Last-Translator: sever <magadansever.ru>\n"
 "Last-Translator: Sprigin <Sprigin.ru>\n"
 "Last-Translator: vyachek <vyachek@op.pl>\n"
@@ -117,4 +117,10 @@ msgstr "Тема 02: %"
 
 msgid "Theme 03 is : %s."
 msgstr "Тема 03: %"
+
+msgid "Advanced parameters?"
+msgstr "Показать больше параметров?"
+
+msgid "List of page exclusions:"
+msgstr "Список исключенных страниц"
 

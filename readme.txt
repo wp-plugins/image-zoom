@@ -6,7 +6,7 @@ Author URI: http://www.sedlex.fr/
 Plugin URI: http://wordpress.org/extend/plugins/image-zoom/
 Tags: 
 Requires at least: 3.0
-Tested up to: 3.3.1
+Tested up to: 3.5
 Stable tag: trunk
 
 Allow to dynamically zoom on images in posts/pages/... 
@@ -38,12 +38,13 @@ This plugin is compatible with multi-site installation.
 
 = Localization =
 
+* Arabic (Syria) translation provided by aboRoma
 * Bulgarian (Bulgaria) translation provided by Vangelov, KalinLynnDimitrov
-* Czech (Czech Republic) translation provided by jurajh
+* Czech (Czech Republic) translation provided by jurajh, LukasProkop
 * German (Germany) translation provided by tcp443, B.Klein, Frutte
 * English (United States), default language
-* Spanish (Spain) translation provided by genteblackberry
-* French (France) translation provided by SedLex
+* Spanish (Spain) translation provided by genteblackberry, Wildsouth
+* French (France) translation provided by SedLex, mediacop, FlorianP.
 * Croatian (Croatia) translation provided by Rene
 * Hungarian (Hungary) translation provided by Metoyou, DvnyiFerenc
 * Lithuanian (Lithuania) translation provided by ydrius
@@ -79,6 +80,9 @@ Have fun !
 2. An image zommed
 
 == Changelog ==
+
+= 1.5.5 =
+* Issue with the new version of wordpress
 
 = 1.5.5 =
 * Some pages may be excluded thanks to a plurality of regexps
@@ -152,4 +156,4 @@ Have fun !
 Visit http://www.sedlex.fr/cote_geek/
  
  
-InfoVersion:59fb65148290d4c3180bde788a1ec5c9
+InfoVersion:b347fd2a589edd8bc826828add432536

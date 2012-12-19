@@ -3,7 +3,7 @@
 Plugin Name: Image Zoom
 Plugin Name: zoom, highslide, image, panorama
 Description: <p>Allow to dynamically zoom on images in posts/pages/... </p><p>When clicked, the image will dynamically scale-up. Please note that you have to insert image normally with the wordpress embedded editor.</p><p>You may configure:</p><ul><li>The max width/height of the image; </li><li>The transition delay; </li><li>The position of the buttons; </li><li>The auto-start of the slideshow; </li><li>the opacity of the background; </li><li>the pages to be excluded. </li></ul><p>If the image does not scale-up, please verify that the HTML looks like the following : &lt;a href=' '&gt;&lt;img src=' '&gt;&lt;/a&gt;.</p><p>This plugin implements the colorbox javascript library. </p><p>This plugin is under GPL licence.</p>
-Version: 1.5.5
+Version: 1.5.6
 
 Author: SedLex
 Author Email: sedlex@sedlex.fr
@@ -48,7 +48,9 @@ class imagezoom extends pluginSedLex {
 		
 		$this->image_type = "(bmp|gif|jpeg|jpg|png)" ;
 		
-		//$this->set_param('theme', $this->get_default_option('theme'))  ; 
+		// Force the type of link
+		update_option('image_default_link_type' , 'file');
+
 	}
 	
 	/**
@@ -136,50 +138,52 @@ class imagezoom extends pluginSedLex {
 	* @return variant of the option
 	*/
 	function header_init() {
-		wp_enqueue_script('jquery');   
-		
-		// We check that there is no exclusion
-		$exclu = $this->get_param('exclu') ;
-		$exclu = explode("\n", $exclu) ;
-		foreach ($exclu as $e) {
-			$e = trim(str_replace("\r", "", $e)) ; 
-			if ($e!="") {
-				$e = "@".$e."@i"; 
-				if (preg_match($e, $_SERVER['REQUEST_URI'])) {
-					return ; 
+		if (!is_admin()) {
+			wp_enqueue_script('jquery');   
+			
+			// We check that there is no exclusion
+			$exclu = $this->get_param('exclu') ;
+			$exclu = explode("\n", $exclu) ;
+			foreach ($exclu as $e) {
+				$e = trim(str_replace("\r", "", $e)) ; 
+				if ($e!="") {
+					$e = "@".$e."@i"; 
+					if (preg_match($e, $_SERVER['REQUEST_URI'])) {
+						return ; 
+					}
 				}
 			}
+			
+			ob_start() ; 
+		?>
+			jQuery(document).ready(function () {
+				jQuery('a.gallery_colorbox').colorbox({ 
+					slideshow: true,
+					title: false,
+					<?php if ($this->get_param('slideshow_autostart')) { ?>
+					slideshowAuto:true,
+					<?php } else { ?>
+					slideshowAuto:false,
+					<?php } ?>
+					slideshowSpeed: <?php echo $this->get_param('show_interval');?> ,
+					slideshowStart: '<?php echo $this->get_param('tra_play') ; ?>',
+					slideshowStop :  '<?php echo $this->get_param('tra_pause') ; ?>',
+					current : '<?php echo $this->get_param('tra_image') ; ?>', 
+					scalePhotos : true , 
+					previous: '<?php echo $this->get_param('tra_previous') ; ?>',	
+					next:'<?php echo $this->get_param('tra_next') ; ?>',
+					close:'<?php echo $this->get_param('tra_close') ; ?>',
+					maxWidth: <?php echo $this->get_param('widthRestriction') ; ?>, 
+					maxHeight : <?php echo $this->get_param('heightRestriction') ; ?>,
+					opacity:<?php echo $this->get_param('background_opacity');?> , 
+					rel:'group1' 
+				});
+			});	
+							
+		<?php 
+			$content = ob_get_clean() ; 
+			$this->add_inline_js($content) ; 
 		}
-		
-		ob_start() ; 
-	?>
-		jQuery(document).ready(function () {
-			jQuery('a.gallery_colorbox').colorbox({ 
-				slideshow: true,
-				title: false,
-				<?php if ($this->get_param('slideshow_autostart')) { ?>
-				slideshowAuto:true,
-				<?php } else { ?>
-				slideshowAuto:false,
-				<?php } ?>
-				slideshowSpeed: <?php echo $this->get_param('show_interval');?> ,
-				slideshowStart: '<?php echo $this->get_param('tra_play') ; ?>',
-				slideshowStop :  '<?php echo $this->get_param('tra_pause') ; ?>',
-				current : '<?php echo $this->get_param('tra_image') ; ?>', 
-				scalePhotos : true , 
-				previous: '<?php echo $this->get_param('tra_previous') ; ?>',	
-				next:'<?php echo $this->get_param('tra_next') ; ?>',
-				close:'<?php echo $this->get_param('tra_close') ; ?>',
-				maxWidth: <?php echo $this->get_param('widthRestriction') ; ?>, 
-				maxHeight : <?php echo $this->get_param('heightRestriction') ; ?>,
-				opacity:<?php echo $this->get_param('background_opacity');?> , 
-				rel:'group1' 
-			});
-		});	
-						
-	<?php 
-		$content = ob_get_clean() ; 
-		$this->add_inline_js($content) ; 
 	}
 	
 	/** ====================================================================================================================================================
