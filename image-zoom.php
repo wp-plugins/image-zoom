@@ -3,8 +3,7 @@
 Plugin Name: Image Zoom
 Plugin Name: zoom, highslide, image, panorama
 Description: <p>Allow to dynamically zoom on images in posts/pages/... </p><p>When clicked, the image will dynamically scale-up. Please note that you have to insert image normally with the wordpress embedded editor.</p><p>You may configure:</p><ul><li>The max width/height of the image; </li><li>The transition delay; </li><li>The position of the buttons; </li><li>The auto-start of the slideshow; </li><li>the opacity of the background; </li><li>the pages to be excluded. </li></ul><p>If the image does not scale-up, please verify that the HTML looks like the following : &lt;a href=' '&gt;&lt;img src=' '&gt;&lt;/a&gt;.</p><p>This plugin implements the colorbox javascript library. </p><p>This plugin is under GPL licence.</p>
-Version: 1.5.6
-
+Version: 1.5.7
 Author: SedLex
 Author Email: sedlex@sedlex.fr
 Framework Email: sedlex@sedlex.fr
@@ -22,11 +21,12 @@ class imagezoom extends pluginSedLex {
 	* @return void
 	*/
 	static $instance = false;
-	static $path = false;
+	var $path = false;
 	
 	var $image_type ;
 
 	protected function _init() {
+		global $wpdb ; 
 		// Configuration
 		$this->pluginName = 'Image Zoom' ; 
 		$this->tableSQL = "" ; 
@@ -38,19 +38,13 @@ class imagezoom extends pluginSedLex {
 		//Init et des-init
 		register_activation_hook(__FILE__, array($this,'install'));
 		register_deactivation_hook(__FILE__, array($this,'deactivate'));
-		register_uninstall_hook(__FILE__, array($this,'uninstall'));
+		register_uninstall_hook(__FILE__, array('imagezoom','uninstall'));
 		
-		//Parametres supplementaires
-		add_action('wp_print_styles', array($this,'header_init_style'));
-		add_action('wp_print_scripts', array($this,'header_init'));
-		add_filter('the_excerpt', array($this,'zoom'),100);
-		add_filter('the_content', array($this,'zoom'),100);
-		
+		//Parametres supplementaires		
 		$this->image_type = "(bmp|gif|jpeg|jpg|png)" ;
 		
 		// Force the type of link
-		update_option('image_default_link_type' , 'file');
-
+		add_action('update_option', array($this, 'image_default_link_type'));
 	}
 	
 	/**
@@ -62,8 +56,49 @@ class imagezoom extends pluginSedLex {
 		}
 		return self::$instance;
 	}
-
 	
+	
+	/** ====================================================================================================================================================
+	* Force the options
+	* 
+	* @return void
+	*/
+	
+	public function image_default_link_type () {
+		update_option('image_default_link_type' , 'file');
+	}
+
+
+	/** ====================================================================================================================================================
+	* In order to uninstall the plugin, few things are to be done ... 
+	* (do not modify this function)
+	* 
+	* @return void
+	*/
+	
+	public function uninstall_removedata () {
+		global $wpdb ;
+		// DELETE OPTIONS
+		delete_option('imagezoom'.'_options') ;
+		if (is_multisite()) {
+			delete_site_option('imagezoom'.'_options') ;
+		}
+		
+		// DELETE SQL
+		if (function_exists('is_multisite') && is_multisite()){
+			$old_blog = $wpdb->blogid;
+			$old_prefix = $wpdb->prefix ; 
+			// Get all blog ids
+			$blogids = $wpdb->get_col($wpdb->prepare("SELECT blog_id FROM ".$wpdb->blogs));
+			foreach ($blogids as $blog_id) {
+				switch_to_blog($blog_id);
+				$wpdb->query("DROP TABLE ".str_replace($old_prefix, $wpdb->prefix, $wpdb->prefix . "pluginSL_" . 'imagezoom')) ; 
+			}
+			switch_to_blog($old_blog);
+		} else {
+			$wpdb->query("DROP TABLE ".$wpdb->prefix . "pluginSL_" . 'imagezoom' ) ; 
+		}
+	}	
 
 
 	/** ====================================================================================================================================================
@@ -95,14 +130,21 @@ class imagezoom extends pluginSedLex {
 	}
 	
 
-
 	/** ====================================================================================================================================================
-	* Load the configuration of the javascript in the header
-	* 
-	* @return variant of the option
+	* Init javascript for the public side
+	* If you want to load a script, please type :
+	* 	<code>wp_enqueue_script( 'jsapi', 'https://www.google.com/jsapi');</code> or 
+	*	<code>wp_enqueue_script('my_plugin_script', plugins_url('/script.js', __FILE__));</code>
+	*	<code>$this->add_inline_js($js_text);</code>
+	*	<code>$this->add_js($js_url_file);</code>
+	*
+	* @return void
 	*/
-	function header_init_style() {
-		// We check that there is no exclusion
+	
+	function _public_js_load() {	
+		wp_enqueue_script('jquery');   
+		
+		// We check whether there is an exclusion
 		$exclu = $this->get_param('exclu') ;
 		$exclu = explode("\n", $exclu) ;
 		foreach ($exclu as $e) {
@@ -110,7 +152,61 @@ class imagezoom extends pluginSedLex {
 			if ($e!="") {
 				$e = "@".$e."@i"; 
 				if (preg_match($e, $_SERVER['REQUEST_URI'])) {
-					
+					return ; 
+				}
+			}
+		}
+	
+		ob_start() ; 
+		?>
+		jQuery(document).ready(function () {
+			jQuery('a.gallery_colorbox').colorbox({ 
+				slideshow: true,
+				title: false,
+				<?php if ($this->get_param('slideshow_autostart')) { ?>
+				slideshowAuto:true,
+				<?php } else { ?>
+				slideshowAuto:false,
+				<?php } ?>
+				slideshowSpeed: <?php echo $this->get_param('show_interval');?> ,
+				slideshowStart: '<?php echo $this->get_param('tra_play') ; ?>',
+				slideshowStop :  '<?php echo $this->get_param('tra_pause') ; ?>',
+				current : '<?php echo $this->get_param('tra_image') ; ?>', 
+				scalePhotos : true , 
+				previous: '<?php echo $this->get_param('tra_previous') ; ?>',	
+				next:'<?php echo $this->get_param('tra_next') ; ?>',
+				close:'<?php echo $this->get_param('tra_close') ; ?>',
+				maxWidth: <?php echo $this->get_param('widthRestriction') ; ?>, 
+				maxHeight : <?php echo $this->get_param('heightRestriction') ; ?>,
+				opacity:<?php echo $this->get_param('background_opacity');?> , 
+				rel:'group1' 
+			});
+		});	
+						
+		<?php 
+		$content = ob_get_clean() ; 
+		$this->add_inline_js($content) ; 
+	}
+	
+	
+	/** ====================================================================================================================================================
+	* Init css for the public side
+	* If you want to load a style sheet, please type :
+	*	<code>$this->add_inline_css($css_text);</code>
+	*	<code>$this->add_css($css_url_file);</code>
+	*
+	* @return void
+	*/
+	
+	function _public_css_load() {	
+		// We check whether there is an exclusion
+		$exclu = $this->get_param('exclu') ;
+		$exclu = explode("\n", $exclu) ;
+		foreach ($exclu as $e) {
+			$e = trim(str_replace("\r", "", $e)) ; 
+			if ($e!="") {
+				$e = "@".$e."@i"; 
+				if (preg_match($e, $_SERVER['REQUEST_URI'])) {
 					return ; 
 				}
 			}
@@ -118,7 +214,7 @@ class imagezoom extends pluginSedLex {
 		
 		$theme = $this->get_param('theme') ; 
 		foreach ($theme as $t) {
-			if ($t[0]!=str_replace("*", "", $t[0])) {
+			if (substr($t[0], 0, 1) == "*") {
 				if ($t[1]=="th01") {
 					$this->add_css(WP_PLUGIN_URL.'/'.str_replace(basename(__FILE__),"",plugin_basename(__FILE__))."css/theme1.css") ; 
 				}
@@ -131,68 +227,22 @@ class imagezoom extends pluginSedLex {
 			}
 		}
 	}
+
+
+	
+
 	
 	/** ====================================================================================================================================================
-	* Load the configuration of the javascript in the header
-	* 
-	* @return variant of the option
+	* Called when the content is displayed
+	*
+	* @param string $content the content which will be displayed
+	* @param string $type the type of the article (e.g. post, page, custom_type1, etc.)
+	* @param boolean $excerpt if the display is performed during the loop
+	* @return string the new content
 	*/
-	function header_init() {
-		if (!is_admin()) {
-			wp_enqueue_script('jquery');   
-			
-			// We check that there is no exclusion
-			$exclu = $this->get_param('exclu') ;
-			$exclu = explode("\n", $exclu) ;
-			foreach ($exclu as $e) {
-				$e = trim(str_replace("\r", "", $e)) ; 
-				if ($e!="") {
-					$e = "@".$e."@i"; 
-					if (preg_match($e, $_SERVER['REQUEST_URI'])) {
-						return ; 
-					}
-				}
-			}
-			
-			ob_start() ; 
-		?>
-			jQuery(document).ready(function () {
-				jQuery('a.gallery_colorbox').colorbox({ 
-					slideshow: true,
-					title: false,
-					<?php if ($this->get_param('slideshow_autostart')) { ?>
-					slideshowAuto:true,
-					<?php } else { ?>
-					slideshowAuto:false,
-					<?php } ?>
-					slideshowSpeed: <?php echo $this->get_param('show_interval');?> ,
-					slideshowStart: '<?php echo $this->get_param('tra_play') ; ?>',
-					slideshowStop :  '<?php echo $this->get_param('tra_pause') ; ?>',
-					current : '<?php echo $this->get_param('tra_image') ; ?>', 
-					scalePhotos : true , 
-					previous: '<?php echo $this->get_param('tra_previous') ; ?>',	
-					next:'<?php echo $this->get_param('tra_next') ; ?>',
-					close:'<?php echo $this->get_param('tra_close') ; ?>',
-					maxWidth: <?php echo $this->get_param('widthRestriction') ; ?>, 
-					maxHeight : <?php echo $this->get_param('heightRestriction') ; ?>,
-					opacity:<?php echo $this->get_param('background_opacity');?> , 
-					rel:'group1' 
-				});
-			});	
-							
-		<?php 
-			$content = ob_get_clean() ; 
-			$this->add_inline_js($content) ; 
-		}
-	}
 	
-	/** ====================================================================================================================================================
-	* Load the configuration of the javascript in the header
-	* 
-	* @return variant of the option
-	*/
-	function zoom($string) {
-		// We check that there is no exclusion
+	function _modify_content($string, $type, $excerpt) {	
+		// We check whether there is an exclusion
 		$exclu = $this->get_param('exclu') ;
 		$exclu = explode("\n", $exclu) ;
 		foreach ($exclu as $e) {
@@ -200,13 +250,14 @@ class imagezoom extends pluginSedLex {
 			if ($e!="") {
 				$e = "@".$e."@i"; 
 				if (preg_match($e, $_SERVER['REQUEST_URI'])) {
-					return $string; 
+					return $string ; 
 				}
 			}
 		}
 		
-		$pattern = '/(<a([^>]*?)href="([^"]*[.])'.$this->image_type.'"([^>]*?)>((?:[^<]|<br)*)<img([^>]*?)src="([^"]*[.])'.$this->image_type.'"([^>]*?)\>([^<]|<br)*<\/a>)/iesU';
+		$pattern = '/(<a([^>]*?)href="([^"]*[.])'.$this->image_type.'"([^>]*?)>((?:[^<]|<br)*)<img([^>]*?)src="([^"]*[.])'.$this->image_type.'"([^>]*?)>([^<]|<br)*<\/a>)/iesU';
 		$replacement = 'stripslashes("<a\2href=\"\3\4\" class=\"gallery_colorbox\"\5>\6<img\7src=\"\8\9\" \10>\11</a>")';
+		//$replacement = 'stripslashes("<a\2href=\"\3\4\" class=\"gallery_colorbox\"\5>\6<img\7src=\"\8\9\" \10>\11</a>")';
 		return preg_replace($pattern, $replacement, $string);
 	}
 
@@ -249,7 +300,7 @@ class imagezoom extends pluginSedLex {
 			
 			
 			$tabs = new adminTabs() ; 
-			echo "<p>".__('This plugin allows a dynamic zoom on the images (based on the highslide javascript library)', $this->pluginID)."</p>" ; 
+			echo "<p>".__('This plugin allows a dynamic zoom on the images (based on the colorbox javascript library)', $this->pluginID)."</p>" ; 
 			ob_start() ; 
 				$params = new parametersSedLex($this, 'tab-parameters') ; 
 				$params->add_title(__('What are the clipped dimensions of the zoomed image?',$this->pluginID)) ; 
@@ -279,7 +330,7 @@ class imagezoom extends pluginSedLex {
 				$params->add_title(__('Advanced parameters?',$this->pluginID)) ; 
 				$params->add_param('exclu', __('List of page exclusions:',$this->pluginID)) ; 
 				$params->add_comment(sprintf(__('For instance, you may exclude page with URL like %s by setting this option to %s. Please add one regular expressions by line',$this->pluginID), "<code>http://yourdomain.tld/portfolio/</code>", "<code>portfolio</code>")) ; 
-				$params->add_comment(sprintf(__('Please, do not use the %s characters in the regular expression but instead %s or %s',$this->pluginID), "<code>*</code>", "<code>+</code>", "<code>{0,}</code>")) ; 
+				$params->add_comment(sprintf(__('In addition, you may set this option to %s and to %s to exclude the home page',$this->pluginID), "<code>^/$</code>", "<code>^$</code>")) ; 
 				
 				$params->flush() ; 
 			$tabs->add_tab(__('Parameters',  $this->pluginID), ob_get_clean() , WP_PLUGIN_URL.'/'.str_replace(basename(__FILE__),"",plugin_basename(__FILE__))."core/img/tab_param.png") ; 	

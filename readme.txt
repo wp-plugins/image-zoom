@@ -81,7 +81,10 @@ Have fun !
 
 == Changelog ==
 
-= 1.5.5 =
+= 1.5.7 =
+* Update of the core
+
+= 1.5.6 =
 * Issue with the new version of wordpress
 
 = 1.5.5 =
@@ -156,4 +159,4 @@ Have fun !
 Visit http://www.sedlex.fr/cote_geek/
  
  
-InfoVersion:b347fd2a589edd8bc826828add432536
+InfoVersion:c7e6b828f33503fc914084423582290b

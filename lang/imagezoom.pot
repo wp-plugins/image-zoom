@@ -1,171 +1,171 @@
 Content-Transfer-Encoding: 8bit
 
-#: image-zoom.php:87
+#: image-zoom.php:115
 #@ imagezoom
 msgid "Theme 01"
 msgstr ""
 
-#: image-zoom.php:88
+#: image-zoom.php:116
 #@ imagezoom
 msgid "Theme 02"
 msgstr ""
 
-#: image-zoom.php:89
+#: image-zoom.php:117
 #@ imagezoom
 msgid "Theme 03"
 msgstr ""
 
-#: image-zoom.php:236
+#: image-zoom.php:282
 #@ imagezoom
 msgid "Your theme contains (i.e. in %s file) a hardcoded reference to the jQuery javascript library."
 msgstr ""
 
-#: image-zoom.php:236
+#: image-zoom.php:282
 #@ imagezoom
 msgid "This reference may break the plugin. So, if the plugin does not work, please either delete this reference or move it just after the %s declaration."
 msgstr ""
 
-#: image-zoom.php:248
+#: image-zoom.php:294
 #@ imagezoom
-msgid "This plugin allows a dynamic zoom on the images (based on the highslide javascript library)"
+msgid "This plugin allows a dynamic zoom on the images (based on the colorbox javascript library)"
 msgstr ""
 
-#: image-zoom.php:251
+#: image-zoom.php:297
 #@ imagezoom
 msgid "What are the clipped dimensions of the zoomed image?"
 msgstr ""
 
-#: image-zoom.php:252
+#: image-zoom.php:298
 #@ imagezoom
 msgid "Max width:"
 msgstr ""
 
-#: image-zoom.php:253
+#: image-zoom.php:299
 #@ imagezoom
 msgid "Max height:"
 msgstr ""
 
-#: image-zoom.php:255
+#: image-zoom.php:301
 #@ imagezoom
 msgid "What is the text for the frontend?"
 msgstr ""
 
-#: image-zoom.php:256
+#: image-zoom.php:302
 #@ imagezoom
 msgid "Previous:"
 msgstr ""
 
-#: image-zoom.php:257
+#: image-zoom.php:303
 #@ imagezoom
 msgid "Next:"
 msgstr ""
 
-#: image-zoom.php:258
+#: image-zoom.php:304
 #@ imagezoom
 msgid "Close:"
 msgstr ""
 
-#: image-zoom.php:259
+#: image-zoom.php:305
 #@ imagezoom
 msgid "Play:"
 msgstr ""
 
-#: image-zoom.php:260
+#: image-zoom.php:306
 #@ imagezoom
 msgid "Pause:"
 msgstr ""
 
-#: image-zoom.php:261
+#: image-zoom.php:307
 #@ imagezoom
 msgid "The image counter:"
 msgstr ""
 
-#: image-zoom.php:262
+#: image-zoom.php:308
 #@ imagezoom
 msgid "The %s will be replace with the index of the image and %s with the total number of images in the page."
 msgstr ""
 
-#: image-zoom.php:264
+#: image-zoom.php:310
 #@ imagezoom
 msgid "What is the theme?"
 msgstr ""
 
-#: image-zoom.php:265
+#: image-zoom.php:311
 #@ imagezoom
 msgid "Choose the theme:"
 msgstr ""
 
-#: image-zoom.php:266
+#: image-zoom.php:312
 #@ imagezoom
 msgid "Theme 01 is : %s."
 msgstr ""
 
-#: image-zoom.php:267
+#: image-zoom.php:313
 #@ imagezoom
 msgid "Theme 02 is : %s."
 msgstr ""
 
-#: image-zoom.php:268
+#: image-zoom.php:314
 #@ imagezoom
 msgid "Theme 03 is : %s."
 msgstr ""
 
-#: image-zoom.php:270
+#: image-zoom.php:316
 #@ imagezoom
 msgid "What are the other parameters?"
 msgstr ""
 
-#: image-zoom.php:271
+#: image-zoom.php:317
 #@ imagezoom
 msgid "Transition time if the slideshow is on:"
 msgstr ""
 
-#: image-zoom.php:272
+#: image-zoom.php:318
 #@ imagezoom
 msgid "Auto-start the slideshow when launched:"
 msgstr ""
 
-#: image-zoom.php:273
+#: image-zoom.php:319
 #@ imagezoom
 msgid "The opacity of the background:"
 msgstr ""
 
-#: image-zoom.php:275
+#: image-zoom.php:321
 #@ imagezoom
 msgid "Advanced parameters?"
 msgstr ""
 
-#: image-zoom.php:276
+#: image-zoom.php:322
 #@ imagezoom
 msgid "List of page exclusions:"
 msgstr ""
 
-#: image-zoom.php:277
+#: image-zoom.php:323
 #@ imagezoom
 msgid "For instance, you may exclude page with URL like %s by setting this option to %s. Please add one regular expressions by line"
 msgstr ""
 
-#: image-zoom.php:278
+#: image-zoom.php:324
 #@ imagezoom
-msgid "Please, do not use the %s characters in the regular expression but instead %s or %s"
+msgid "In addition, you may set this option to %s and to %s to exclude the home page"
 msgstr ""
 
-#: image-zoom.php:281
+#: image-zoom.php:327
 #@ imagezoom
 msgid "Parameters"
 msgstr ""
 
-#: image-zoom.php:288
+#: image-zoom.php:334
 #@ imagezoom
 msgid "Manage translations"
 msgstr ""
 
-#: image-zoom.php:294
+#: image-zoom.php:340
 #@ imagezoom
 msgid "Give feedback"
 msgstr ""
 
-#: image-zoom.php:299
+#: image-zoom.php:345
 #@ imagezoom
 msgid "Other plugins"
 msgstr ""

@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2012-08-02T08:48:43+00:00\n"
+"PO-Revision-Date: 2012-12-30T10:35:09+00:00\n"
 "Last-Translator: SedLex <http://www.sedlex.fr/>\n"
 "Last-Translator: mediacop <>\n"
 "Last-Translator: FlorianP. <floflo63400@gmail.com>\n"
@@ -22,6 +22,21 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Textdomain-Support: yes\n"
 
+msgid "Theme 01"
+msgstr "Thème 01"
+
+msgid "Theme 02"
+msgstr "Thème 02"
+
+msgid "Theme 03"
+msgstr "Thème 03"
+
+msgid "Your theme contains (i.e. in %s file) a hardcoded reference to the jQuery javascript library."
+msgstr "Votre thème contient (dans %s fichier) une référence codée en dur dans la bibliothèque javascript jQuery."
+
+msgid "This reference may break the plugin. So, if the plugin does not work, please either delete this reference or move it just after the %s declaration."
+msgstr "Cette référence peut casser le plugin. Donc, si le plugin ne fonctionne pas, s&#039;il vous plaît, soit supprimer cette référence ou le déplacer juste après la %s déclaration."
+
 msgid "This plugin allows a dynamic zoom on the images (based on the highslide javascript library)"
 msgstr "Ce plugin vous permet de zoomer dynamiquement sur les images (utilise la librairie javascript highslide)"
 
@@ -37,20 +52,11 @@ msgstr "Hauteur maximale :"
 msgid "What is the text for the frontend?"
 msgstr "Quelle est le texte pour le frontend ?"
 
-msgid "Load:"
-msgstr "Chargement :"
-
-msgid "Expand:"
-msgstr "Agrandissement :"
-
 msgid "Previous:"
 msgstr "Précédent :"
 
 msgid "Next:"
 msgstr "Suivant :"
-
-msgid "Move:"
-msgstr "Déplacer :"
 
 msgid "Close:"
 msgstr "Fermer :"
@@ -61,56 +67,11 @@ msgstr "Lecture :"
 msgid "Pause:"
 msgstr "Pause :"
 
-msgid "Restore:"
-msgstr "Restaurer :"
-
-msgid "What are the other parameters?"
-msgstr "Quels sont les autres paramètres ?"
-
-msgid "Transition time if the slideshow is on:"
-msgstr "Durée de transition si le mode panorama est activé :"
-
-msgid "Auto-start the slideshow when launched:"
-msgstr "Commencer automatiquement le mode panorama lors du lancement :"
-
-msgid "The position of the button (play, next, ...) (e.g top center):"
-msgstr "La position des boutons (marche, suivant, ...) (par exemple, top center) :"
-
-msgid "The opacity of the background:"
-msgstr "L&#039;opacité du fond :"
-
-msgid "Parameters"
-msgstr "Paramètres"
-
-msgid "Manage translations"
-msgstr "Gérer les traductions"
-
-msgid "Give feedback"
-msgstr "Donner son avis"
-
-msgid "Other plugins"
-msgstr "Autres plugins"
-
-msgid "Theme 01"
-msgstr "Theme 01"
-
-msgid "Theme 02"
-msgstr "Theme 02"
-
-msgid "Theme 03"
-msgstr "Theme 03"
-
-msgid "Your theme contains (i.e. in %s file) a hardcoded reference to the jQuery javascript library."
-msgstr "Votre thème contient (dans %s fichier) une référence codée en dur dans la bibliothèque javascript jQuery."
-
-msgid "This reference may break the plugin. So, if the plugin does not work, please either delete this reference or move it just after the %s declaration."
-msgstr "Cette référence peut casser le plugin. Donc, si le plugin ne fonctionne pas, s&#039;il vous plaît, soit supprimer cette référence ou le déplacer juste après la %s déclaration."
-
 msgid "The image counter:"
 msgstr "Le compteur d&#039;images:"
 
 msgid "The %s will be replace with the index of the image and %s with the total number of images in the page."
-msgstr "Le %s sera remplacer par l&#039;indice de l&#039;image et %s avec le nombre total d&#039;images dans la page."
+msgstr "Le %s sera remplacé par l&#039;indice de l&#039;image et %s avec le nombre total d&#039;images dans la page."
 
 msgid "What is the theme?"
 msgstr "Quel est le thème?"
@@ -127,6 +88,18 @@ msgstr "Thème 02 est : %s."
 msgid "Theme 03 is : %s."
 msgstr "Thème 03 est : %s."
 
+msgid "What are the other parameters?"
+msgstr "Quels sont les autres paramètres ?"
+
+msgid "Transition time if the slideshow is on:"
+msgstr "Durée de transition si le mode panorama est activé :"
+
+msgid "Auto-start the slideshow when launched:"
+msgstr "Commencer automatiquement le mode panorama lors du lancement :"
+
+msgid "The opacity of the background:"
+msgstr "L&#039;opacité du fond :"
+
 msgid "Advanced parameters?"
 msgstr "Les paramètres avancés?"
 
@@ -136,6 +109,18 @@ msgstr "Liste des pages à exclures:"
 msgid "For instance, you may exclude page with URL like %s by setting this option to %s. Please add one regular expressions by line"
 msgstr "Par exemple, vous pouvez exclure la page avec l&#039;URL %s en mettant cette option à %s. S&#039;il vous plaît, ajouter un expressions régulières par ligne"
 
-msgid "Please, do not use the %s characters in the regular expression but instead %s or %s"
-msgstr "S&#039;il vous plaît, n&#039;utilisez pas de %s caractères dans l&#039;expression régulière, mais au lieu de %s ou %s"
+msgid "In addition, you may set this option to %s and to %s to exclude the home page"
+msgstr "De plus, vous pouvez mettre cette option à %s et à %s pour exclure la page d&#039;accueil "
+
+msgid "Parameters"
+msgstr "Paramètres"
+
+msgid "Manage translations"
+msgstr "Gérer les traductions"
+
+msgid "Give feedback"
+msgstr "Donner son avis"
+
+msgid "Other plugins"
+msgstr "Autres plugins"
 
