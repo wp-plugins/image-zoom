@@ -68,7 +68,7 @@ Have fun !
 
 == Installation ==
 
-1. Upload this folder to your plugin directory (for instance '/wp-content/plugins/')
+1. Upload this folder image-zoom to your plugin directory (for instance '/wp-content/plugins/')
 2. Activate the plugin through the 'Plugins' menu in WordPress
 3. Navigate to the 'SL plugins' box
 4. All plugins developed with the SL core will be listed in this box
@@ -80,6 +80,9 @@ Have fun !
 2. An image zommed
 
 == Changelog ==
+
+= 1.5.8 =
+* Issue 500 error with wordpress
 
 = 1.5.7 =
 * Update of the core
@@ -159,4 +162,4 @@ Have fun !
 Visit http://www.sedlex.fr/cote_geek/
  
  
-InfoVersion:c7e6b828f33503fc914084423582290b
+InfoVersion:cee84ec4e8ae3f0058cd95b967f33368
