@@ -3,7 +3,7 @@
 Plugin Name: Image Zoom
 Plugin Name: zoom, highslide, image, panorama
 Description: <p>Allow to dynamically zoom on images in posts/pages/... </p><p>When clicked, the image will dynamically scale-up. Please note that you have to insert image normally with the wordpress embedded editor.</p><p>You may configure:</p><ul><li>The max width/height of the image; </li><li>The transition delay; </li><li>The position of the buttons; </li><li>The auto-start of the slideshow; </li><li>the opacity of the background; </li><li>the pages to be excluded. </li></ul><p>If the image does not scale-up, please verify that the HTML looks like the following : &lt;a href=' '&gt;&lt;img src=' '&gt;&lt;/a&gt;.</p><p>This plugin implements the colorbox javascript library. </p><p>This plugin is under GPL licence.</p>
-Version: 1.5.8
+Version: 1.5.9
 Author: SedLex
 Author Email: sedlex@sedlex.fr
 Framework Email: sedlex@sedlex.fr
@@ -44,7 +44,8 @@ class imagezoom extends pluginSedLex {
 		$this->image_type = "(bmp|gif|jpeg|jpg|png)" ;
 		
 		// Force the type of link
-		add_action('update_option', array($this, 'image_default_link_type'));
+		add_action('init', array($this, 'image_default_link_type'));
+		add_action('admin_notices', array($this, 'check_image_default_link_type'));
 	}
 	
 	/**
@@ -65,9 +66,22 @@ class imagezoom extends pluginSedLex {
 	*/
 	
 	public function image_default_link_type () {
-		update_option('image_default_link_type' , 'file');
+		if ( get_option( 'image_default_link_type' ) != 'file' ) {
+			update_option('image_default_link_type' , 'file');
+		} 
 	}
 
+	/** ====================================================================================================================================================
+	* Force the options
+	* 
+	* @return void
+	*/
+	
+	public function check_image_default_link_type () {
+		if (get_option( 'image_default_link_type' ) != 'file' ) {
+			echo '<div class="updated"><p>'.sprintf(__("The option %s is not set correctly (at the present time, set to %s). Please go to this page %s and set it to %s", $this->pluginID), "<code>image_default_link_type</code>", "<code>".get_option( 'image_default_link_type' ) ."</code>", "<code>file</code>").'</p></div>';
+		} 
+	}
 
 	/** ====================================================================================================================================================
 	* In order to uninstall the plugin, few things are to be done ... 

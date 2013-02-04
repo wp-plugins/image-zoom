@@ -82,6 +82,9 @@ Have fun !
 == Changelog ==
 
 = 1.5.8 =
+* Activation issue
+
+= 1.5.8 =
 * Issue 500 error with wordpress
 
 = 1.5.7 =
@@ -162,4 +165,4 @@ Have fun !
 Visit http://www.sedlex.fr/cote_geek/
  
  
-InfoVersion:cee84ec4e8ae3f0058cd95b967f33368
+InfoVersion:89e5c09d4e6ff12b84a88b2a9dae43d6
