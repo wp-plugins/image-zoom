@@ -81,34 +81,20 @@ Have fun !
 
 == Changelog ==
 
-= 1.5.8 =
+= 1.6.0 =
+* Detect image when the url is not an url to the media file
+* Possibility to add the title or the alt text
+
+= 1.5.0 -&gt;1.5.9 =
 * Activation issue
-
-= 1.5.8 =
 * Issue 500 error with wordpress
-
-= 1.5.7 =
 * Update of the core
-
-= 1.5.6 =
 * Issue with the new version of wordpress
-
-= 1.5.5 =
 * Some pages may be excluded thanks to a plurality of regexps
-
-= 1.5.4 =
 * Debug and multisite support
-
-= 1.5.3 =
 * Add a warnig if the header contains a jquery reference
-
-= 1.5.2 =
 * Three themes added
-
-= 1.5.1 =
 * Remove the title displayed at the top of the image (will be possible in next release optionally)
-
-= 1.5.0 =
 * Due to the restriction by Wordpress it is forbidden to include Creative Common code in plugin. So, I was asked to change the javascript code to a GPL code. I am sorry if some features that you used have disapear but the library does not provide exactly the same features ... That's why ! 
 
 = 1.4.0 -&gt; 1.4.1 =
@@ -165,4 +151,4 @@ Have fun !
 Visit http://www.sedlex.fr/cote_geek/
  
  
-InfoVersion:89e5c09d4e6ff12b84a88b2a9dae43d6
+InfoVersion:edf26f9da40a5f43b7020fbe868b305a

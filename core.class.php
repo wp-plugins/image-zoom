@@ -583,9 +583,10 @@ if (!class_exists('pluginSedLex')) {
 			// On cree le machin
 			if ($path_ok) {
 				$css_f = $path."/".$id.'.js' ; 
-				if (!is_file($css_f)) {
+				if (!@is_file($css_f)) {
 					@file_put_contents($css_f, $text) ; 
 				}
+				@chmod($css_f, 0755);
 				$sedlex_list_scripts[] = $css_f ; 
 			} else {
 				echo "\n<script type='text/javascript'>\n" ; 
@@ -615,7 +616,7 @@ if (!class_exists('pluginSedLex')) {
 				}
 				if ($plugin[count($plugin)-1]!="sedlex") {
 					$plugin = explode("/", $plugin[count($plugin)-1]) ; 
-					if ((!isset($plugin[0]))||(!is_file(WP_PLUGIN_DIR."/".$plugin[0]."/core.class.php")))
+					if ((!isset($plugin[0]))||(!@is_file(WP_PLUGIN_DIR."/".$plugin[0]."/core.class.php")))
 						return;
 				}
 			}
@@ -633,7 +634,7 @@ if (!class_exists('pluginSedLex')) {
 				// We create the file if it does not exist
 				$out = "" ; 
 				foreach( $sedlex_list_scripts as $file ) {
-					if (is_file($file)) {
+					if (@is_file($file)) {
 						$out .=  "\n/*====================================================*/\n";
 						$out .=  "/* FILE ".str_replace(WP_CONTENT_DIR,"",$file)  ."*/\n";
 						$out .=  "/*====================================================*/\n";
@@ -645,9 +646,12 @@ if (!class_exists('pluginSedLex')) {
 					}
 				}
 				$md5 = md5($out) ; 
-				if (!is_file(WP_CONTENT_DIR."/sedlex/inline_scripts/".$md5.".js")) {
+				if (!@is_file(WP_CONTENT_DIR."/sedlex/inline_scripts/".$md5.".js")) {
 					@file_put_contents(WP_CONTENT_DIR."/sedlex/inline_scripts/".$md5.".js", $out) ; 
 				}
+				
+				@chmod(WP_CONTENT_DIR."/sedlex/inline_scripts/".$md5.".js", 0755);
+				
 				$url = WP_PLUGIN_URL.'/'.str_replace(basename(__FILE__),"",plugin_basename(__FILE__)).'core/load-scripts.php?c=0&load='.$md5 ; 
 				wp_enqueue_script('sedlex_scripts', $url, array() ,date('Ymd'));
 				$sedlex_list_scripts = array(); 
@@ -670,7 +674,7 @@ if (!class_exists('pluginSedLex')) {
 			}
 			if ($plugin[count($plugin)-1]!="sedlex") {
 				$plugin = explode("/", $plugin[count($plugin)-1]) ; 
-				if ((!isset($plugin[0]))||(!is_file(WP_PLUGIN_DIR."/".$plugin[0]."/core.class.php")))
+				if ((!isset($plugin[0]))||(!@is_file(WP_PLUGIN_DIR."/".$plugin[0]."/core.class.php")))
 					return;
 			}	
 			
@@ -780,9 +784,10 @@ if (!class_exists('pluginSedLex')) {
 			// On cree le machin
 			if ($path_ok) {
 				$css_f = $path."/".$id.'.css' ; 
-				if (!is_file($css_f)) {
+				if (!@is_file($css_f)) {
 					@file_put_contents($css_f , $text); 
 				} 
+				@chmod($css_f, 0755);
 				$sedlex_list_styles[] = $css_f ; 
 			} else {
 				echo "\n<style type='text/css'>\n" ; 
@@ -812,7 +817,7 @@ if (!class_exists('pluginSedLex')) {
 				}
 				if ($plugin[count($plugin)-1]!="sedlex") {
 					$plugin = explode("/", $plugin[count($plugin)-1]) ; 
-					if ((!isset($plugin[0]))||(!is_file(WP_PLUGIN_DIR."/".$plugin[0]."/core.class.php")))
+					if ((!isset($plugin[0]))||(!@is_file(WP_PLUGIN_DIR."/".$plugin[0]."/core.class.php")))
 						return;
 				}
 			}
@@ -831,7 +836,7 @@ if (!class_exists('pluginSedLex')) {
 				// We create the file if it does not exist
 				$out = "" ; 
 				foreach( $sedlex_list_styles as $file ) {
-					if (is_file($file)) {
+					if (@is_file($file)) {
 						$out .=  "\n/*====================================================*/\n";
 						$out .=  "/* FILE ".str_replace(WP_CONTENT_DIR,"",$file)  ."*/\n";
 						$out .=  "/*====================================================*/\n";
@@ -853,9 +858,12 @@ if (!class_exists('pluginSedLex')) {
 					}
 				}
 				$md5 = md5($out) ; 
-				if (!is_file(WP_CONTENT_DIR."/sedlex/inline_styles/".$md5.".css")) {
+				if (!@is_file(WP_CONTENT_DIR."/sedlex/inline_styles/".$md5.".css")) {
 					@file_put_contents(WP_CONTENT_DIR."/sedlex/inline_styles/".$md5.".css", $out) ; 
 				}
+				
+				@chmod(WP_CONTENT_DIR."/sedlex/inline_styles/".$md5.".css", 0755);
+				
 				$url = WP_PLUGIN_URL.'/'.str_replace(basename(__FILE__),"",plugin_basename( __FILE__)).'core/load-styles.php?c=0&load='.$md5 ; 
 				wp_enqueue_style('sedlex_styles', $url, array() ,date('Ymd'));
 
@@ -881,7 +889,7 @@ if (!class_exists('pluginSedLex')) {
 			}
 			if ($plugin[count($plugin)-1]!="sedlex") {
 				$plugin = explode("/", $plugin[count($plugin)-1]) ; 
-				if ((!isset($plugin[0]))||(!is_file(WP_PLUGIN_DIR."/".$plugin[0]."/core.class.php")))
+				if ((!isset($plugin[0]))||(!@is_file(WP_PLUGIN_DIR."/".$plugin[0]."/core.class.php")))
 					return;
 			}
 			
@@ -1187,7 +1195,7 @@ if (!class_exists('pluginSedLex')) {
 			
 			$result = "" ; 
 			foreach ($folders as $f ) {
-				if ( (is_dir($f[0])) || (is_file($f[0])) ) {
+				if ( (is_dir($f[0])) || (@is_file($f[0])) ) {
 					$readable = Utils::is_readable($f[0]) ; 
 					$writable = Utils::is_writable($f[0]) ; 
 					
@@ -1204,7 +1212,7 @@ if (!class_exists('pluginSedLex')) {
 					if ($pb) {
 						if  (is_dir($f[0])) 
 							$result .= "<p>".sprintf(__('The folder %s is not %s !','SL_framework'), "<code>".$f[0]."</code>", "<code>".$f[1]."</code>")."</p>" ; 
-						if  (is_file($f[0])) 
+						if  (@is_file($f[0])) 
 							$result .= "<p>".sprintf(__('The file %s is not %s !','SL_framework'), "<code>".$f[0]."</code>", "<code>".$f[1]."</code>")."</p>" ; 
 					}
 				} else {

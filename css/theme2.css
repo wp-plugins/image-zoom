@@ -32,15 +32,16 @@
 }
 #cboxTitle{
 	position:absolute; 
-	top:-9999px;
-	left:-9999px;
+	bottom:-20px; 
 	color:#ccc;
-	text-indent:-9999px;
+}
+#cboxTitle h2{
+	font-size:110%;
+	font-weight:bold ; 
 }
 #cboxCurrent{
-	position:absolute; 
-	top:-20px; 
-	right:0px; 
+	border:5px; 
+	padding:5px; 
 	color:#ccc;
 }
 

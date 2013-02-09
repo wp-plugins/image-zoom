@@ -3,7 +3,8 @@
 Plugin Name: Image Zoom
 Plugin Name: zoom, highslide, image, panorama
 Description: <p>Allow to dynamically zoom on images in posts/pages/... </p><p>When clicked, the image will dynamically scale-up. Please note that you have to insert image normally with the wordpress embedded editor.</p><p>You may configure:</p><ul><li>The max width/height of the image; </li><li>The transition delay; </li><li>The position of the buttons; </li><li>The auto-start of the slideshow; </li><li>the opacity of the background; </li><li>the pages to be excluded. </li></ul><p>If the image does not scale-up, please verify that the HTML looks like the following : &lt;a href=' '&gt;&lt;img src=' '&gt;&lt;/a&gt;.</p><p>This plugin implements the colorbox javascript library. </p><p>This plugin is under GPL licence.</p>
-Version: 1.5.9
+Version: 1.6.0
+
 Author: SedLex
 Author Email: sedlex@sedlex.fr
 Framework Email: sedlex@sedlex.fr
@@ -43,9 +44,6 @@ class imagezoom extends pluginSedLex {
 		//Parametres supplementaires		
 		$this->image_type = "(bmp|gif|jpeg|jpg|png)" ;
 		
-		// Force the type of link
-		add_action('init', array($this, 'image_default_link_type'));
-		add_action('admin_notices', array($this, 'check_image_default_link_type'));
 	}
 	
 	/**
@@ -56,31 +54,6 @@ class imagezoom extends pluginSedLex {
 			self::$instance = new self;
 		}
 		return self::$instance;
-	}
-	
-	
-	/** ====================================================================================================================================================
-	* Force the options
-	* 
-	* @return void
-	*/
-	
-	public function image_default_link_type () {
-		if ( get_option( 'image_default_link_type' ) != 'file' ) {
-			update_option('image_default_link_type' , 'file');
-		} 
-	}
-
-	/** ====================================================================================================================================================
-	* Force the options
-	* 
-	* @return void
-	*/
-	
-	public function check_image_default_link_type () {
-		if (get_option( 'image_default_link_type' ) != 'file' ) {
-			echo '<div class="updated"><p>'.sprintf(__("The option %s is not set correctly (at the present time, set to %s). Please go to this page %s and set it to %s", $this->pluginID), "<code>image_default_link_type</code>", "<code>".get_option( 'image_default_link_type' ) ."</code>", "<code>file</code>").'</p></div>';
-		} 
 	}
 
 	/** ====================================================================================================================================================
@@ -125,6 +98,8 @@ class imagezoom extends pluginSedLex {
 			case 'widthRestriction'		 	: return 640 	; break ; 
 			case 'heightRestriction'		: return 900 	; break ; 
 			case 'show_interval'		 	: return 5000 	; break ; 
+			case 'show_alt'		 			: return false 	; break ; 
+			case 'show_title'		 		: return false 	; break ; 
 			case 'background_opacity'		: return "0.8" ; break ; 
 			case 'slideshow_autostart'		: return false ; break ; 
 			case 'tra_image'		: return "Image {current} of {total}" ; break ; 
@@ -176,8 +151,43 @@ class imagezoom extends pluginSedLex {
 		jQuery(document).ready(function () {
 			jQuery('a.gallery_colorbox').colorbox({ 
 				slideshow: true,
+				<?php if (($this->get_param('show_alt'))&&(!$this->get_param('show_title'))) { ?>
+				title: function(){ 
+					if (typeof jQuery(this).children("img:first").attr('alt') !== "undefined") {
+						return jQuery(this).children("img:first").attr('alt'); 
+					} else {
+						return "" ; 
+					}
+				},
+				<?php } else if ((!$this->get_param('show_alt'))&&($this->get_param('show_title'))) { ?>
+				title: function(){ 
+					if (typeof jQuery(this).children("img:first").attr('title') !== "undefined") {
+						return "<h2>"+jQuery(this).children("img:first").attr('title')+"</h2>" ; 
+					} else {
+						return "" ; 
+					}
+				},
+				<?php } else if (($this->get_param('show_alt'))&&($this->get_param('show_title'))) { ?>
+				title: function(){ 
+					var out = "" ; 
+					if (typeof jQuery(this).children("img:first").attr('title') !== "undefined") {
+						out = out + "<h2>"+jQuery(this).children("img:first").attr('title')+"</h2>" ; 
+					} else {
+						out = out + "" ; 
+					}
+					if (typeof jQuery(this).children("img:first").attr('alt') !== "undefined") {
+						out = out + jQuery(this).children("img:first").attr('alt'); 
+					} else {
+						out = out + "" ; 
+					}
+					return out; 
+				},
+				<?php 				
+				} else {
+				?>
 				title: false,
-				<?php if ($this->get_param('slideshow_autostart')) { ?>
+				<?php }
+				if ($this->get_param('slideshow_autostart')) { ?>
 				slideshowAuto:true,
 				<?php } else { ?>
 				slideshowAuto:false,
@@ -242,10 +252,6 @@ class imagezoom extends pluginSedLex {
 		}
 	}
 
-
-	
-
-	
 	/** ====================================================================================================================================================
 	* Called when the content is displayed
 	*
@@ -269,12 +275,47 @@ class imagezoom extends pluginSedLex {
 			}
 		}
 		
-		$pattern = '/(<a([^>]*?)href="([^"]*[.])'.$this->image_type.'"([^>]*?)>((?:[^<]|<br)*)<img([^>]*?)src="([^"]*[.])'.$this->image_type.'"([^>]*?)>([^<]|<br)*<\/a>)/iesU';
-		$replacement = 'stripslashes("<a\2href=\"\3\4\" class=\"gallery_colorbox\"\5>\6<img\7src=\"\8\9\" \10>\11</a>")';
-		//$replacement = 'stripslashes("<a\2href=\"\3\4\" class=\"gallery_colorbox\"\5>\6<img\7src=\"\8\9\" \10>\11</a>")';
-		return preg_replace($pattern, $replacement, $string);
+		$pattern = '/(<a([^>]*?)href="([^"]*)"([^>]*?)>((?:[^<]|<br)*)<img([^>]*?)src="([^"]*[.])'.$this->image_type.'"([^>]*?)>([^<]|<br)*<\/a>)/iu';
+		$out = preg_replace_callback($pattern, array($this,"_modify_content_callback"), $string);
+		
+		return $out ; 
 	}
+	
+	/** ====================================================================================================================================================
+	* Called when the content is displayed
+	*
+	* @param string $content the content which will be displayed
+	* @param string $type the type of the article (e.g. post, page, custom_type1, etc.)
+	* @param boolean $excerpt if the display is performed during the loop
+	* @return string the new content
+	*/
+	
+	function _modify_content_callback($matches) {
+  		// comme d'habitude : $matches[0] represente la valeur totale
+  		// $matches[1] represente la première parenthèse capturante
 
+		$pattern_img = '/(<a([^>]*?)href="([^"]*[.])'.$this->image_type.'"([^>]*?)>((?:[^<]|<br)*)<img([^>]*?)src="([^"]*[.])'.$this->image_type.'"([^>]*?)>([^<]|<br)*<\/a>)/iesU';
+  		$replacement_img = 'stripslashes("<a\2href=\"\3\4\" class=\"gallery_colorbox\"\5>\6<img\7src=\"\8\9\" \10>\11</a>")';
+		
+		if (preg_match($pattern_img, $matches[0])) {
+			return preg_replace($pattern_img, $replacement_img, $matches[0]);
+		}
+		
+		$id_attach = url_to_postid($matches[3]) ; 
+		if ($id_attach!=0) {
+			$pattern = '/(<a([^>]*?)href="([^"]*)"([^>]*?)>((?:[^<]|<br)*)<img([^>]*?)src="([^"]*[.])'.$this->image_type.'"([^>]*?)>([^<]|<br)*<\/a>)/iesU';
+  			$image = wp_get_attachment_image_src( $id_attach , 'full');
+			$replacement = 'stripslashes("<a\2href=\"'.$image[0].'\" class=\"gallery_colorbox\"\4>\5<img\6src=\"\7\8\" \9>\10</a>")';
+			
+			return preg_replace($pattern, $replacement, $matches[0]);
+		}
+		
+		$pattern_file = '/(<a([^>]*?)href="([^"]*)"([^>]*?)>((?:[^<]|<br)*)<img([^>]*?)src="([^"]*[.])'.$this->image_type.'"([^>]*?)>([^<]|<br)*<\/a>)/iesU';
+
+
+  		return $matches[0];
+	}
+	
 	/** ====================================================================================================================================================
 	* The configuration page
 	* 
@@ -335,6 +376,10 @@ class imagezoom extends pluginSedLex {
 				$params->add_comment(sprintf(__('Theme 01 is : %s.',$this->pluginID), "<img src='".WP_PLUGIN_URL.'/'.str_replace(basename(__FILE__),"",plugin_basename(__FILE__))."img/theme1_illustr.jpg"."'/>")) ; 
 				$params->add_comment(sprintf(__('Theme 02 is : %s.',$this->pluginID), "<img src='".WP_PLUGIN_URL.'/'.str_replace(basename(__FILE__),"",plugin_basename(__FILE__))."img/theme2_illustr.jpg"."'/>")) ; 
 				$params->add_comment(sprintf(__('Theme 03 is : %s.',$this->pluginID), "<img src='".WP_PLUGIN_URL.'/'.str_replace(basename(__FILE__),"",plugin_basename(__FILE__))."img/theme3_illustr.jpg"."'/>")) ; 
+				
+				$params->add_title(__('Show description text',$this->pluginID)) ; 
+				$params->add_param('show_title', __('Show the title of the image:',$this->pluginID)) ; 
+				$params->add_param('show_alt', __('Show the alternative text of the image:',$this->pluginID)) ; 
 				
 				$params->add_title(__('What are the other parameters?',$this->pluginID)) ; 
 				$params->add_param('show_interval', __('Transition time if the slideshow is on:',$this->pluginID)) ; 
