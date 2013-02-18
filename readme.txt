@@ -81,6 +81,9 @@ Have fun !
 
 == Changelog ==
 
+= 1.6.1 =
+* Bug when the link points to an post url
+
 = 1.6.0 =
 * Detect image when the url is not an url to the media file
 * Possibility to add the title or the alt text
@@ -151,4 +154,4 @@ Have fun !
 Visit http://www.sedlex.fr/cote_geek/
  
  
-InfoVersion:edf26f9da40a5f43b7020fbe868b305a
+InfoVersion:db2d4cb7f81cbc0735e726d3ec97b201
