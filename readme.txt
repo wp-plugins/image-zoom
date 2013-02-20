@@ -81,6 +81,9 @@ Have fun !
 
 == Changelog ==
 
+= 1.6.2 =
+* Add a new theme with button out of the image
+
 = 1.6.1 =
 * Bug when the link points to an post url
 
@@ -154,4 +157,4 @@ Have fun !
 Visit http://www.sedlex.fr/cote_geek/
  
  
-InfoVersion:db2d4cb7f81cbc0735e726d3ec97b201
+InfoVersion:a97f853bbc255971e8f0398b6b6f1f25

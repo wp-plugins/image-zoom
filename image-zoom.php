@@ -3,7 +3,7 @@
 Plugin Name: Image Zoom
 Plugin Name: zoom, highslide, image, panorama
 Description: <p>Allow to dynamically zoom on images in posts/pages/... </p><p>When clicked, the image will dynamically scale-up. Please note that you have to insert image normally with the wordpress embedded editor.</p><p>You may configure:</p><ul><li>The max width/height of the image; </li><li>The transition delay; </li><li>The position of the buttons; </li><li>The auto-start of the slideshow; </li><li>the opacity of the background; </li><li>the pages to be excluded. </li></ul><p>If the image does not scale-up, please verify that the HTML looks like the following : &lt;a href=' '&gt;&lt;img src=' '&gt;&lt;/a&gt;.</p><p>This plugin implements the colorbox javascript library. </p><p>This plugin is under GPL licence.</p>
-Version: 1.6.1
+Version: 1.6.2
 
 Author: SedLex
 Author Email: sedlex@sedlex.fr
@@ -113,9 +113,32 @@ class imagezoom extends pluginSedLex {
 			case 'theme'		: return array(		array("*".__("Theme 01", $this->pluginID), "th01"), 
 											array(__("Theme 02", $this->pluginID), "th02"),											
 											array(__("Theme 03", $this->pluginID), "th03"),
+											array(__("Theme 04", $this->pluginID), "th04")
 									   ) ; break ; 
 		}
 		return null ;
+	}
+	
+	/**====================================================================================================================================================
+	* Function called when the plugin is activated
+	* For instance, you can do stuff regarding the update of the format of the database if needed
+	* If you do not need this function, you may delete it.
+	*
+	* @return void
+	*/
+	
+	public function _update() {
+		$theme = $this->get_param('theme') ; 
+		$is_theme4 = false ; 
+		foreach ($theme as $val) {
+			if ($val[1]=="th04") {
+				$is_theme4 = true ; 
+			}
+		}
+		if (!$is_theme4) {
+			$theme = array_merge($theme, array(array(__("Theme 04", $this->pluginID), "th04"))) ; 
+		}
+		$this->set_param('theme', $theme) ; 
 	}
 	
 
@@ -248,6 +271,9 @@ class imagezoom extends pluginSedLex {
 				if ($t[1]=="th03") {
 					$this->add_css(WP_PLUGIN_URL.'/'.str_replace(basename(__FILE__),"",plugin_basename(__FILE__))."css/theme3.css") ; 
 				}
+				if ($t[1]=="th04") {
+					$this->add_css(WP_PLUGIN_URL.'/'.str_replace(basename(__FILE__),"",plugin_basename(__FILE__))."css/theme4.css") ; 
+				}
 			}
 		}
 	}
@@ -376,6 +402,7 @@ class imagezoom extends pluginSedLex {
 				$params->add_comment(sprintf(__('Theme 01 is : %s.',$this->pluginID), "<img src='".WP_PLUGIN_URL.'/'.str_replace(basename(__FILE__),"",plugin_basename(__FILE__))."img/theme1_illustr.jpg"."'/>")) ; 
 				$params->add_comment(sprintf(__('Theme 02 is : %s.',$this->pluginID), "<img src='".WP_PLUGIN_URL.'/'.str_replace(basename(__FILE__),"",plugin_basename(__FILE__))."img/theme2_illustr.jpg"."'/>")) ; 
 				$params->add_comment(sprintf(__('Theme 03 is : %s.',$this->pluginID), "<img src='".WP_PLUGIN_URL.'/'.str_replace(basename(__FILE__),"",plugin_basename(__FILE__))."img/theme3_illustr.jpg"."'/>")) ; 
+				$params->add_comment(sprintf(__('Theme 04 is : %s (created by %s).',$this->pluginID), "<img src='".WP_PLUGIN_URL.'/'.str_replace(basename(__FILE__),"",plugin_basename(__FILE__))."img/theme4_illustr.jpg"."'/>", "Andreas Amundin")) ; 
 				
 				$params->add_title(__('Show description text',$this->pluginID)) ; 
 				$params->add_param('show_title', __('Show the title of the image:',$this->pluginID)) ; 
