@@ -3,7 +3,8 @@
 Plugin Name: Image Zoom
 Plugin Name: zoom, highslide, image, panorama
 Description: <p>Allow to dynamically zoom on images in posts/pages/... </p><p>When clicked, the image will dynamically scale-up. Please note that you have to insert image normally with the wordpress embedded editor.</p><p>You may configure:</p><ul><li>The max width/height of the image; </li><li>The transition delay; </li><li>The position of the buttons; </li><li>The auto-start of the slideshow; </li><li>the opacity of the background; </li><li>the pages to be excluded. </li></ul><p>If the image does not scale-up, please verify that the HTML looks like the following : &lt;a href=' '&gt;&lt;img src=' '&gt;&lt;/a&gt;.</p><p>This plugin implements the colorbox javascript library. </p><p>This plugin is under GPL licence.</p>
-Version: 1.6.2
+Version: 1.6.3
+
 
 Author: SedLex
 Author Email: sedlex@sedlex.fr
@@ -102,6 +103,8 @@ class imagezoom extends pluginSedLex {
 			case 'show_title'		 		: return false 	; break ; 
 			case 'background_opacity'		: return "0.8" ; break ; 
 			case 'slideshow_autostart'		: return false ; break ; 
+			case 'disable_nav_buttons'		: return false ; break ; 
+			case 'disable_slide_buttons'	: return false ; break ; 
 			case 'tra_image'		: return "Image {current} of {total}" ; break ; 
 			case 'tra_previous'		: return "Previous" ; break ; 
 			case 'tra_next'			: return "Next" ; break ; 
@@ -226,6 +229,21 @@ class imagezoom extends pluginSedLex {
 				maxWidth: <?php echo $this->get_param('widthRestriction') ; ?>, 
 				maxHeight : <?php echo $this->get_param('heightRestriction') ; ?>,
 				opacity:<?php echo $this->get_param('background_opacity');?> , 
+				onComplete : function(){ 
+				<?php
+				if ($this->get_param('disable_nav_buttons')) {
+				?>
+					jQuery("#cboxPrevious").hide();
+					jQuery("#cboxNext").hide();
+				<?php
+				}
+				if ($this->get_param('disable_slide_buttons')) {
+				?>
+					jQuery("#cboxSlideshow").hide();
+				<?php
+				}
+				?>
+				},
 				rel:'group1' 
 			});
 		});	
@@ -414,6 +432,8 @@ class imagezoom extends pluginSedLex {
 				$params->add_param('background_opacity', __('The opacity of the background:',$this->pluginID)) ; 
 				
 				$params->add_title(__('Advanced parameters?',$this->pluginID)) ; 
+				$params->add_param('disable_nav_buttons', __('Disable the navigation buttons on images:',$this->pluginID)) ; 
+				$params->add_param('disable_slide_buttons', __('Disable the slideshow buttons on images:',$this->pluginID)) ; 
 				$params->add_param('exclu', __('List of page exclusions:',$this->pluginID)) ; 
 				$params->add_comment(sprintf(__('For instance, you may exclude page with URL like %s by setting this option to %s. Please add one regular expressions by line',$this->pluginID), "<code>http://yourdomain.tld/portfolio/</code>", "<code>portfolio</code>")) ; 
 				$params->add_comment(sprintf(__('In addition, you may set this option to %s and to %s to exclude the home page',$this->pluginID), "<code>^/$</code>", "<code>^$</code>")) ; 

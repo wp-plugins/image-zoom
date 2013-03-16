@@ -4,8 +4,9 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2012-06-18T11:57:53+00:00\n"
+"PO-Revision-Date: 2013-03-03T18:28:53+00:00\n"
 "Last-Translator: PC-Rider <annodevries@gmail.com>\n"
+"Last-Translator: Erik <www.digihulpdienst.nl>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -48,34 +49,34 @@ msgid "Max height:"
 msgstr "Max hoogte"
 
 msgid "What is the text for the frontend?"
-msgstr "Wat is de tekst voor het dashboard?"
+msgstr "Wat is de tekst voor de voorzijde?"
 
 msgid "Previous:"
-msgstr "Vorige"
+msgstr "Vorige:"
 
 msgid "Next:"
-msgstr "Volgende"
+msgstr "Volgende:"
 
 msgid "Close:"
-msgstr "Sluit"
+msgstr "Sluit:"
 
 msgid "Play:"
-msgstr "Speel af"
+msgstr "Speel af:"
 
 msgid "Pause:"
-msgstr "Pauseer"
+msgstr "Pauseer:"
 
 msgid "The image counter:"
-msgstr "De afbeeldings teller"
+msgstr "De afbeeldings teller:"
 
 msgid "The %s will be replace with the index of the image and %s with the total number of images in the page."
-msgstr "De %s zal vervangen worden door de index van de afbeelding en %s met het totaal aantal afbeeldingen op de pagina"
+msgstr "De %s zal vervangen worden door de index van de afbeelding en %s met het totaal aantal afbeeldingen op de pagina."
 
 msgid "What is the theme?"
 msgstr "Wat is het thema?"
 
 msgid "Choose the theme:"
-msgstr "Kies het thema"
+msgstr "Kies het thema:"
 
 msgid "Theme 01 is : %s."
 msgstr "Thema 01 is %s."
@@ -93,13 +94,13 @@ msgid "Transition time if the slideshow is on:"
 msgstr "Overgangstijd als de slideshow is ingeschakeld:"
 
 msgid "Auto-start the slideshow when launched:"
-msgstr "Auto-start de diavoorstelling wanneer ingeschaleld"
+msgstr "Auto-start de diavoorstelling wanneer ingeschakeld:"
 
 msgid "The opacity of the background:"
 msgstr "De ondoorzichtigheid van de achtergrond:"
 
 msgid "Parameters"
-msgstr "parameters"
+msgstr "Parameters"
 
 msgid "Manage translations"
 msgstr "Beheer vertalingen"
@@ -108,17 +109,23 @@ msgid "Give feedback"
 msgstr "Geef feedback"
 
 msgid "Other plugins"
-msgstr "andere plugins"
+msgstr "Andere plugins"
 
 msgid "Advanced parameters?"
-msgstr "Geavanceerde instellingen"
+msgstr "Geavanceerde instellingen?"
 
 msgid "List of page exclusions:"
-msgstr "Lijst van uitgesloten pagina&#039;s"
+msgstr "Lijst van uitgesloten pagina&#039;s:"
 
 msgid "For instance, you may exclude page with URL like %s by setting this option to %s. Please add one regular expressions by line"
-msgstr "Bijvoorbeeld kun je pagina&#039;s uitsluiten meet een URL als: %s door deze optie op %s te zetten. Voeg a.u.b één reguliere expressie per regel toe."
+msgstr "Bijvoorbeeld kun je pagina&#039;s uitsluiten met een URL als: %s door deze optie op %s te zetten. Voeg a.u.b één reguliere expressie per regel toe."
 
 msgid "Please, do not use the %s characters in the regular expression but instead %s or %s"
 msgstr "A.u.b gebruik de %s characters niet in de reguliere expressie maar %s of %s."
+
+msgid "This plugin allows a dynamic zoom on the images (based on the colorbox javascript library)"
+msgstr "Met deze plugin kun je afbeelding dynamisch zommen (gebaseerd op de colorbox javascript library)"
+
+msgid "In addition, you may set this option to %s and to %s to exclude the home page"
+msgstr "Je kunt eventueeel die optie kiezen om %s en %s om de beginpagina uit te sluiten"
 

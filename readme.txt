@@ -48,7 +48,7 @@ This plugin is compatible with multi-site installation.
 * Croatian (Croatia) translation provided by Rene
 * Hungarian (Hungary) translation provided by Metoyou, DvnyiFerenc
 * Lithuanian (Lithuania) translation provided by ydrius
-* Dutch (Netherlands) translation provided by PC-Rider
+* Dutch (Netherlands) translation provided by PC-Rider, Erik
 * Polish (Poland) translation provided by rzuf
 * Russian (Russia) translation provided by sever, Sprigin, vyachek
 * Vietnamese (Viet Nam) translation provided by Khco
@@ -80,6 +80,9 @@ Have fun !
 2. An image zommed
 
 == Changelog ==
+
+= 1.6.3 =
+* You can now disable the button if you do not like them
 
 = 1.6.2 =
 * Add a new theme with button out of the image
@@ -146,8 +149,6 @@ Have fun !
 * Add a form to send feedback to the author
 * Major release of the framework (3.0)
 * Bug correction (thanks to Chipset): block property of images was cleared and this action could have change their paginations
-
-= 1.0.1 =
 * First release in the wild web (enjoy)
 
 == Frequently Asked Questions ==
@@ -157,4 +158,4 @@ Have fun !
 Visit http://www.sedlex.fr/cote_geek/
  
  
-InfoVersion:a97f853bbc255971e8f0398b6b6f1f25
+InfoVersion:8a16de51c5bbf7322cc5a256b78e4ad8
