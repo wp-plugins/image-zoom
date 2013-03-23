@@ -81,6 +81,10 @@ Have fun !
 
 == Changelog ==
 
+= 1.6.4 =
+* Wordpress gallery is now supported
+* Click on the image may close the slideshow
+
 = 1.6.3 =
 * You can now disable the button if you do not like them
 
@@ -158,4 +162,4 @@ Have fun !
 Visit http://www.sedlex.fr/cote_geek/
  
  
-InfoVersion:8a16de51c5bbf7322cc5a256b78e4ad8
+InfoVersion:ebc4bb34b4402f595e73e4cf4205789e
