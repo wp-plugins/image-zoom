@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2012-03-23T19:37:42+00:00\n"
+"PO-Revision-Date: 2013-04-02T11:26:00+00:00\n"
 "Last-Translator: rzuf <info@andrek.info>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -29,20 +29,11 @@ msgstr "Temat 02"
 msgid "Theme 03"
 msgstr "Temat 03"
 
-msgid "This plugin allows a dynamic zoom on the images (based on the highslide javascript library)"
-msgstr ""
-
-msgid "What are the clipped dimensions of the zoomed image?"
-msgstr ""
-
 msgid "Max width:"
 msgstr "Maksymalna szerokość:"
 
 msgid "Max height:"
 msgstr "Maksymalna wysokość:"
-
-msgid "What is the text for the frontend?"
-msgstr ""
 
 msgid "Previous:"
 msgstr "Poprzedni:"
@@ -61,9 +52,6 @@ msgstr "Wstrzymaj:"
 
 msgid "The image counter:"
 msgstr "Paginacja obrazów:"
-
-msgid "The %s will be replace with the index of the image and %s with the total number of images in the page."
-msgstr ""
 
 msgid "What is the theme?"
 msgstr "Jaki chcesz temat?"
@@ -103,4 +91,19 @@ msgstr "Wyraź swoją opinię"
 
 msgid "Other plugins"
 msgstr "Inne wtyczki"
+
+msgid "This plugin allows a dynamic zoom on the images (based on the colorbox javascript library)"
+msgstr "Ten plugin pozwala na dynamiczne przybliżanie obrazków (na bazie biblioteki colorbox)"
+
+msgid "What are the clipped dimensions of the zoomed image?"
+msgstr "Jakie są wymiary powiększanego obrazu?"
+
+msgid "The %s will be replace with the index of the image and %s with the total number of images in the page."
+msgstr "%s zostanie zastąpiony numerem obrazka a %s całkowitą liczbą obrazków na stronie."
+
+msgid "Advanced parameters?"
+msgstr "Zaawansowane parametry?"
+
+msgid "In addition, you may set this option to %s and to %s to exclude the home page"
+msgstr "Dodatkowo, możesz ustawić tą opcję dla %s oraz dla %s, żeby wyłączyć stronę główną"
 
