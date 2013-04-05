@@ -81,6 +81,9 @@ Have fun !
 
 == Changelog ==
 
+= 1.6.5 =
+* Sometime there is some bug with the url of the cursor ... probably due to browsers.
+
 = 1.6.4 =
 * Wordpress gallery is now supported
 * Click on the image may close the slideshow
@@ -162,4 +165,4 @@ Have fun !
 Visit http://www.sedlex.fr/cote_geek/
  
  
-InfoVersion:ae6bc978ef7473327cf2d78f9d6d0a32
+InfoVersion:76d63dd64da342c8dde6c27c164f10ab
