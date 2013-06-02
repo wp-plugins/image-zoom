@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2012-07-27T17:37:03+00:00\n"
+"PO-Revision-Date: 2013-04-07T14:50:38+00:00\n"
 "Last-Translator: aboRoma <jacksacali@gmail.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -33,10 +33,10 @@ msgid "Your theme contains (i.e. in %s file) a hardcoded reference to the jQuery
 msgstr "المظهر يحتوي (مثلاً في %s ملف) في إشارة ضمنية إلى jQuery من مكتبة جافا سكريبت"
 
 msgid "This reference may break the plugin. So, if the plugin does not work, please either delete this reference or move it just after the %s declaration."
-msgstr "هذه الإشارة قد تعطل الإضافة، لذا إذا توقفت الإضافة عن العمل، إما إحذف هذه الإشارة أو إلتزم بما هو مكتوب"
+msgstr "هذه الإشارة قد تعطل الإضافة، لذا إذا توقفت الإضافة عن العمل، إما إحذف هذه الإشارة %s أو إلتزم بما هو مكتوب"
 
-msgid "This plugin allows a dynamic zoom on the images (based on the highslide javascript library)"
-msgstr "هذه الإضافة تتيح تكبير ديناميكي للصورة (اعتماداً على مكتبات هاي سلايد في جافا سكريبت)"
+msgid "This plugin allows a dynamic zoom on the images (based on the colorbox javascript library)"
+msgstr ""
 
 msgid "What are the clipped dimensions of the zoomed image?"
 msgstr "ما هي أبعاد القص للصورة المكبرة؟"
@@ -96,7 +96,7 @@ msgid "Auto-start the slideshow when launched:"
 msgstr "تشغيل تلقائي لعرض الشرائح:"
 
 msgid "The opacity of the background:"
-msgstr "شفافية الخلفية: "
+msgstr "شفافية الخلفية:"
 
 msgid "Advanced parameters?"
 msgstr "بارامترات متقدمة؟"
@@ -107,8 +107,8 @@ msgstr "قائمة بالصفحات المستبعدة:"
 msgid "For instance, you may exclude page with URL like %s by setting this option to %s. Please add one regular expressions by line"
 msgstr "على سبيل المثال، قد تستبعد صفحة برابط مثل:  %s بوضع الإعداد على  %s. رجاء ضع تعبير نظامي واحد في كل سطر"
 
-msgid "Please, do not use the %s characters in the regular expression but instead %s or %s"
-msgstr "رجاءً، لا تستخدم الترميز %s في التعبير النظامي بل استخدم  %s أو  %s "
+msgid "In addition, you may set this option to %s and to %s to exclude the home page"
+msgstr ""
 
 msgid "Parameters"
 msgstr "البارامترات"

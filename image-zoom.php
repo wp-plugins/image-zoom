@@ -3,15 +3,12 @@
 Plugin Name: Image Zoom
 Plugin Name: zoom, highslide, image, panorama
 Description: <p>Allow to dynamically zoom on images in posts/pages/... </p><p>When clicked, the image will dynamically scale-up. Please note that you have to insert image normally with the wordpress embedded editor.</p><p>You may configure:</p><ul><li>The max width/height of the image; </li><li>The transition delay; </li><li>The position of the buttons; </li><li>The auto-start of the slideshow; </li><li>the opacity of the background; </li><li>the pages to be excluded. </li></ul><p>If the image does not scale-up, please verify that the HTML looks like the following : &lt;a href=' '&gt;&lt;img src=' '&gt;&lt;/a&gt;.</p><p>This plugin implements the colorbox javascript library. </p><p>This plugin is under GPL licence.</p>
-Version: 1.6.5
-
-
-
+Version: 1.6.6
 Author: SedLex
 Author Email: sedlex@sedlex.fr
 Framework Email: sedlex@sedlex.fr
 Author URI: http://www.sedlex.fr/
-Plugin URI: http://wordpress.org/extend/plugins/image-zoom/
+Plugin URI: http://wordpress.org/plugins/image-zoom/
 License: GPL3
 */
 
@@ -233,6 +230,7 @@ class imagezoom extends pluginSedLex {
 				maxHeight : <?php echo $this->get_param('heightRestriction') ; ?>,
 				opacity:<?php echo $this->get_param('background_opacity');?> , 
 				onComplete : function(){ 
+					jQuery("#cboxLoadedContent").css({overflow:'hidden'});
 				<?php
 				if ($this->get_param('disable_nav_buttons')) {
 				?>

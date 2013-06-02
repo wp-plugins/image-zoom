@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2012-05-26T14:15:29+00:00\n"
+"PO-Revision-Date: 2013-04-07T14:53:38+00:00\n"
 "Last-Translator: Vangelov <vangelov@stselectronics.eu>\n"
 "Last-Translator: KalinLynnDimitrov <cassidycornell@abv.bg>\n"
 "Language-Team: \n"
@@ -21,8 +21,23 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Textdomain-Support: yes\n"
 
-msgid "This plugin allows a dynamic zoom on the images (based on the highslide javascript library)"
-msgstr "Този плъгин позволява динамично мащабиране на изображенията (въз основа на Highslide JavaScript библиотека)"
+msgid "Theme 01"
+msgstr "Тема 01"
+
+msgid "Theme 02"
+msgstr "Тема 02"
+
+msgid "Theme 03"
+msgstr "Тема 03"
+
+msgid "Your theme contains (i.e. in %s file) a hardcoded reference to the jQuery javascript library."
+msgstr "Вашата тема (i.e. in %s file) съдържа код връзка към jQuery javascript библиотека."
+
+msgid "This reference may break the plugin. So, if the plugin does not work, please either delete this reference or move it just after the %s declaration."
+msgstr "Тази връзка може да повреди плъгина. Затова, ако плъгина не работи, моля, или изтрийте тази връзка или я преместете точно след %s декларацията."
+
+msgid "This plugin allows a dynamic zoom on the images (based on the colorbox javascript library)"
+msgstr ""
 
 msgid "What are the clipped dimensions of the zoomed image?"
 msgstr "Какви са орязаните размери на мащабираното изображение?"
@@ -36,20 +51,11 @@ msgstr "Максимална височина:"
 msgid "What is the text for the frontend?"
 msgstr "Какъв е текстът за интерфейса?"
 
-msgid "Load:"
-msgstr "Заредете:"
-
-msgid "Expand:"
-msgstr "Увеличете:"
-
 msgid "Previous:"
 msgstr "Предишен:"
 
 msgid "Next:"
 msgstr "Следващ:"
-
-msgid "Move:"
-msgstr "Премести:"
 
 msgid "Close:"
 msgstr "Затвори:"
@@ -59,51 +65,6 @@ msgstr "Пусни:"
 
 msgid "Pause:"
 msgstr "Пауза:"
-
-msgid "Restore:"
-msgstr "Възстанови:"
-
-msgid "What are the other parameters?"
-msgstr "Какви са другите параметри?"
-
-msgid "Transition time if the slideshow is on:"
-msgstr "Времето за преминаване, ако слайдшоу е на:"
-
-msgid "Auto-start the slideshow when launched:"
-msgstr "Автоматично стартиране на слайдшоу, когато стартира:"
-
-msgid "The position of the button (play, next, ...) (e.g top center):"
-msgstr "Позицията на бутона (пусни, следващ, ...) (например топ центъра):"
-
-msgid "The opacity of the background:"
-msgstr "Прозрачността на фона:"
-
-msgid "Parameters"
-msgstr "Параметри"
-
-msgid "Manage translations"
-msgstr "Управление на преводи"
-
-msgid "Give feedback"
-msgstr "Изпратете отзиви"
-
-msgid "Other plugins"
-msgstr "Други плъгини"
-
-msgid "Theme 01"
-msgstr "Тема 01"
-
-msgid "Theme 02"
-msgstr "Тема 02"
-
-msgid "Theme 03"
-msgstr "Тема 03"
-
-msgid "Your theme contains (i.e. in %s file) a hardcoded reference to the jQuery javascript library."
-msgstr "Вашата тема съдържа код връзка към jQuery javascript библиотека."
-
-msgid "This reference may break the plugin. So, if the plugin does not work, please either delete this reference or move it just after the %s declaration."
-msgstr "Тази връзка може да повреди плъгина. Затова, ако плъгина не работи, моля, или изтрийте тази връзка или я преместете точно след %s декларацията."
 
 msgid "The image counter:"
 msgstr "Изображение броят:"
@@ -125,4 +86,40 @@ msgstr "Тема 02 е: %s"
 
 msgid "Theme 03 is : %s."
 msgstr "Тема 03 е: %s"
+
+msgid "What are the other parameters?"
+msgstr "Какви са другите параметри?"
+
+msgid "Transition time if the slideshow is on:"
+msgstr "Времето за преминаване, ако слайдшоу е на:"
+
+msgid "Auto-start the slideshow when launched:"
+msgstr "Автоматично стартиране на слайдшоу, когато стартира:"
+
+msgid "The opacity of the background:"
+msgstr "Прозрачността на фона:"
+
+msgid "Advanced parameters?"
+msgstr ""
+
+msgid "List of page exclusions:"
+msgstr ""
+
+msgid "For instance, you may exclude page with URL like %s by setting this option to %s. Please add one regular expressions by line"
+msgstr ""
+
+msgid "In addition, you may set this option to %s and to %s to exclude the home page"
+msgstr ""
+
+msgid "Parameters"
+msgstr "Параметри"
+
+msgid "Manage translations"
+msgstr "Управление на преводи"
+
+msgid "Give feedback"
+msgstr "Изпратете отзиви"
+
+msgid "Other plugins"
+msgstr "Други плъгини"
 

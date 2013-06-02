@@ -3,7 +3,7 @@
 Author: SedLex
 Contributors: SedLex
 Author URI: http://www.sedlex.fr/
-Plugin URI: http://wordpress.org/extend/plugins/image-zoom/
+Plugin URI: http://wordpress.org/plugins/image-zoom/
 Tags: 
 Requires at least: 3.0
 Tested up to: 3.5
@@ -44,7 +44,7 @@ This plugin is compatible with multi-site installation.
 * German (Germany) translation provided by tcp443, B.Klein, Frutte
 * English (United States), default language
 * Spanish (Spain) translation provided by genteblackberry, Wildsouth
-* French (France) translation provided by SedLex, mediacop, FlorianP.
+* French (France) translation provided by SedLex, mediacop, FlorianP., LaurentChemla
 * Croatian (Croatia) translation provided by Rene
 * Hungarian (Hungary) translation provided by Metoyou, DvnyiFerenc
 * Lithuanian (Lithuania) translation provided by ydrius
@@ -80,6 +80,9 @@ Have fun !
 2. An image zommed
 
 == Changelog ==
+
+= 1.6.6 =
+* Modification of the plugin URL
 
 = 1.6.5 =
 * Sometime there is some bug with the url of the cursor ... probably due to browsers.
@@ -165,4 +168,4 @@ Have fun !
 Visit http://www.sedlex.fr/cote_geek/
  
  
-InfoVersion:76d63dd64da342c8dde6c27c164f10ab
+InfoVersion:4307132bd4579c5253c4e2b069390c9b
