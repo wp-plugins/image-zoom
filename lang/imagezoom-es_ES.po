@@ -4,9 +4,10 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2013-04-07T14:51:50+00:00\n"
+"PO-Revision-Date: 2013-06-03T06:14:59+00:00\n"
 "Last-Translator: genteblackberry <http://newgenteblackberry.com>\n"
 "Last-Translator: Wildsouth <wildsout@gmail.com>\n"
+"Last-Translator: Paul <www.tecnofilos.net>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -30,6 +31,9 @@ msgstr "Tema 02"
 msgid "Theme 03"
 msgstr "Tema 03"
 
+msgid "Theme 04"
+msgstr ""
+
 msgid "Your theme contains (i.e. in %s file) a hardcoded reference to the jQuery javascript library."
 msgstr "Su tema contiene (i.e. in %s file) una referencia explícita a la biblioteca jQuery javascript."
 
@@ -37,7 +41,7 @@ msgid "This reference may break the plugin. So, if the plugin does not work, ple
 msgstr "Esta referencia puede provocar fallos del plugin. Por lo tanto, si el algo no funciona, por favor suprima esta referencia o insertela justo después de la declaración %s."
 
 msgid "This plugin allows a dynamic zoom on the images (based on the colorbox javascript library)"
-msgstr ""
+msgstr "Este plugin realiza un zoom dinámico de las imágenes (basado en la librería javascript colorbox)"
 
 msgid "What are the clipped dimensions of the zoomed image?"
 msgstr "¿Cuáles son las dimensiones recortadas de la imagen ampliada?"
@@ -49,67 +53,88 @@ msgid "Max height:"
 msgstr "Altura máxima:"
 
 msgid "What is the text for the frontend?"
-msgstr "¿Cuál es el texto de la pagina principal?"
+msgstr "¿Cuál es el texto de la página principal?"
 
 msgid "Previous:"
-msgstr ""
+msgstr "Anterior:"
 
 msgid "Next:"
-msgstr ""
+msgstr "Siguiente:"
 
 msgid "Close:"
-msgstr ""
+msgstr "Cerrar:"
 
 msgid "Play:"
-msgstr ""
+msgstr "Iniciar:"
 
 msgid "Pause:"
-msgstr ""
+msgstr "Parar:"
 
 msgid "The image counter:"
-msgstr ""
+msgstr "Contador de imagen:"
 
 msgid "The %s will be replace with the index of the image and %s with the total number of images in the page."
-msgstr ""
+msgstr "El %s será reemplazado con el indice de la imagen y %s con número total de imágenes de la página."
 
 msgid "What is the theme?"
-msgstr ""
+msgstr "¿Cuál es la plantilla?"
 
 msgid "Choose the theme:"
-msgstr ""
+msgstr "Selecciona plantilla"
 
 msgid "Theme 01 is : %s."
-msgstr ""
+msgstr "La plantilla 01 es: %s."
 
 msgid "Theme 02 is : %s."
-msgstr ""
+msgstr "La plantilla 02 es: %s."
 
 msgid "Theme 03 is : %s."
+msgstr "La plantilla 03 es: %s."
+
+msgid "Theme 04 is : %s (created by %s)."
+msgstr ""
+
+msgid "Show description text"
+msgstr ""
+
+msgid "Show the title of the image:"
+msgstr ""
+
+msgid "Show the alternative text of the image:"
 msgstr ""
 
 msgid "What are the other parameters?"
-msgstr ""
+msgstr "¿Cuales son los otros parámetros?"
 
 msgid "Transition time if the slideshow is on:"
 msgstr "Tiempo de transición, si la presentación está en:"
 
 msgid "Auto-start the slideshow when launched:"
-msgstr ""
+msgstr "Auto-iniciar el carrusel cuando se ponga en marcha"
 
 msgid "The opacity of the background:"
 msgstr "La opacidad de los antecedentes:"
 
 msgid "Advanced parameters?"
+msgstr "Parámetros avanzados"
+
+msgid "Disable the navigation buttons on images:"
+msgstr ""
+
+msgid "Disable click on the image for next (it will then close the slideshow):"
+msgstr ""
+
+msgid "Disable the slideshow buttons on images:"
 msgstr ""
 
 msgid "List of page exclusions:"
-msgstr ""
+msgstr "Lista de páginas para excluir"
 
 msgid "For instance, you may exclude page with URL like %s by setting this option to %s. Please add one regular expressions by line"
-msgstr ""
+msgstr "Por ejemplo, se puede excluir una página con la URL similar a %s set to %s. Por favor, añade una expresión regular por línea"
 
 msgid "In addition, you may set this option to %s and to %s to exclude the home page"
-msgstr ""
+msgstr "Adicionalmente, se puede configurar esta opción a %s y a %s para excluir la página de unicio"
 
 msgid "Parameters"
 msgstr "Parámetros"
@@ -121,5 +146,5 @@ msgid "Give feedback"
 msgstr "Deje su comentario"
 
 msgid "Other plugins"
-msgstr ""
+msgstr "Otros plugins"
 
