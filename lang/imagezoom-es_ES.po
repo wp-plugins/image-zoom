@@ -4,10 +4,13 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2013-06-03T06:14:59+00:00\n"
+"PO-Revision-Date: 2013-10-22T09:24:59+00:00\n"
 "Last-Translator: genteblackberry <http://newgenteblackberry.com>\n"
 "Last-Translator: Wildsouth <wildsout@gmail.com>\n"
 "Last-Translator: Paul <www.tecnofilos.net>\n"
+"Last-Translator: RUDIS <ffernandezf@estudiantes.udg.co.cu>\n"
+"Last-Translator: yanmarcosgtmo <ajedrezdiscapacitados.cubava.cu>\n"
+"Last-Translator: yorkel <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -31,9 +34,6 @@ msgstr "Tema 02"
 msgid "Theme 03"
 msgstr "Tema 03"
 
-msgid "Theme 04"
-msgstr ""
-
 msgid "Your theme contains (i.e. in %s file) a hardcoded reference to the jQuery javascript library."
 msgstr "Su tema contiene (i.e. in %s file) una referencia explícita a la biblioteca jQuery javascript."
 
@@ -41,7 +41,7 @@ msgid "This reference may break the plugin. So, if the plugin does not work, ple
 msgstr "Esta referencia puede provocar fallos del plugin. Por lo tanto, si el algo no funciona, por favor suprima esta referencia o insertela justo después de la declaración %s."
 
 msgid "This plugin allows a dynamic zoom on the images (based on the colorbox javascript library)"
-msgstr "Este plugin realiza un zoom dinámico de las imágenes (basado en la librería javascript colorbox)"
+msgstr "Este plugin permite un zoom dinámico en las imágenes (basado en la biblioteca javascript colorbox)"
 
 msgid "What are the clipped dimensions of the zoomed image?"
 msgstr "¿Cuáles son las dimensiones recortadas de la imagen ampliada?"
@@ -53,7 +53,7 @@ msgid "Max height:"
 msgstr "Altura máxima:"
 
 msgid "What is the text for the frontend?"
-msgstr "¿Cuál es el texto de la página principal?"
+msgstr "¿Cuál es el texto de la pagina principal?"
 
 msgid "Previous:"
 msgstr "Anterior:"
@@ -65,7 +65,7 @@ msgid "Close:"
 msgstr "Cerrar:"
 
 msgid "Play:"
-msgstr "Iniciar:"
+msgstr "Jugar:"
 
 msgid "Pause:"
 msgstr "Parar:"
@@ -91,18 +91,6 @@ msgstr "La plantilla 02 es: %s."
 msgid "Theme 03 is : %s."
 msgstr "La plantilla 03 es: %s."
 
-msgid "Theme 04 is : %s (created by %s)."
-msgstr ""
-
-msgid "Show description text"
-msgstr ""
-
-msgid "Show the title of the image:"
-msgstr ""
-
-msgid "Show the alternative text of the image:"
-msgstr ""
-
 msgid "What are the other parameters?"
 msgstr "¿Cuales son los otros parámetros?"
 
@@ -117,15 +105,6 @@ msgstr "La opacidad de los antecedentes:"
 
 msgid "Advanced parameters?"
 msgstr "Parámetros avanzados"
-
-msgid "Disable the navigation buttons on images:"
-msgstr ""
-
-msgid "Disable click on the image for next (it will then close the slideshow):"
-msgstr ""
-
-msgid "Disable the slideshow buttons on images:"
-msgstr ""
 
 msgid "List of page exclusions:"
 msgstr "Lista de páginas para excluir"

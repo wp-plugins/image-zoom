@@ -3,7 +3,8 @@
 Plugin Name: Image Zoom
 Plugin Name: zoom, highslide, image, panorama
 Description: <p>Allow to dynamically zoom on images in posts/pages/... </p><p>When clicked, the image will dynamically scale-up. Please note that you have to insert image normally with the wordpress embedded editor.</p><p>You may configure:</p><ul><li>The max width/height of the image; </li><li>The transition delay; </li><li>The position of the buttons; </li><li>The auto-start of the slideshow; </li><li>the opacity of the background; </li><li>the pages to be excluded. </li></ul><p>If the image does not scale-up, please verify that the HTML looks like the following : &lt;a href=' '&gt;&lt;img src=' '&gt;&lt;/a&gt;.</p><p>This plugin implements the colorbox javascript library. </p><p>This plugin is under GPL licence.</p>
-Version: 1.6.6
+Version: 1.7.0
+
 Author: SedLex
 Author Email: sedlex@sedlex.fr
 Framework Email: sedlex@sedlex.fr
@@ -11,6 +12,7 @@ Author URI: http://www.sedlex.fr/
 Plugin URI: http://wordpress.org/plugins/image-zoom/
 License: GPL3
 */
+
 
 require_once('core.php') ; 
 
@@ -112,6 +114,7 @@ class imagezoom extends pluginSedLex {
 			case 'tra_play'			: return "Play" ; break ; 
 			case 'tra_pause'		: return "Pause" ; break ; 
 			case 'exclu'		: return "*" ; break ; 
+			case 'image_clip'	: return false ; break ; 
 
 			case 'theme'		: return array(		array("*".__("Theme 01", $this->pluginID), "th01"), 
 											array(__("Theme 02", $this->pluginID), "th02"),											
@@ -174,7 +177,15 @@ class imagezoom extends pluginSedLex {
 	
 		ob_start() ; 
 		?>
-		jQuery(document).ready(function () {
+		jQuery(document).ready(function () {	
+		
+			jQuery(window).resize(function () { 
+				jQuery('a.gallery_colorbox').colorbox({
+					maxWidth: Math.min(<?php echo $this->get_param('widthRestriction') ; ?>, Math.floor(0.95*jQuery(window).width())-80), 
+					maxHeight: Math.min(<?php echo $this->get_param('heightRestriction') ; ?>, Math.floor(0.95*jQuery(window).height())-80)
+				}) ; 
+			});
+				
 			jQuery('a.gallery_colorbox').colorbox({ 
 				slideshow: true,
 				<?php if (($this->get_param('show_alt'))&&(!$this->get_param('show_title'))) { ?>
@@ -226,11 +237,22 @@ class imagezoom extends pluginSedLex {
 				previous: '<?php echo $this->get_param('tra_previous') ; ?>',	
 				next:'<?php echo $this->get_param('tra_next') ; ?>',
 				close:'<?php echo $this->get_param('tra_close') ; ?>',
-				maxWidth: <?php echo $this->get_param('widthRestriction') ; ?>, 
-				maxHeight : <?php echo $this->get_param('heightRestriction') ; ?>,
+				<?php 
+				if ($this->get_param('image_clip')) { ?>
+					maxWidth: Math.min(<?php echo $this->get_param('widthRestriction') ; ?>, Math.floor(0.95*jQuery(window).width())-80), 
+					maxHeight: Math.min(<?php echo $this->get_param('heightRestriction') ; ?>, Math.floor(0.95*jQuery(window).height())-80),
+				<?php 
+				} else { ?>
+					maxWidth: <?php echo $this->get_param('widthRestriction') ; ?>, 
+					maxHeight: <?php echo $this->get_param('heightRestriction') ; ?>,				
+				<?php 
+				}?>
+				
+				
 				opacity:<?php echo $this->get_param('background_opacity');?> , 
 				onComplete : function(){ 
 					jQuery("#cboxLoadedContent").css({overflow:'hidden'});
+					jQuery("#colorbox").css({overflow:'visible'});
 				<?php
 				if ($this->get_param('disable_nav_buttons')) {
 				?>
@@ -287,16 +309,16 @@ class imagezoom extends pluginSedLex {
 		foreach ($theme as $t) {
 			if (substr($t[0], 0, 1) == "*") {
 				if ($t[1]=="th01") {
-					$this->add_css(WP_PLUGIN_URL.'/'.str_replace(basename(__FILE__),"",plugin_basename(__FILE__))."css/theme1.css") ; 
+					$this->add_css(plugin_dir_url("/").'/'.str_replace(basename(__FILE__),"",plugin_basename(__FILE__))."css/theme1.css") ; 
 				}
 				if ($t[1]=="th02") {
-					$this->add_css(WP_PLUGIN_URL.'/'.str_replace(basename(__FILE__),"",plugin_basename(__FILE__))."css/theme2.css") ; 
+					$this->add_css(plugin_dir_url("/").'/'.str_replace(basename(__FILE__),"",plugin_basename(__FILE__))."css/theme2.css") ; 
 				}
 				if ($t[1]=="th03") {
-					$this->add_css(WP_PLUGIN_URL.'/'.str_replace(basename(__FILE__),"",plugin_basename(__FILE__))."css/theme3.css") ; 
+					$this->add_css(plugin_dir_url("/").'/'.str_replace(basename(__FILE__),"",plugin_basename(__FILE__))."css/theme3.css") ; 
 				}
 				if ($t[1]=="th04") {
-					$this->add_css(WP_PLUGIN_URL.'/'.str_replace(basename(__FILE__),"",plugin_basename(__FILE__))."css/theme4.css") ; 
+					$this->add_css(plugin_dir_url("/").'/'.str_replace(basename(__FILE__),"",plugin_basename(__FILE__))."css/theme4.css") ; 
 				}
 			}
 		}
@@ -353,6 +375,10 @@ class imagezoom extends pluginSedLex {
 		
 		$id_attach = url_to_postid($matches[3]) ; 
 		if (($id_attach!=0)&&(wp_attachment_is_image($id_attach))) {
+			// Remove existing class in this link
+			$matches[0] = preg_replace("/<a([^>]*?)class='[^']*'([^>]*?)>/u","<a$1$2>",$matches[0]) ; 
+			$matches[0] = preg_replace('/<a([^>]*?)class="[^"]*"([^>]*?)>/u',"<a$1$2>",$matches[0]) ; 
+			
 			$pattern = '/(<a([^>]*?)href=["\']([^"\']*)["\']([^>]*?)>((?:[^<]|<br)*)<img([^>]*?)src=["\']([^"\']*[.])'.$this->image_type.'["\']([^>]*?)>([^<]|<br)*<\/a>)/iesU';
   			$image = wp_get_attachment_image_src( $id_attach , 'full');
 			$replacement = 'stripslashes("<a\2href=\"'.$image[0].'\" class=\"gallery_colorbox\"\4>\5<img\6src=\"\7\8\" \9>\10</a>")';
@@ -408,6 +434,7 @@ class imagezoom extends pluginSedLex {
 				$params->add_title(__('What are the clipped dimensions of the zoomed image?',$this->pluginID)) ; 
 				$params->add_param('widthRestriction', __('Max width:',$this->pluginID)) ; 
 				$params->add_param('heightRestriction', __('Max height:',$this->pluginID)) ; 
+				$params->add_param('image_clip', __('Do you want to clip to browser size:',$this->pluginID)) ; 
 				
 				$params->add_title(__('What is the text for the frontend?',$this->pluginID)) ; 
 				$params->add_param('tra_previous', __('Previous:',$this->pluginID)) ; 
@@ -420,10 +447,10 @@ class imagezoom extends pluginSedLex {
 				
 				$params->add_title(__('What is the theme?',$this->pluginID)) ; 
 				$params->add_param('theme', __('Choose the theme:',$this->pluginID)) ; 
-				$params->add_comment(sprintf(__('Theme 01 is : %s.',$this->pluginID), "<img src='".WP_PLUGIN_URL.'/'.str_replace(basename(__FILE__),"",plugin_basename(__FILE__))."img/theme1_illustr.jpg"."'/>")) ; 
-				$params->add_comment(sprintf(__('Theme 02 is : %s.',$this->pluginID), "<img src='".WP_PLUGIN_URL.'/'.str_replace(basename(__FILE__),"",plugin_basename(__FILE__))."img/theme2_illustr.jpg"."'/>")) ; 
-				$params->add_comment(sprintf(__('Theme 03 is : %s.',$this->pluginID), "<img src='".WP_PLUGIN_URL.'/'.str_replace(basename(__FILE__),"",plugin_basename(__FILE__))."img/theme3_illustr.jpg"."'/>")) ; 
-				$params->add_comment(sprintf(__('Theme 04 is : %s (created by %s).',$this->pluginID), "<img src='".WP_PLUGIN_URL.'/'.str_replace(basename(__FILE__),"",plugin_basename(__FILE__))."img/theme4_illustr.jpg"."'/>", "Andreas Amundin")) ; 
+				$params->add_comment(sprintf(__('Theme 01 is : %s.',$this->pluginID), "<img src='".plugin_dir_url("/").'/'.str_replace(basename(__FILE__),"",plugin_basename(__FILE__))."img/theme1_illustr.jpg"."'/>")) ; 
+				$params->add_comment(sprintf(__('Theme 02 is : %s.',$this->pluginID), "<img src='".plugin_dir_url("/").'/'.str_replace(basename(__FILE__),"",plugin_basename(__FILE__))."img/theme2_illustr.jpg"."'/>")) ; 
+				$params->add_comment(sprintf(__('Theme 03 is : %s.',$this->pluginID), "<img src='".plugin_dir_url("/").'/'.str_replace(basename(__FILE__),"",plugin_basename(__FILE__))."img/theme3_illustr.jpg"."'/>")) ; 
+				$params->add_comment(sprintf(__('Theme 04 is : %s (created by %s).',$this->pluginID), "<img src='".plugin_dir_url("/").'/'.str_replace(basename(__FILE__),"",plugin_basename(__FILE__))."img/theme4_illustr.jpg"."'/>", "Andreas Amundin")) ; 
 				
 				$params->add_title(__('Show description text',$this->pluginID)) ; 
 				$params->add_param('show_title', __('Show the title of the image:',$this->pluginID)) ; 
@@ -444,25 +471,25 @@ class imagezoom extends pluginSedLex {
 				$params->add_comment(sprintf(__('In addition, you may set this option to %s and to %s to exclude the home page',$this->pluginID), "<code>^/$</code>", "<code>^$</code>")) ; 
 				
 				$params->flush() ; 
-			$tabs->add_tab(__('Parameters',  $this->pluginID), ob_get_clean() , WP_PLUGIN_URL.'/'.str_replace(basename(__FILE__),"",plugin_basename(__FILE__))."core/img/tab_param.png") ; 	
+			$tabs->add_tab(__('Parameters',  $this->pluginID), ob_get_clean() , plugin_dir_url("/").'/'.str_replace(basename(__FILE__),"",plugin_basename(__FILE__))."core/img/tab_param.png") ; 	
 
 						
 			ob_start() ; 
 				$plugin = str_replace("/","",str_replace(basename(__FILE__),"",plugin_basename( __FILE__))) ; 
 				$trans = new translationSL($this->pluginID, $plugin) ; 
 				$trans->enable_translation() ; 
-			$tabs->add_tab(__('Manage translations',  $this->pluginID), ob_get_clean() , WP_PLUGIN_URL.'/'.str_replace(basename(__FILE__),"",plugin_basename(__FILE__))."core/img/tab_trad.png") ; 	
+			$tabs->add_tab(__('Manage translations',  $this->pluginID), ob_get_clean() , plugin_dir_url("/").'/'.str_replace(basename(__FILE__),"",plugin_basename(__FILE__))."core/img/tab_trad.png") ; 	
 
 			ob_start() ; 
 				$plugin = str_replace("/","",str_replace(basename(__FILE__),"",plugin_basename( __FILE__))) ; 
 				$trans = new feedbackSL($plugin,  $this->pluginID) ; 
 				$trans->enable_feedback() ; 
-			$tabs->add_tab(__('Give feedback',  $this->pluginID), ob_get_clean() , WP_PLUGIN_URL.'/'.str_replace(basename(__FILE__),"",plugin_basename(__FILE__))."core/img/tab_mail.png") ; 	
+			$tabs->add_tab(__('Give feedback',  $this->pluginID), ob_get_clean() , plugin_dir_url("/").'/'.str_replace(basename(__FILE__),"",plugin_basename(__FILE__))."core/img/tab_mail.png") ; 	
 			
 			ob_start() ; 
 				$trans = new otherPlugins("sedLex", array('wp-pirates-search')) ; 
 				$trans->list_plugins() ; 
-			$tabs->add_tab(__('Other plugins',  $this->pluginID), ob_get_clean() , WP_PLUGIN_URL.'/'.str_replace(basename(__FILE__),"",plugin_basename(__FILE__))."core/img/tab_plug.png") ; 	
+			$tabs->add_tab(__('Other plugins',  $this->pluginID), ob_get_clean() , plugin_dir_url("/").'/'.str_replace(basename(__FILE__),"",plugin_basename(__FILE__))."core/img/tab_plug.png") ; 	
 			
 
 			echo $tabs->flush() ; 

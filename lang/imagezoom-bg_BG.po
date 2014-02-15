@@ -4,9 +4,10 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2013-04-07T14:53:38+00:00\n"
+"PO-Revision-Date: 2013-11-04T12:36:41+00:00\n"
 "Last-Translator: Vangelov <vangelov@stselectronics.eu>\n"
 "Last-Translator: KalinLynnDimitrov <cassidycornell@abv.bg>\n"
+"Last-Translator: KonstantinYovev <www.bitsbg.eu>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -36,9 +37,6 @@ msgstr "Вашата тема (i.e. in %s file) съдържа код връзк
 msgid "This reference may break the plugin. So, if the plugin does not work, please either delete this reference or move it just after the %s declaration."
 msgstr "Тази връзка може да повреди плъгина. Затова, ако плъгина не работи, моля, или изтрийте тази връзка или я преместете точно след %s декларацията."
 
-msgid "This plugin allows a dynamic zoom on the images (based on the colorbox javascript library)"
-msgstr ""
-
 msgid "What are the clipped dimensions of the zoomed image?"
 msgstr "Какви са орязаните размери на мащабираното изображение?"
 
@@ -67,10 +65,10 @@ msgid "Pause:"
 msgstr "Пауза:"
 
 msgid "The image counter:"
-msgstr "Изображение броят:"
+msgstr "Броячът на изображения:"
 
 msgid "The %s will be replace with the index of the image and %s with the total number of images in the page."
-msgstr "%s ще бъде заменен с индекс на изображението и %s с общия брой изображения на страница."
+msgstr "%s ще бъде заменен с поредния номер на изображението,а %s с общия брой изображения на страница."
 
 msgid "What is the theme?"
 msgstr "Каква е темата?"
@@ -91,25 +89,13 @@ msgid "What are the other parameters?"
 msgstr "Какви са другите параметри?"
 
 msgid "Transition time if the slideshow is on:"
-msgstr "Времето за преминаване, ако слайдшоу е на:"
+msgstr "Времето за преминаване, ако слайдшоу е активиран:"
 
 msgid "Auto-start the slideshow when launched:"
 msgstr "Автоматично стартиране на слайдшоу, когато стартира:"
 
 msgid "The opacity of the background:"
 msgstr "Прозрачността на фона:"
-
-msgid "Advanced parameters?"
-msgstr ""
-
-msgid "List of page exclusions:"
-msgstr ""
-
-msgid "For instance, you may exclude page with URL like %s by setting this option to %s. Please add one regular expressions by line"
-msgstr ""
-
-msgid "In addition, you may set this option to %s and to %s to exclude the home page"
-msgstr ""
 
 msgid "Parameters"
 msgstr "Параметри"
@@ -121,5 +107,44 @@ msgid "Give feedback"
 msgstr "Изпратете отзиви"
 
 msgid "Other plugins"
-msgstr "Други плъгини"
+msgstr "Други добавки"
+
+msgid "Theme 04"
+msgstr "Тема 04"
+
+msgid "This plugin allows a dynamic zoom on the images (based on the colorbox javascript library)"
+msgstr "Тази добавка позволява динамично увеличение на изображенията (базирана на javascript библиотеката colorbox"
+
+msgid "Theme 04 is : %s (created by %s)."
+msgstr "Тема 04 е: %s (създадена от %s)."
+
+msgid "Show description text"
+msgstr "Показвай описание"
+
+msgid "Show the title of the image:"
+msgstr "Показвай заглавието на изображението:"
+
+msgid "Show the alternative text of the image:"
+msgstr "Показвай алтернативния текст на изображението:"
+
+msgid "Advanced parameters?"
+msgstr "Разширени настройки?"
+
+msgid "Disable the navigation buttons on images:"
+msgstr "Изключи навигационните бутони на изображенията:"
+
+msgid "Disable click on the image for next (it will then close the slideshow):"
+msgstr "При кликване върху изображението затвори галерията (по подразбиране се отваря следващо изображение):"
+
+msgid "Disable the slideshow buttons on images:"
+msgstr "Забрани бутоните за слайдшоу на изображенията:"
+
+msgid "List of page exclusions:"
+msgstr "Списък от страници, на които да не работи добавката:"
+
+msgid "For instance, you may exclude page with URL like %s by setting this option to %s. Please add one regular expressions by line"
+msgstr "Например: може да изключите адрес на страница като %s, като въведете в полето %s. Моля, добавяйте само по една страница на ред."
+
+msgid "In addition, you may set this option to %s and to %s to exclude the home page"
+msgstr "Допълнително, може да промените тази настройка %s и %s за да изключите добавката на началната страница."
 

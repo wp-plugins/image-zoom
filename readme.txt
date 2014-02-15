@@ -6,7 +6,7 @@ Author URI: http://www.sedlex.fr/
 Plugin URI: http://wordpress.org/plugins/image-zoom/
 Tags: 
 Requires at least: 3.0
-Tested up to: 3.5
+Tested up to: 3.8.1
 Stable tag: trunk
 
 Allow to dynamically zoom on images in posts/pages/... 
@@ -38,19 +38,23 @@ This plugin is compatible with multi-site installation.
 
 = Localization =
 
-* Arabic (Syria) translation provided by aboRoma
-* Bulgarian (Bulgaria) translation provided by Vangelov, KalinLynnDimitrov
+* Arabic (Syria) translation provided by aboRoma, Dimajahiz
+* Bulgarian (Bulgaria) translation provided by Vangelov, KalinLynnDimitrov, KonstantinYovev
 * Czech (Czech Republic) translation provided by jurajh, LukasProkop
-* German (Germany) translation provided by tcp443, B.Klein, Frutte
+* German (Germany) translation provided by tcp443, B.Klein, Frutte, Dirk
 * English (United States), default language
-* Spanish (Spain) translation provided by genteblackberry, Wildsouth
-* French (France) translation provided by SedLex, mediacop, FlorianP., LaurentChemla
+* Spanish (Spain) translation provided by genteblackberry, Wildsouth, Paul, RUDIS, yanmarcosgtmo, yorkel
+* French (France) translation provided by SedLex, mediacop, FlorianP., LaurentChemla, FabienPardo, GizProd
 * Croatian (Croatia) translation provided by Rene
 * Hungarian (Hungary) translation provided by Metoyou, DvnyiFerenc
+* Italian (Italy) translation provided by Mauro
 * Lithuanian (Lithuania) translation provided by ydrius
 * Dutch (Netherlands) translation provided by PC-Rider, Erik
-* Polish (Poland) translation provided by rzuf
-* Russian (Russia) translation provided by sever, Sprigin, vyachek
+* Norwegian-Nynorsk (Norway) translation provided by SimenEggen
+* Polish (Poland) translation provided by rzuf, ukasz, Lukasz
+* Portuguese (Brazil) translation provided by FabyanoTitara
+* Romanian (Romania) translation provided by 
+* Russian (Russia) translation provided by sever, Sprigin, vyachek, Copyright
 * Vietnamese (Viet Nam) translation provided by Khco
 
 = Features of the framework =
@@ -81,26 +85,21 @@ Have fun !
 
 == Changelog ==
 
-= 1.6.6 =
+= 1.7.0 =
+* NEW: update of the colorbox version v1.4.37
+* NEW: update of the theme in order to match with this version
+* NEW: enhancing the clipping version
+* NEW: The CSS has been updated
+* WARNING: as it is a major update of the JS, please test before using it on a production server 
+
+= 1.6.0 -&gt; 1.6.6 =
 * Modification of the plugin URL
-
-= 1.6.5 =
 * Sometime there is some bug with the url of the cursor ... probably due to browsers.
-
-= 1.6.4 =
 * Wordpress gallery is now supported
 * Click on the image may close the slideshow
-
-= 1.6.3 =
 * You can now disable the button if you do not like them
-
-= 1.6.2 =
 * Add a new theme with button out of the image
-
-= 1.6.1 =
 * Bug when the link points to an post url
-
-= 1.6.0 =
 * Detect image when the url is not an url to the media file
 * Possibility to add the title or the alt text
 
@@ -168,4 +167,4 @@ Have fun !
 Visit http://www.sedlex.fr/cote_geek/
  
  
-InfoVersion:f6dbd7431d47a67508932005d2835e72
+InfoVersion:cb48ee498a1d19bffd029641afe809ea

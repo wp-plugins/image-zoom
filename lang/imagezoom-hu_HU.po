@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2011-11-19T21:48:53+00:00\n"
+"PO-Revision-Date: 2013-09-15T21:44:17+00:00\n"
 "Last-Translator: Metoyou <http://webdesignelemek.hu>\n"
 "Last-Translator: DvnyiFerenc <http://webdesignelemek.hu>\n"
 "Language-Team: \n"
@@ -63,12 +63,36 @@ msgstr "Ez a form egy egyszerű módja annak, hogy kapcsolatba lépjünk a szerz
 msgid "Give feedback"
 msgstr "Visszajelzés küldése"
 
-msgid "Here is the plugins developped by the author"
-msgstr ""
+msgid "Theme 01"
+msgstr "Téma 01"
 
-msgid "Other possible plugins"
-msgstr ""
+msgid "Theme 02"
+msgstr "Téma 02"
 
-msgid "Here is the plugins developped by the author:"
-msgstr ""
+msgid "Theme 03"
+msgstr "Téma 03"
+
+msgid "Theme 04"
+msgstr "Téma 04"
+
+msgid "Previous:"
+msgstr "Előző"
+
+msgid "Next:"
+msgstr "Következő"
+
+msgid "Close:"
+msgstr "Bezárás"
+
+msgid "Play:"
+msgstr "Lejátszás"
+
+msgid "Pause:"
+msgstr "Szüneteltetés"
+
+msgid "Choose the theme:"
+msgstr "Téma választása:"
+
+msgid "Other plugins"
+msgstr "Egyéb bővítmények"
 

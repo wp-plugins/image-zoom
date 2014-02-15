@@ -4,11 +4,13 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2013-06-01T18:10:19+00:00\n"
+"PO-Revision-Date: 2013-10-10T15:17:22+00:00\n"
 "Last-Translator: SedLex <http://www.sedlex.fr/>\n"
 "Last-Translator: mediacop <>\n"
 "Last-Translator: FlorianP. <floflo63400@gmail.com>\n"
 "Last-Translator: LaurentChemla <laurent@brainstorm.fr>\n"
+"Last-Translator: FabienPardo <fabien009@hotmail.com>\n"
+"Last-Translator: GizProd <http://www.gizprod.fr>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -127,4 +129,28 @@ msgstr "Autres plugins"
 
 msgid "This plugin allows a dynamic zoom on the images (based on the colorbox javascript library)"
 msgstr "Ce plugin crée un zoom dynamique des images (basé sur la librairie javascript colorbox)"
+
+msgid "Theme 04"
+msgstr "Thème 04"
+
+msgid "Theme 04 is : %s (created by %s)."
+msgstr "Thème 04 est : %s (créé par %s)."
+
+msgid "Show description text"
+msgstr "Montrer la description"
+
+msgid "Show the title of the image:"
+msgstr "Montrer le titre de l&#039;image :"
+
+msgid "Show the alternative text of the image:"
+msgstr "Montrer le texte alternatif de l&#039;image :"
+
+msgid "Disable the navigation buttons on images:"
+msgstr "Désactiver les boutons de navigation dans l&#039;image :"
+
+msgid "Disable click on the image for next (it will then close the slideshow):"
+msgstr "Déactiver le clique sur l&#039;image pour passer à la suivante (cela fermera le panorama):"
+
+msgid "Disable the slideshow buttons on images:"
+msgstr "Déactiver les boutons de panorama sur les images:"
 

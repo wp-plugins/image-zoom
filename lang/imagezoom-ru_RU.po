@@ -4,10 +4,11 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2013-04-07T15:45:00+00:00\n"
+"PO-Revision-Date: 2013-10-02T11:32:03+00:00\n"
 "Last-Translator: sever <magadansever.ru>\n"
 "Last-Translator: Sprigin <Sprigin.ru>\n"
 "Last-Translator: vyachek <vyachek@op.pl>\n"
+"Last-Translator: Copyright <http://belfast.by>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -30,18 +31,6 @@ msgstr "Тема 02"
 
 msgid "Theme 03"
 msgstr "Тема 03"
-
-msgid "Theme 04"
-msgstr ""
-
-msgid "Your theme contains (i.e. in %s file) a hardcoded reference to the jQuery javascript library."
-msgstr ""
-
-msgid "This reference may break the plugin. So, if the plugin does not work, please either delete this reference or move it just after the %s declaration."
-msgstr ""
-
-msgid "This plugin allows a dynamic zoom on the images (based on the colorbox javascript library)"
-msgstr ""
 
 msgid "What are the clipped dimensions of the zoomed image?"
 msgstr "Размеры для увеличенного изображения"
@@ -73,9 +62,6 @@ msgstr "Пауза"
 msgid "The image counter:"
 msgstr "Счетчик фото:"
 
-msgid "The %s will be replace with the index of the image and %s with the total number of images in the page."
-msgstr ""
-
 msgid "What is the theme?"
 msgstr "Какая тема?"
 
@@ -90,18 +76,6 @@ msgstr "Тема 02: %s"
 
 msgid "Theme 03 is : %s."
 msgstr "Тема 03: %s"
-
-msgid "Theme 04 is : %s (created by %s)."
-msgstr ""
-
-msgid "Show description text"
-msgstr ""
-
-msgid "Show the title of the image:"
-msgstr ""
-
-msgid "Show the alternative text of the image:"
-msgstr ""
 
 msgid "What are the other parameters?"
 msgstr "Другие параметры"
@@ -118,23 +92,8 @@ msgstr "Прозрачность фона:"
 msgid "Advanced parameters?"
 msgstr "Показать больше параметров?"
 
-msgid "Disable the navigation buttons on images:"
-msgstr ""
-
-msgid "Disable click on the image for next (it will then close the slideshow):"
-msgstr ""
-
-msgid "Disable the slideshow buttons on images:"
-msgstr ""
-
 msgid "List of page exclusions:"
 msgstr "Список исключенных страниц"
-
-msgid "For instance, you may exclude page with URL like %s by setting this option to %s. Please add one regular expressions by line"
-msgstr ""
-
-msgid "In addition, you may set this option to %s and to %s to exclude the home page"
-msgstr ""
 
 msgid "Parameters"
 msgstr "Параметры"
@@ -147,4 +106,28 @@ msgstr "Обратная связь"
 
 msgid "Other plugins"
 msgstr "Другие плагины"
+
+msgid "Theme 04"
+msgstr "Тема 04"
+
+msgid "This plugin allows a dynamic zoom on the images (based on the colorbox javascript library)"
+msgstr "Включить динамическое увеличение изображений (базируется на javascript библиотеке colorbox)"
+
+msgid "Theme 04 is : %s (created by %s)."
+msgstr "Тема 04: %s (автор %s)."
+
+msgid "Show description text"
+msgstr "Показывать описание"
+
+msgid "Show the title of the image:"
+msgstr "Показывать заголовок изображения"
+
+msgid "Disable the navigation buttons on images:"
+msgstr "Отключить кнопки навигации на изображениях"
+
+msgid "Disable click on the image for next (it will then close the slideshow):"
+msgstr "Отключить переход к следующему изображению при нажатии (если активировано слайдер при нажатии бужет закрыт)"
+
+msgid "Disable the slideshow buttons on images:"
+msgstr "Отключить кнопки управления слайдером"
 
