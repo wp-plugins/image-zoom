@@ -21,197 +21,197 @@ msgstr ""
 msgid "Theme 04"
 msgstr ""
 
-#: image-zoom.php:415
+#: image-zoom.php:419
 #@ imagezoom
 msgid "Your theme contains (i.e. in %s file) a hardcoded reference to the jQuery javascript library."
 msgstr ""
 
-#: image-zoom.php:415
+#: image-zoom.php:419
 #@ imagezoom
 msgid "This reference may break the plugin. So, if the plugin does not work, please either delete this reference or move it just after the %s declaration."
 msgstr ""
 
-#: image-zoom.php:427
+#: image-zoom.php:431
 #@ imagezoom
 msgid "This plugin allows a dynamic zoom on the images (based on the colorbox javascript library)"
 msgstr ""
 
-#: image-zoom.php:430
+#: image-zoom.php:434
 #@ imagezoom
 msgid "What are the clipped dimensions of the zoomed image?"
 msgstr ""
 
-#: image-zoom.php:431
+#: image-zoom.php:435
 #@ imagezoom
 msgid "Max width:"
 msgstr ""
 
-#: image-zoom.php:432
+#: image-zoom.php:436
 #@ imagezoom
 msgid "Max height:"
 msgstr ""
 
-#: image-zoom.php:433
+#: image-zoom.php:437
 #@ imagezoom
 msgid "Do you want to clip to browser size:"
 msgstr ""
 
-#: image-zoom.php:435
+#: image-zoom.php:439
 #@ imagezoom
 msgid "What is the text for the frontend?"
 msgstr ""
 
-#: image-zoom.php:436
+#: image-zoom.php:440
 #@ imagezoom
 msgid "Previous:"
 msgstr ""
 
-#: image-zoom.php:437
+#: image-zoom.php:441
 #@ imagezoom
 msgid "Next:"
 msgstr ""
 
-#: image-zoom.php:438
+#: image-zoom.php:442
 #@ imagezoom
 msgid "Close:"
 msgstr ""
 
-#: image-zoom.php:439
+#: image-zoom.php:443
 #@ imagezoom
 msgid "Play:"
 msgstr ""
 
-#: image-zoom.php:440
+#: image-zoom.php:444
 #@ imagezoom
 msgid "Pause:"
 msgstr ""
 
-#: image-zoom.php:441
+#: image-zoom.php:445
 #@ imagezoom
 msgid "The image counter:"
 msgstr ""
 
-#: image-zoom.php:442
+#: image-zoom.php:446
 #@ imagezoom
 msgid "The %s will be replace with the index of the image and %s with the total number of images in the page."
 msgstr ""
 
-#: image-zoom.php:444
+#: image-zoom.php:448
 #@ imagezoom
 msgid "What is the theme?"
 msgstr ""
 
-#: image-zoom.php:445
+#: image-zoom.php:449
 #@ imagezoom
 msgid "Choose the theme:"
 msgstr ""
 
-#: image-zoom.php:446
+#: image-zoom.php:450
 #@ imagezoom
 msgid "Theme 01 is : %s."
 msgstr ""
 
-#: image-zoom.php:447
+#: image-zoom.php:451
 #@ imagezoom
 msgid "Theme 02 is : %s."
 msgstr ""
 
-#: image-zoom.php:448
+#: image-zoom.php:452
 #@ imagezoom
 msgid "Theme 03 is : %s."
 msgstr ""
 
-#: image-zoom.php:449
+#: image-zoom.php:453
 #@ imagezoom
 msgid "Theme 04 is : %s (created by %s)."
 msgstr ""
 
-#: image-zoom.php:451
+#: image-zoom.php:455
 #@ imagezoom
 msgid "Show description text"
 msgstr ""
 
-#: image-zoom.php:452
+#: image-zoom.php:456
 #@ imagezoom
 msgid "Show the title of the image:"
 msgstr ""
 
-#: image-zoom.php:453
+#: image-zoom.php:457
 #@ imagezoom
 msgid "Show the alternative text of the image:"
 msgstr ""
 
-#: image-zoom.php:455
+#: image-zoom.php:459
 #@ imagezoom
 msgid "What are the other parameters?"
 msgstr ""
 
-#: image-zoom.php:456
+#: image-zoom.php:460
 #@ imagezoom
 msgid "Transition time if the slideshow is on:"
 msgstr ""
 
-#: image-zoom.php:457
+#: image-zoom.php:461
 #@ imagezoom
 msgid "Auto-start the slideshow when launched:"
 msgstr ""
 
-#: image-zoom.php:458
+#: image-zoom.php:462
 #@ imagezoom
 msgid "The opacity of the background:"
 msgstr ""
 
-#: image-zoom.php:460
+#: image-zoom.php:464
 #@ imagezoom
 msgid "Advanced parameters?"
 msgstr ""
 
-#: image-zoom.php:461
+#: image-zoom.php:465
 #@ imagezoom
 msgid "Disable the navigation buttons on images:"
 msgstr ""
 
-#: image-zoom.php:462
+#: image-zoom.php:466
 #@ imagezoom
 msgid "Disable click on the image for next (it will then close the slideshow):"
 msgstr ""
 
-#: image-zoom.php:463
+#: image-zoom.php:467
 #@ imagezoom
 msgid "Disable the slideshow buttons on images:"
 msgstr ""
 
-#: image-zoom.php:465
+#: image-zoom.php:469
 #@ imagezoom
 msgid "List of page exclusions:"
 msgstr ""
 
-#: image-zoom.php:466
+#: image-zoom.php:470
 #@ imagezoom
 msgid "For instance, you may exclude page with URL like %s by setting this option to %s. Please add one regular expressions by line"
 msgstr ""
 
-#: image-zoom.php:467
+#: image-zoom.php:471
 #@ imagezoom
 msgid "In addition, you may set this option to %s and to %s to exclude the home page"
 msgstr ""
 
-#: image-zoom.php:470
+#: image-zoom.php:474
 #@ imagezoom
 msgid "Parameters"
 msgstr ""
 
-#: image-zoom.php:477
+#: image-zoom.php:481
 #@ imagezoom
 msgid "Manage translations"
 msgstr ""
 
-#: image-zoom.php:483
+#: image-zoom.php:487
 #@ imagezoom
 msgid "Give feedback"
 msgstr ""
 
-#: image-zoom.php:488
+#: image-zoom.php:492
 #@ imagezoom
 msgid "Other plugins"
 msgstr ""
