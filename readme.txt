@@ -85,6 +85,9 @@ Have fun !
 
 == Changelog ==
 
+= 1.7.1 =
+* BUG: Styling CSS issue due to the display of the scroll bar on windows
+
 = 1.7.0 =
 * NEW: update of the colorbox version v1.4.37
 * NEW: update of the theme in order to match with this version
@@ -167,4 +170,4 @@ Have fun !
 Visit http://www.sedlex.fr/cote_geek/
  
  
-InfoVersion:4d5bd785a16738f17d591275be4502be
+InfoVersion:a8f5ea40b13fa65fe185eef5910f79ec
