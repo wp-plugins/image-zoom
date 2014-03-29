@@ -43,7 +43,7 @@ This plugin is compatible with multi-site installation.
 * Czech (Czech Republic) translation provided by jurajh, LukasProkop
 * German (Germany) translation provided by tcp443, B.Klein, Frutte, Dirk
 * English (United States), default language
-* Spanish (Spain) translation provided by genteblackberry, Wildsouth, Paul, RUDIS, yanmarcosgtmo, yorkel
+* Spanish (Spain) translation provided by genteblackberry, Wildsouth, Paul, RUDIS, yanmarcosgtmo, yorkel, DJREY
 * French (France) translation provided by SedLex, mediacop, FlorianP., LaurentChemla, FabienPardo, GizProd
 * Croatian (Croatia) translation provided by Rene
 * Hungarian (Hungary) translation provided by Metoyou, DvnyiFerenc
@@ -84,6 +84,9 @@ Have fun !
 2. An image zommed
 
 == Changelog ==
+
+= 1.7.2 =
+* NEW: image may be excluded by inserting a HTML class exclude_image_zoom
 
 = 1.7.1 =
 * BUG: Styling CSS issue due to the display of the scroll bar on windows
@@ -170,4 +173,4 @@ Have fun !
 Visit http://www.sedlex.fr/cote_geek/
  
  
-InfoVersion:a8f5ea40b13fa65fe185eef5910f79ec
+InfoVersion:82ce03971dc632e237be12d5d83ed732
