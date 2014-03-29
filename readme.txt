@@ -55,6 +55,7 @@ This plugin is compatible with multi-site installation.
 * Portuguese (Brazil) translation provided by FabyanoTitara
 * Romanian (Romania) translation provided by 
 * Russian (Russia) translation provided by sever, Sprigin, vyachek, Copyright
+* Turkish (Turkey) translation provided by 
 * Vietnamese (Viet Nam) translation provided by Khco
 
 = Features of the framework =
@@ -84,6 +85,9 @@ Have fun !
 2. An image zommed
 
 == Changelog ==
+
+= 1.7.3 =
+* NEW: Improve the look of the configuration page
 
 = 1.7.2 =
 * NEW: image may be excluded by inserting a HTML class exclude_image_zoom
@@ -173,4 +177,4 @@ Have fun !
 Visit http://www.sedlex.fr/cote_geek/
  
  
-InfoVersion:82ce03971dc632e237be12d5d83ed732
+InfoVersion:9389ace0f86260e0f053362019d5dabb
