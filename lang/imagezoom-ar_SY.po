@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2014-02-11T13:06:56+00:00\n"
+"PO-Revision-Date: 2014-03-30T08:39:46+00:00\n"
 "Last-Translator: aboRoma <jacksacali@gmail.com>\n"
 "Last-Translator: Dimajahiz <admin@dimajahiz.com>\n"
 "Language-Team: \n"
@@ -51,9 +51,6 @@ msgstr "العرض الأعظمي:"
 msgid "Max height:"
 msgstr "الطول الأعظمي:"
 
-msgid "Do you want to clip to browser size:"
-msgstr ""
-
 msgid "What is the text for the frontend?"
 msgstr "ما هو النص على الواجهة؟"
 
@@ -85,16 +82,16 @@ msgid "Choose the theme:"
 msgstr "اختر المظهر:"
 
 msgid "Theme 01 is : %s."
-msgstr "المظهر 01 :  %s"
+msgstr "المظهر 01 : %s"
 
 msgid "Theme 02 is : %s."
-msgstr "المظهر 02 :  %s"
+msgstr "المظهر 02 : %s"
 
 msgid "Theme 03 is : %s."
-msgstr "المظهر 03 :  %s"
+msgstr "المظهر 03 : %s"
 
 msgid "Theme 04 is : %s (created by %s)."
-msgstr "المظهر 04 :  %s (created by %s)."
+msgstr "المظهر 04 : %s (created by %s)."
 
 msgid "Show description text"
 msgstr "عرض وصف النص"
@@ -133,10 +130,10 @@ msgid "List of page exclusions:"
 msgstr "قائمة بالصفحات المستبعدة:"
 
 msgid "For instance, you may exclude page with URL like %s by setting this option to %s. Please add one regular expressions by line"
-msgstr "على سبيل المثال، قد تستبعد صفحة برابط مثل:  %s بوضع الإعداد على  %s. رجاء ضع تعبير نظامي واحد في كل سطر"
+msgstr "على سبيل المثال، قد تستبعد صفحة برابط مثل: %s بوضع الإعداد على %s. رجاء ضع تعبير نظامي واحد في كل سطر"
 
 msgid "In addition, you may set this option to %s and to %s to exclude the home page"
-msgstr "بالإضافة إلى ذلك، قد قمت بتعيين هذا الخيار إلى %s  إلى %s واستبعاد الصفحة الرئيسية"
+msgstr "بالإضافة إلى ذلك، قد قمت بتعيين هذا الخيار إلى %s إلى %s واستبعاد الصفحة الرئيسية"
 
 msgid "Parameters"
 msgstr "البارامترات"

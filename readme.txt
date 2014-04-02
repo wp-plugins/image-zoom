@@ -86,6 +86,9 @@ Have fun !
 
 == Changelog ==
 
+= 1.7.4 =
+* NEW: Try to be clearer regarding the exclusion list (regular expressions)
+
 = 1.7.3 =
 * NEW: Improve the look of the configuration page
 
@@ -177,4 +180,4 @@ Have fun !
 Visit http://www.sedlex.fr/cote_geek/
  
  
-InfoVersion:9389ace0f86260e0f053362019d5dabb
+InfoVersion:13dd5ed80d9f7a1f7087dd2d5a18a8cc
