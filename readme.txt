@@ -81,6 +81,9 @@ Have fun !
 
 == Changelog ==
 
+= 1.7.7 =
+* BUG: Some issue with PHP version below 5.2 (now corrected)
+
 = 1.7.6 =
 * NEW: Option to disable if the users uses mobile terminal
 
@@ -181,4 +184,4 @@ Have fun !
 Visit http://www.sedlex.fr/cote_geek/
  
  
-InfoVersion:8bed2e1ceca8067bd11440a4afa22cf4
+InfoVersion:4ae150f842b3aca6bcdab8dbed836945
