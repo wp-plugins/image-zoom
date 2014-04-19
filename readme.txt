@@ -81,6 +81,9 @@ Have fun !
 
 == Changelog ==
 
+= 1.7.6 =
+* NEW: Option to disable if the users uses mobile terminal
+
 = 1.7.5 =
 * NEW: Upgarde of the framework
 
@@ -178,4 +181,4 @@ Have fun !
 Visit http://www.sedlex.fr/cote_geek/
  
  
-InfoVersion:157a66cdc5fb02023f87e8a151b1608e
+InfoVersion:8bed2e1ceca8067bd11440a4afa22cf4
