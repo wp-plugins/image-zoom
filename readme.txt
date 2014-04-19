@@ -6,7 +6,7 @@ Author URI: http://www.sedlex.fr/
 Plugin URI: http://wordpress.org/plugins/image-zoom/
 Tags: 
 Requires at least: 3.0
-Tested up to: 3.8.1
+Tested up to: 3.9
 Stable tag: trunk
 
 Allow to dynamically zoom on images in posts/pages/... 
@@ -41,7 +41,7 @@ This plugin is compatible with multi-site installation.
 * Arabic (Syria) translation provided by aboRoma, Dimajahiz
 * Bulgarian (Bulgaria) translation provided by Vangelov, KalinLynnDimitrov, KonstantinYovev
 * Czech (Czech Republic) translation provided by jurajh, LukasProkop
-* German (Germany) translation provided by tcp443, B.Klein, Frutte, Dirk
+* German (Germany) translation provided by tcp443, B.Klein, Frutte, Dirk, Robin
 * English (United States), default language
 * Spanish (Spain) translation provided by genteblackberry, Wildsouth, Paul, RUDIS, yanmarcosgtmo, yorkel, DJREY
 * French (France) translation provided by SedLex, mediacop, FlorianP., LaurentChemla, FabienPardo, GizProd
@@ -60,14 +60,9 @@ This plugin is compatible with multi-site installation.
 
 = Features of the framework =
 
-This plugin uses the SL framework. This framework eases the creation of new plugins by providing incredible tools and frames.
+This plugin uses the SL framework. This framework eases the creation of new plugins by providing tools and frames (see dev-toolbox plugin for more info).
 
-For instance, a new created plugin comes with
-
-* A translation interface to simplify the localization of the text of the plugin ; 
-* An embedded SVN client (subversion) to easily commit/update the plugin in wordpress.org repository ; 
-* A detailled documentation of all available classes and methodes ; 
-* etc.
+You may easily translate the text of the plugin and submit it to the developer, send a feedback, or choose the location of the plugin in the admin panel.
 
 Have fun !
 
@@ -85,6 +80,9 @@ Have fun !
 2. An image zommed
 
 == Changelog ==
+
+= 1.7.5 =
+* NEW: Upgarde of the framework
 
 = 1.7.4 =
 * NEW: Try to be clearer regarding the exclusion list (regular expressions)
@@ -180,4 +178,4 @@ Have fun !
 Visit http://www.sedlex.fr/cote_geek/
  
  
-InfoVersion:480a92947c2a0a31e0ae3ed51090ab96
+InfoVersion:45539d2dd1fb413f20390da722de3624

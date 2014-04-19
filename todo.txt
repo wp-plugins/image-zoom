@@ -1,0 +1,1 @@
+Inbcrease the default size of the image and set the clip to image size to true by default
