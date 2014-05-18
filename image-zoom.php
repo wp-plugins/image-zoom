@@ -3,7 +3,8 @@
 Plugin Name: Image Zoom
 Plugin Name: zoom, highslide, image, panorama
 Description: <p>Allow to dynamically zoom on images in posts/pages/... </p><p>When clicked, the image will dynamically scale-up. Please note that you have to insert image normally with the wordpress embedded editor.</p><p>You may configure:</p><ul><li>The max width/height of the image; </li><li>The transition delay; </li><li>The position of the buttons; </li><li>The auto-start of the slideshow; </li><li>the opacity of the background; </li><li>the pages to be excluded. </li></ul><p>If the image does not scale-up, please verify that the HTML looks like the following : &lt;a href=' '&gt;&lt;img src=' '&gt;&lt;/a&gt;.</p><p>This plugin implements the colorbox javascript library. </p><p>This plugin is under GPL licence.</p>
-Version: 1.7.7
+Version: 1.7.8
+
 
 
 
@@ -443,12 +444,12 @@ class imagezoom extends pluginSedLex {
 			//==========================================================================================
 			
 			
-			$tabs = new adminTabs() ; 
+			$tabs = new SLFramework_Tabs() ; 
 			echo "<p>".__('This plugin allows a dynamic zoom on the images.', $this->pluginID)."</p>" ; 
 			echo "<p>".sprintf(__('All images in your pages/posts like %s will be zoomable.', $this->pluginID),"<code>&lt;a href=''&gt;&lt;img src=''&gt;&lt;/a&gt;</code>")."</p>" ; 
 			echo "<p>".sprintf(__('If you want to exclude one specific image, please modify the HTML code so that this image is like that: %s or %s.', $this->pluginID),"<code>&lt;a href='' class='exclude_image_zoom'&gt;&lt;img src=''&gt;&lt;/a&gt;</code>","<code>&lt;a href=''&gt;&lt;img src='' class='exclude_image_zoom'&gt;&lt;/a&gt;</code>")."</p>" ; 
 			ob_start() ; 
-				$params = new parametersSedLex($this, 'tab-parameters') ; 
+				$params = new SLFramework_Parameters($this, 'tab-parameters') ; 
 				$params->add_title(__('What are the clipped dimensions of the zoomed image?',$this->pluginID)) ; 
 				$params->add_param('widthRestriction', __('Max width:',$this->pluginID)) ; 
 				$params->add_param('heightRestriction', __('Max height:',$this->pluginID)) ; 
@@ -497,18 +498,18 @@ class imagezoom extends pluginSedLex {
 						
 			ob_start() ; 
 				$plugin = str_replace("/","",str_replace(basename(__FILE__),"",plugin_basename( __FILE__))) ; 
-				$trans = new translationSL($this->pluginID, $plugin) ; 
+				$trans = new SLFramework_Translation($this->pluginID, $plugin) ; 
 				$trans->enable_translation() ; 
 			$tabs->add_tab(__('Manage translations',  $this->pluginID), ob_get_clean() , plugin_dir_url("/").'/'.str_replace(basename(__FILE__),"",plugin_basename(__FILE__))."core/img/tab_trad.png") ; 	
 
 			ob_start() ; 
 				$plugin = str_replace("/","",str_replace(basename(__FILE__),"",plugin_basename( __FILE__))) ; 
-				$trans = new feedbackSL($plugin,  $this->pluginID) ; 
+				$trans = new SLFramework_Feedback($plugin,  $this->pluginID) ; 
 				$trans->enable_feedback() ; 
 			$tabs->add_tab(__('Give feedback',  $this->pluginID), ob_get_clean() , plugin_dir_url("/").'/'.str_replace(basename(__FILE__),"",plugin_basename(__FILE__))."core/img/tab_mail.png") ; 	
 			
 			ob_start() ; 
-				$trans = new otherPlugins("sedLex", array('wp-pirates-search')) ; 
+				$trans = new SLFramework_OtherPlugins("sedLex", array('wp-pirates-search')) ; 
 				$trans->list_plugins() ; 
 			$tabs->add_tab(__('Other plugins',  $this->pluginID), ob_get_clean() , plugin_dir_url("/").'/'.str_replace(basename(__FILE__),"",plugin_basename(__FILE__))."core/img/tab_plug.png") ; 	
 			

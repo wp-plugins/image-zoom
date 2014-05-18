@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2014-03-03T15:46:19+00:00\n"
+"PO-Revision-Date: 2014-05-18T11:11:13+00:00\n"
 "Last-Translator: genteblackberry <http://newgenteblackberry.com>\n"
 "Last-Translator: Wildsouth <wildsout@gmail.com>\n"
 "Last-Translator: Paul <www.tecnofilos.net>\n"
@@ -12,6 +12,7 @@ msgstr ""
 "Last-Translator: yanmarcosgtmo <ajedrezdiscapacitados.cubava.cu>\n"
 "Last-Translator: yorkel <>\n"
 "Last-Translator: DJREY <www.reynerio.cubava.cu>\n"
+"Last-Translator: Francisco <franko.cubava.cu>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -84,13 +85,13 @@ msgid "Choose the theme:"
 msgstr "Selecciona plantilla"
 
 msgid "Theme 01 is : %s."
-msgstr "La plantilla 01 es: %s."
+msgstr "Plantilla 01 es: %s."
 
 msgid "Theme 02 is : %s."
-msgstr "La plantilla 02 es: %s."
+msgstr "Plantilla 02 es: %s."
 
 msgid "Theme 03 is : %s."
-msgstr "La plantilla 03 es: %s."
+msgstr "Plantilla 03 es: %s."
 
 msgid "What are the other parameters?"
 msgstr "¿Cuales son los otros parámetros?"
@@ -136,4 +137,22 @@ msgstr "Deshabilitar click en la imagen para el siguiente (a continuación cerra
 
 msgid "Disable the slideshow buttons on images:"
 msgstr "Desactive los botones de presentación de diapositivas en las imágenes:"
+
+msgid "Theme 04"
+msgstr "Tema 04"
+
+msgid "Do you want to clip to browser size:"
+msgstr "¿Usted quiere recortar el tamaño del navegador?"
+
+msgid "Theme 04 is : %s (created by %s)."
+msgstr "Plantilla 03 es: %s. (creada por %s)."
+
+msgid "Show description text"
+msgstr "Mostrar descripción de texto"
+
+msgid "Show the title of the image:"
+msgstr "Mostrar titulo de la imagen"
+
+msgid "Show the alternative text of the image:"
+msgstr "Mostrar el texto alternativo de la imagen"
 

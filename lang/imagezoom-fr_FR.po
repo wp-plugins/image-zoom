@@ -4,13 +4,14 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2013-10-10T15:17:22+00:00\n"
+"PO-Revision-Date: 2014-05-18T11:12:21+00:00\n"
 "Last-Translator: SedLex <http://www.sedlex.fr/>\n"
 "Last-Translator: mediacop <>\n"
 "Last-Translator: FlorianP. <floflo63400@gmail.com>\n"
 "Last-Translator: LaurentChemla <laurent@brainstorm.fr>\n"
 "Last-Translator: FabienPardo <fabien009@hotmail.com>\n"
 "Last-Translator: GizProd <http://www.gizprod.fr>\n"
+"Last-Translator: Francisco <franko.cubava.cu>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -153,4 +154,7 @@ msgstr "Déactiver le clique sur l&#039;image pour passer à la suivante (cela f
 
 msgid "Disable the slideshow buttons on images:"
 msgstr "Déactiver les boutons de panorama sur les images:"
+
+msgid "Do you want to clip to browser size:"
+msgstr "Voulez-vous de couper à la taille du navigateur:"
 

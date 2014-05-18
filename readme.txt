@@ -6,7 +6,7 @@ Author URI: http://www.sedlex.fr/
 Plugin URI: http://wordpress.org/plugins/image-zoom/
 Tags: 
 Requires at least: 3.0
-Tested up to: 3.9
+Tested up to: 3.9.1
 Stable tag: trunk
 
 Allow to dynamically zoom on images in posts/pages/... 
@@ -41,10 +41,10 @@ This plugin is compatible with multi-site installation.
 * Arabic (Syria) translation provided by aboRoma, Dimajahiz
 * Bulgarian (Bulgaria) translation provided by Vangelov, KalinLynnDimitrov, KonstantinYovev
 * Czech (Czech Republic) translation provided by jurajh, LukasProkop
-* German (Germany) translation provided by tcp443, B.Klein, Frutte, Dirk, Robin
+* German (Germany) translation provided by tcp443, B.Klein, Frutte, Dirk, Robin, Francisco
 * English (United States), default language
-* Spanish (Spain) translation provided by genteblackberry, Wildsouth, Paul, RUDIS, yanmarcosgtmo, yorkel, DJREY
-* French (France) translation provided by SedLex, mediacop, FlorianP., LaurentChemla, FabienPardo, GizProd
+* Spanish (Spain) translation provided by genteblackberry, Wildsouth, Paul, RUDIS, yanmarcosgtmo, yorkel, DJREY, Francisco
+* French (France) translation provided by SedLex, mediacop, FlorianP., LaurentChemla, FabienPardo, GizProd, Francisco
 * Croatian (Croatia) translation provided by Rene
 * Hungarian (Hungary) translation provided by Metoyou, DvnyiFerenc
 * Italian (Italy) translation provided by Mauro
@@ -52,8 +52,8 @@ This plugin is compatible with multi-site installation.
 * Dutch (Netherlands) translation provided by PC-Rider, Erik
 * Norwegian-Nynorsk (Norway) translation provided by SimenEggen
 * Polish (Poland) translation provided by rzuf, ukasz, Lukasz
-* Portuguese (Brazil) translation provided by FabyanoTitara
-* Romanian (Romania) translation provided by 
+* Portuguese (Brazil) translation provided by FabyanoTitara, Francisco
+* Romanian (Romania) translation provided by Francisco
 * Russian (Russia) translation provided by sever, Sprigin, vyachek, Copyright
 * Turkish (Turkey) translation provided by 
 * Vietnamese (Viet Nam) translation provided by Khco
@@ -80,6 +80,9 @@ Have fun !
 2. An image zommed
 
 == Changelog ==
+
+= 1.7.8 =
+* Few enhancement to avoid conflicts with others plugins
 
 = 1.7.7 =
 * BUG: Some issue with PHP version below 5.2 (now corrected)
@@ -184,4 +187,4 @@ Have fun !
 Visit http://www.sedlex.fr/cote_geek/
  
  
-InfoVersion:4ae150f842b3aca6bcdab8dbed836945
+InfoVersion:73e010e98414c0badf6e1d337ad8cd93f31c2250

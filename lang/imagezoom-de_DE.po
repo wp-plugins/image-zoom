@@ -4,12 +4,13 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2014-04-06T17:30:35+00:00\n"
+"PO-Revision-Date: 2014-05-18T11:17:36+00:00\n"
 "Last-Translator: tcp443 <www.tcp443.de>\n"
 "Last-Translator: B.Klein <www.kpowered.de>\n"
 "Last-Translator: Frutte <http://www.figaros-netzwerk.de>\n"
 "Last-Translator: Dirk <dirk@dredv.de>\n"
 "Last-Translator: Robin <rc.tontechnik@gmail.com>\n"
+"Last-Translator: Francisco <franko.cubava.cu>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -24,6 +25,33 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Textdomain-Support: yes\n"
 
+msgid "Theme 01"
+msgstr "Thema 01"
+
+msgid "Theme 02"
+msgstr "Thema 02"
+
+msgid "Theme 03"
+msgstr "Thema 03"
+
+msgid "Theme 04"
+msgstr "Thema 04"
+
+msgid "Your theme contains (i.e. in %s file) a hardcoded reference to the jQuery javascript library."
+msgstr "Ihr Thema enthält (i.e. in %s Datei) einen hartcodierten Referenz auf die jQuery-JavaScript-Bibliothek."
+
+msgid "This reference may break the plugin. So, if the plugin does not work, please either delete this reference or move it just after the %s declaration."
+msgstr "Diese Referenz kann das Plugin zu brechen. Also, wenn das Plugin nicht funktioniert, löschen Sie bitte entweder die Referenz oder verschieben Sie sie kurz nach der %s Erklärung."
+
+msgid "This plugin allows a dynamic zoom on the images."
+msgstr "Dieses Plugin erlaubt das dynamische Zoomen von Bildern"
+
+msgid "All images in your pages/posts like %s will be zoomable."
+msgstr "Alle Bilder, wie %s, die in den Seiten/Posts enthalten sind, sind zoombar"
+
+msgid "If you want to exclude one specific image, please modify the HTML code so that this image is like that: %s or %s."
+msgstr "Wenn du ein Bild ausnehmen willst, modifiziere bitte den HTML Code so, dass das Bild ist wie hier: %s oder %s"
+
 msgid "What are the clipped dimensions of the zoomed image?"
 msgstr "Wie groß soll der Ausschnitt des gezoomten Bildes sein?"
 
@@ -32,6 +60,9 @@ msgstr "Maximale Breite:"
 
 msgid "Max height:"
 msgstr "Maximale Höhe:"
+
+msgid "Do you want to clip to browser size:"
+msgstr "Wollen Sie auf Browsergröße Clip wollen:"
 
 msgid "What is the text for the frontend?"
 msgstr "Wie lautet der Frontend-Text?"
@@ -54,8 +85,11 @@ msgstr "Pause:"
 msgid "The image counter:"
 msgstr "Auflistung der Bilder."
 
+msgid "The %s will be replace with the index of the image and %s with the total number of images in the page."
+msgstr "%s wird mit dem Index des Bildes und %s mit der Gesamtanzahl der Bilder in der Seite zu ersetzen."
+
 msgid "What is the theme?"
-msgstr "Wie ist das Thema?"
+msgstr "Wie ist das Thema:"
 
 msgid "Choose the theme:"
 msgstr "Wähle das Thema:"
@@ -105,8 +139,20 @@ msgstr "Beenden der Bildanzeige:"
 msgid "Disable the slideshow buttons on images:"
 msgstr "Navigation auf Abbilgungen anzeigen."
 
-msgid "List of page exclusions:"
-msgstr "Liste anzeigen:"
+msgid "List of page exclusions (regular expressions):"
+msgstr "Liste der ausgenommen Seiten (Regular Expressions):"
+
+msgid "For instance, you may exclude page with URL like %s by setting this option to %s. Please add one regular expressions by line"
+msgstr "Zum Beispiel können Sie Seite mit URL wie %s, indem Sie diese Option, um %s auszuschließen. Bitte fügen Sie eine reguläre Ausdrücke für Zeile"
+
+msgid "You may also exclude this same page by setting this option to %s"
+msgstr "Du kannst die selbe Seite auch ausschließen, indem du diese Option zu %s setzts"
+
+msgid "In addition, you may set this option to %s and to %s to exclude the home page"
+msgstr "Darüber hinaus können Sie diese Option, um %s zu setzen und %s, um die Homepage ausschließen"
+
+msgid "Disable if the user uses mobile terminal:"
+msgstr ""
 
 msgid "Parameters"
 msgstr "Einstellungen"
@@ -119,49 +165,4 @@ msgstr "Feedback"
 
 msgid "Other plugins"
 msgstr "weitere Plugins"
-
-msgid "Theme 01"
-msgstr "Thema 01"
-
-msgid "Theme 02"
-msgstr "Thema 02"
-
-msgid "Theme 03"
-msgstr "Thema 03"
-
-msgid "Theme 04"
-msgstr "Thema 04"
-
-msgid "Your theme contains (i.e. in %s file) a hardcoded reference to the jQuery javascript library."
-msgstr "Das Layout enthält in der Datei %s einen fest einprogrammierten Verweis zu der jQuery Javascript Bibliothek"
-
-msgid "This reference may break the plugin. So, if the plugin does not work, please either delete this reference or move it just after the %s declaration."
-msgstr "Dieser Verweis kann möglicherweise die Funktion des Plugins behindern. Sollte also das Plugin nicht funktionieren, lösche entweder diesen Verweis oder rücke ihn hinter die %s Deklaration"
-
-msgid "This plugin allows a dynamic zoom on the images."
-msgstr "Dieses Plugin erlaubt das dynamische Zoomen von Bildern"
-
-msgid "All images in your pages/posts like %s will be zoomable."
-msgstr "Alle Bilder, wie %s, die in den Seiten/Posts enthalten sind, sind zoombar"
-
-msgid "If you want to exclude one specific image, please modify the HTML code so that this image is like that: %s or %s."
-msgstr "Wenn du ein Bild ausnehmen willst, modifiziere bitte den HTML Code so, dass das Bild ist wie hier: %s oder %s"
-
-msgid "Do you want to clip to browser size:"
-msgstr "Soll das Bild auf Browser Größe gezoomt werden:"
-
-msgid "The %s will be replace with the index of the image and %s with the total number of images in the page."
-msgstr "Das %s wird mit dem Index des Bildes ersetzt und %s mit der Anzahl aller Bilder."
-
-msgid "List of page exclusions (regular expressions):"
-msgstr "Liste der ausgenommen Seiten (Regular Expressions):"
-
-msgid "For instance, you may exclude page with URL like %s by setting this option to %s. Please add one regular expressions by line"
-msgstr "Zum Beispiel kannst du eine Seite mit einer URL wie %s ausschließen indem du diese Option zu %s setzts. Bitte füge eine Regular Expression in die Zeile hinzu."
-
-msgid "You may also exclude this same page by setting this option to %s"
-msgstr "Du kannst die selbe Seite auch ausschließen, indem du diese Option zu %s setzts"
-
-msgid "In addition, you may set this option to %s and to %s to exclude the home page"
-msgstr "Zusätzlich kannst du auch diese Option zu %s oder %s setzen, um die Startseite auszuschließen"
 
