@@ -3,12 +3,7 @@
 Plugin Name: Image Zoom
 Plugin Name: zoom, highslide, image, panorama
 Description: <p>Allow to dynamically zoom on images in posts/pages/... </p><p>When clicked, the image will dynamically scale-up. Please note that you have to insert image normally with the wordpress embedded editor.</p><p>You may configure:</p><ul><li>The max width/height of the image; </li><li>The transition delay; </li><li>The position of the buttons; </li><li>The auto-start of the slideshow; </li><li>the opacity of the background; </li><li>the pages to be excluded. </li></ul><p>If the image does not scale-up, please verify that the HTML looks like the following : &lt;a href=' '&gt;&lt;img src=' '&gt;&lt;/a&gt;.</p><p>This plugin implements the colorbox javascript library. </p><p>This plugin is under GPL licence.</p>
-Version: 1.7.8
-
-
-
-
-
+Version: 1.7.9
 Author: SedLex
 Author Email: sedlex@sedlex.fr
 Framework Email: sedlex@sedlex.fr
@@ -445,9 +440,6 @@ class imagezoom extends pluginSedLex {
 			
 			
 			$tabs = new SLFramework_Tabs() ; 
-			echo "<p>".__('This plugin allows a dynamic zoom on the images.', $this->pluginID)."</p>" ; 
-			echo "<p>".sprintf(__('All images in your pages/posts like %s will be zoomable.', $this->pluginID),"<code>&lt;a href=''&gt;&lt;img src=''&gt;&lt;/a&gt;</code>")."</p>" ; 
-			echo "<p>".sprintf(__('If you want to exclude one specific image, please modify the HTML code so that this image is like that: %s or %s.', $this->pluginID),"<code>&lt;a href='' class='exclude_image_zoom'&gt;&lt;img src=''&gt;&lt;/a&gt;</code>","<code>&lt;a href=''&gt;&lt;img src='' class='exclude_image_zoom'&gt;&lt;/a&gt;</code>")."</p>" ; 
 			ob_start() ; 
 				$params = new SLFramework_Parameters($this, 'tab-parameters') ; 
 				$params->add_title(__('What are the clipped dimensions of the zoomed image?',$this->pluginID)) ; 
@@ -495,7 +487,33 @@ class imagezoom extends pluginSedLex {
 				$params->flush() ; 
 			$tabs->add_tab(__('Parameters',  $this->pluginID), ob_get_clean() , plugin_dir_url("/").'/'.str_replace(basename(__FILE__),"",plugin_basename(__FILE__))."core/img/tab_param.png") ; 	
 
-						
+			// HOW To
+			ob_start() ;
+				echo "<p>".__('This plugin allows a dynamic zoom on the images.', $this->pluginID)."</p>" ; 
+				echo "<p>".sprintf(__('All images in your pages/posts like %s will be zoomable.', $this->pluginID),"<code>&lt;a href=''&gt;&lt;img src=''&gt;&lt;/a&gt;</code>")."</p>" ; 
+			$howto1 = new SLFramework_Box (__("Purpose of that plugin", $this->pluginID), ob_get_clean()) ; 
+			ob_start() ;
+				echo "<p>".sprintf(__('If you want to exclude one specific image, please modify the HTML code so that this image is like that: %s or %s.', $this->pluginID),"<code>&lt;a href='' class='exclude_image_zoom'&gt;&lt;img src=''&gt;&lt;/a&gt;</code>","<code>&lt;a href=''&gt;&lt;img src='' class='exclude_image_zoom'&gt;&lt;/a&gt;</code>")."</p>" ; 
+			$howto2 = new SLFramework_Box (__("Exclude an image", $this->pluginID), ob_get_clean()) ; 
+			ob_start() ;
+				echo "<p>".__('If you want to exclude one specific page, please use the advanced option in the configuration tab', $this->pluginID)."</p>" ; 
+				echo "<p>".sprintf(__('For instance, you may exclude page with URL like %s by setting this option to portfolio. Please add one regular expressions by line.', $this->pluginID), "<code>http://yourdomain.tld/portfolio/</code>")."</p>" ; 
+				echo "<p>".sprintf(__('You may also exclude this same page by setting this option to %s.', $this->pluginID), "<code>http://www\.yourdomain\.tld/portfolio/</code>")."</p>" ; 
+				echo "<p>".sprintf(__('In addition, you may set this option to %s and to %s to exclude the home page.', $this->pluginID), "<code>^/$</code>", "<code>^$</code>")."</p>" ; 
+			$howto3 = new SLFramework_Box (__("Exclude a page", $this->pluginID), ob_get_clean()) ; 
+			ob_start() ;
+				echo "<p>".__('One of the most probable reason that the plugin does not work is that there is a conflict with your theme of one of your plugins.', $this->pluginID)."</p>" ; 
+				echo "<p>".__('Before contacting me, please test deactivating each plugin one by one to see if it solve the problem and change the theme by the default one.', $this->pluginID)."</p>" ; 
+				echo "<p>".sprintf(__('Indeed, most of the time the %s library is not loaded correctly.', $this->pluginID), "<code>jQuery</code>")."</p>" ;
+				echo "<p>".__('I cannot give you a simple way to correct it!', $this->pluginID)."</p>" ; 
+			$howto4 = new SLFramework_Box (__("The plugin does not work", $this->pluginID), ob_get_clean()) ; 
+			ob_start() ;
+				 echo $howto1->flush() ; 
+				 echo $howto2->flush() ; 
+				 echo $howto3->flush() ; 
+				 echo $howto4->flush() ; 
+			$tabs->add_tab(__('How To',  $this->pluginID), ob_get_clean() , plugin_dir_url("/").'/'.str_replace(basename(__FILE__),"",plugin_basename(__FILE__))."core/img/tab_how.png") ; 	
+					
 			ob_start() ; 
 				$plugin = str_replace("/","",str_replace(basename(__FILE__),"",plugin_basename( __FILE__))) ; 
 				$trans = new SLFramework_Translation($this->pluginID, $plugin) ; 

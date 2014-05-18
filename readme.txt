@@ -81,6 +81,9 @@ Have fun !
 
 == Changelog ==
 
+= 1.7.9 =
+* NEW: How To tabs added
+
 = 1.7.8 =
 * Few enhancement to avoid conflicts with others plugins
 
@@ -187,4 +190,4 @@ Have fun !
 Visit http://www.sedlex.fr/cote_geek/
  
  
-InfoVersion:73e010e98414c0badf6e1d337ad8cd93f31c2250
+InfoVersion:7b16554cdcb54efc380bf2ee48fdfb817ce290c2
