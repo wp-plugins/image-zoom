@@ -3,7 +3,8 @@
 Plugin Name: Image Zoom
 Plugin Name: zoom, highslide, image, panorama
 Description: <p>Allow to dynamically zoom on images in posts/pages/... </p><p>When clicked, the image will dynamically scale-up. Please note that you have to insert image normally with the wordpress embedded editor.</p><p>You may configure:</p><ul><li>The max width/height of the image; </li><li>The transition delay; </li><li>The position of the buttons; </li><li>The auto-start of the slideshow; </li><li>the opacity of the background; </li><li>the pages to be excluded. </li></ul><p>If the image does not scale-up, please verify that the HTML looks like the following : &lt;a href=' '&gt;&lt;img src=' '&gt;&lt;/a&gt;.</p><p>This plugin implements the colorbox javascript library. </p><p>This plugin is under GPL licence.</p>
-Version: 1.7.9
+Version: 1.8.0
+
 Author: SedLex
 Author Email: sedlex@sedlex.fr
 Framework Email: sedlex@sedlex.fr
@@ -114,6 +115,32 @@ class imagezoom extends pluginSedLex {
 			case 'tra_play'			: return "Play" ; break ; 
 			case 'tra_pause'		: return "Pause" ; break ; 
 			case 'exclu'		: return "*" ; break ; 
+			
+			case 'css'		: return "*.gallery_colorbox {}
+#cboxOverlay{}
+#colorbox{}
+#cboxContent{}
+.cboxIframe{}
+#cboxError{}
+#cboxLoadedContent{}
+#cboxTitle{}
+#cboxTitle h2{}
+#cboxCurrent{}
+#cboxLoadingGraphic{}
+#cboxLoadingOverlay{}
+#cboxLoadingGraphic{}
+#cboxLoadedContent{}
+#cboxPrevious, #cboxNext, #cboxSlideshow, #cboxClose {}
+#cboxPrevious:active, #cboxNext:active, #cboxSlideshow:active, #cboxClose:active {}
+#cboxPrevious{}
+#cboxPrevious:hover{}
+#cboxNext{}
+#cboxClose{}
+#cboxClose:hover{}
+.cboxSlideshow_off #cboxSlideshow{}
+.cboxSlideshow_off #cboxSlideshow:hover{}
+.cboxSlideshow_on #cboxSlideshow{}
+.cboxSlideshow_on #cboxSlideshow:hover{}" ; break ; 
 			
 			case 'disable_mobile' : return false ; break ; 
 			
@@ -329,6 +356,9 @@ class imagezoom extends pluginSedLex {
 				}
 			}
 		}
+		
+		$this->add_inline_css($this->get_param('css')) ; 
+
 	}
 
 	/** ====================================================================================================================================================
@@ -462,7 +492,10 @@ class imagezoom extends pluginSedLex {
 				$params->add_comment(sprintf(__('Theme 02 is : %s.',$this->pluginID), "<img src='".plugin_dir_url("/").'/'.str_replace(basename(__FILE__),"",plugin_basename(__FILE__))."img/theme2_illustr.jpg"."'/>")) ; 
 				$params->add_comment(sprintf(__('Theme 03 is : %s.',$this->pluginID), "<img src='".plugin_dir_url("/").'/'.str_replace(basename(__FILE__),"",plugin_basename(__FILE__))."img/theme3_illustr.jpg"."'/>")) ; 
 				$params->add_comment(sprintf(__('Theme 04 is : %s (created by %s).',$this->pluginID), "<img src='".plugin_dir_url("/").'/'.str_replace(basename(__FILE__),"",plugin_basename(__FILE__))."img/theme4_illustr.jpg"."'/>", "Andreas Amundin")) ; 
-				
+				$params->add_param('css', __('Additional CSS you want to add:',$this->pluginID)) ; 
+				$params->add_comment(__('If you want to modify sligthly the CSS, you can modify it here.',$this->pluginID)) ; 
+				$params->add_comment_default_value('css') ; 
+
 				$params->add_title(__('Show description text',$this->pluginID)) ; 
 				$params->add_param('show_title', __('Show the title of the image:',$this->pluginID)) ; 
 				$params->add_param('show_alt', __('Show the alternative text of the image:',$this->pluginID)) ; 

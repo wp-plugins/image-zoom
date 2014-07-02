@@ -47,7 +47,7 @@ This plugin is compatible with multi-site installation.
 * French (France) translation provided by SedLex, mediacop, FlorianP., LaurentChemla, FabienPardo, GizProd, Francisco
 * Croatian (Croatia) translation provided by Rene
 * Hungarian (Hungary) translation provided by Metoyou, DvnyiFerenc
-* Italian (Italy) translation provided by Mauro
+* Italian (Italy) translation provided by Mauro, ManuelIzziL.
 * Lithuanian (Lithuania) translation provided by ydrius
 * Dutch (Netherlands) translation provided by PC-Rider, Erik
 * Norwegian-Nynorsk (Norway) translation provided by SimenEggen
@@ -80,6 +80,10 @@ Have fun !
 2. An image zommed
 
 == Changelog ==
+
+= 1.8.0 =
+* NEW: Speed up the framework
+* NEW : add an option to modify the CSS as wanted
 
 = 1.7.9 =
 * NEW: How To tabs added
@@ -190,4 +194,4 @@ Have fun !
 Visit http://www.sedlex.fr/cote_geek/
  
  
-InfoVersion:102a91814e12af4d488d3419a9a924cee27627d4
+InfoVersion:c798c9ac28c46a1d8ef17dedb48c930ca8ee306c
