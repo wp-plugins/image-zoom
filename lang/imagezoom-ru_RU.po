@@ -4,11 +4,13 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2013-10-02T11:32:03+00:00\n"
+"PO-Revision-Date: 2014-09-10T13:44:01+00:00\n"
+"Last-Translator: SedLex <http://www.sedlex.fr/>\n"
 "Last-Translator: sever <magadansever.ru>\n"
 "Last-Translator: Sprigin <Sprigin.ru>\n"
 "Last-Translator: vyachek <vyachek@op.pl>\n"
 "Last-Translator: Copyright <http://belfast.by>\n"
+"Last-Translator: OlegKovalenko <http://sdelanovpmr.info>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -32,6 +34,15 @@ msgstr "Тема 02"
 msgid "Theme 03"
 msgstr "Тема 03"
 
+msgid "Theme 04"
+msgstr "Тема 04"
+
+msgid "Your theme contains (i.e. in %s file) a hardcoded reference to the jQuery javascript library."
+msgstr "Ваша тема содержит (т.е. в файле %s) жесткую ссылку на JQuery JavaScript Library."
+
+msgid "This reference may break the plugin. So, if the plugin does not work, please either delete this reference or move it just after the %s declaration."
+msgstr "Эта ссылка может нарушить плагин. Так, если плагин не работает, пожалуйста, удалите эту ссылку или переместить его сразу после объявления %s."
+
 msgid "What are the clipped dimensions of the zoomed image?"
 msgstr "Размеры для увеличенного изображения"
 
@@ -40,6 +51,9 @@ msgstr "Максимальная ширина:"
 
 msgid "Max height:"
 msgstr "Максимальная высота:"
+
+msgid "Do you want to clip to browser size:"
+msgstr "Обрезать по размеру браузера:"
 
 msgid "What is the text for the frontend?"
 msgstr "Текст для интерфейса (кнопок)"
@@ -62,6 +76,9 @@ msgstr "Пауза"
 msgid "The image counter:"
 msgstr "Счетчик фото:"
 
+msgid "The %s will be replace with the index of the image and %s with the total number of images in the page."
+msgstr "Введенное значение %s будет заменять индексо изображения %s общее количество изображений на странице."
+
 msgid "What is the theme?"
 msgstr "Какая тема?"
 
@@ -76,6 +93,24 @@ msgstr "Тема 02: %s"
 
 msgid "Theme 03 is : %s."
 msgstr "Тема 03: %s"
+
+msgid "Theme 04 is : %s (created by %s)."
+msgstr "Тема 04: %s (автор %s)."
+
+msgid "Additional CSS you want to add:"
+msgstr ""
+
+msgid "If you want to modify sligthly the CSS, you can modify it here."
+msgstr ""
+
+msgid "Show description text"
+msgstr "Показывать описание"
+
+msgid "Show the title of the image:"
+msgstr "Показывать заголовок изображения"
+
+msgid "Show the alternative text of the image:"
+msgstr "Показывать текст тега Alt для изображений"
 
 msgid "What are the other parameters?"
 msgstr "Другие параметры"
@@ -92,11 +127,80 @@ msgstr "Прозрачность фона:"
 msgid "Advanced parameters?"
 msgstr "Показать больше параметров?"
 
-msgid "List of page exclusions:"
-msgstr "Список исключенных страниц"
+msgid "Disable the navigation buttons on images:"
+msgstr "Отключить кнопки навигации на изображениях"
+
+msgid "Disable click on the image for next (it will then close the slideshow):"
+msgstr "Отключить переход к следующему изображению при нажатии (если активировано слайдер при нажатии бужет закрыт)"
+
+msgid "Disable the slideshow buttons on images:"
+msgstr "Отключить кнопки управления слайдером"
+
+msgid "List of page exclusions (regular expressions):"
+msgstr "Список страниц исключений (регулярные выражения):"
+
+msgid "For instance, you may exclude page with URL like %s by setting this option to %s. Please add one regular expressions by line"
+msgstr "Например, вы можете исключить страницу с URL содержащую %s установкой этого параметра в %s. Пожалуйста, добавьте одно регулярное выражение в строку"
+
+msgid "You may also exclude this same page by setting this option to %s"
+msgstr "Вы также можете исключить эту же страницу, выберите значение %s"
+
+msgid "In addition, you may set this option to %s and to %s to exclude the home page"
+msgstr "Кроме того, вы можете установить эту опцию %s и %s для исключения стартовой"
+
+msgid "Disable if the user uses mobile terminal:"
+msgstr "Отключить, если пользователь использует мобильный терминал:"
 
 msgid "Parameters"
 msgstr "Параметры"
+
+msgid "This plugin allows a dynamic zoom on the images."
+msgstr "Этот плагин добавляет динамический зум на изображение."
+
+msgid "All images in your pages/posts like %s will be zoomable."
+msgstr "Все изображения в ваших страниц / сообщений %s с будут с масштабированием."
+
+msgid "Purpose of that plugin"
+msgstr "Цель этого плагина"
+
+msgid "If you want to exclude one specific image, please modify the HTML code so that this image is like that: %s or %s."
+msgstr "Если вы хотите исключить одно изображение, пожалуйста, изменить HTML код так, чтобы это изображение содержало %s или %s."
+
+msgid "Exclude an image"
+msgstr "Исключить изображение"
+
+msgid "If you want to exclude one specific page, please use the advanced option in the configuration tab"
+msgstr "Если вы хотите исключить конкретную страницу, пожалуйста, воспользуйтесь расширенной опцией во вкладке конфигурации"
+
+msgid "For instance, you may exclude page with URL like %s by setting this option to portfolio. Please add one regular expressions by line."
+msgstr "Например, вы можете исключить страницу с URL, совпадающую с %s установкой этого параметра в портфеле. Пожалуйста, добавьте одино регулярное выражение в строку."
+
+msgid "You may also exclude this same page by setting this option to %s."
+msgstr "Вы также можете исключить эту же страницу, выберите значение %s."
+
+msgid "In addition, you may set this option to %s and to %s to exclude the home page."
+msgstr "Кроме того, вы можете установить эту опцию %s and to %s, чтобы исключить домашнюю страницу."
+
+msgid "Exclude a page"
+msgstr "Исключить страницу"
+
+msgid "One of the most probable reason that the plugin does not work is that there is a conflict with your theme of one of your plugins."
+msgstr "Один из наиболее вероятных причине, что плагин не работает в том, что есть конфликт с вашей темой одного из ваших плагинов."
+
+msgid "Before contacting me, please test deactivating each plugin one by one to see if it solve the problem and change the theme by the default one."
+msgstr "Прежде чем обращаться в меня, пожалуйста, тест деактивации каждый плагин один за другим, чтобы увидеть, если он решить эту проблему и изменить тему по умолчанию."
+
+msgid "Indeed, most of the time the %s library is not loaded correctly."
+msgstr "В самом деле, большую часть времени библиотека %s не загружается правильно."
+
+msgid "I cannot give you a simple way to correct it!"
+msgstr "Я не могу дать вам простой способ исправить это!"
+
+msgid "The plugin does not work"
+msgstr "Плагин не работает"
+
+msgid "How To"
+msgstr "Как"
 
 msgid "Manage translations"
 msgstr "Управление переводом"
@@ -106,28 +210,4 @@ msgstr "Обратная связь"
 
 msgid "Other plugins"
 msgstr "Другие плагины"
-
-msgid "Theme 04"
-msgstr "Тема 04"
-
-msgid "This plugin allows a dynamic zoom on the images (based on the colorbox javascript library)"
-msgstr "Включить динамическое увеличение изображений (базируется на javascript библиотеке colorbox)"
-
-msgid "Theme 04 is : %s (created by %s)."
-msgstr "Тема 04: %s (автор %s)."
-
-msgid "Show description text"
-msgstr "Показывать описание"
-
-msgid "Show the title of the image:"
-msgstr "Показывать заголовок изображения"
-
-msgid "Disable the navigation buttons on images:"
-msgstr "Отключить кнопки навигации на изображениях"
-
-msgid "Disable click on the image for next (it will then close the slideshow):"
-msgstr "Отключить переход к следующему изображению при нажатии (если активировано слайдер при нажатии бужет закрыт)"
-
-msgid "Disable the slideshow buttons on images:"
-msgstr "Отключить кнопки управления слайдером"
 

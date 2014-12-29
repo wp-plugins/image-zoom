@@ -6,8 +6,9 @@ Author URI: http://www.sedlex.fr/
 Plugin URI: http://wordpress.org/plugins/image-zoom/
 Tags: 
 Requires at least: 3.0
-Tested up to: 3.9.1
+Tested up to: 4.2
 Stable tag: trunk
+License: GPLv3
 
 Allow to dynamically zoom on images in posts/pages/... 
 
@@ -38,13 +39,14 @@ This plugin is compatible with multi-site installation.
 
 = Localization =
 
+* Arabic (Lebanon) translation provided by 
 * Arabic (Syria) translation provided by aboRoma, Dimajahiz
 * Bulgarian (Bulgaria) translation provided by Vangelov, KalinLynnDimitrov, KonstantinYovev
 * Czech (Czech Republic) translation provided by jurajh, LukasProkop
 * German (Germany) translation provided by tcp443, B.Klein, Frutte, Dirk, Robin, Francisco
 * English (United States), default language
 * Spanish (Spain) translation provided by genteblackberry, Wildsouth, Paul, RUDIS, yanmarcosgtmo, yorkel, DJREY, Francisco
-* French (France) translation provided by SedLex, mediacop, FlorianP., LaurentChemla, FabienPardo, GizProd, Francisco
+* French (France) translation provided by SedLex, mediacop, FlorianP., LaurentChemla, FabienPardo, GizProd, Francisco, Cdric, Haugier
 * Croatian (Croatia) translation provided by Rene
 * Hungarian (Hungary) translation provided by Metoyou, DvnyiFerenc
 * Italian (Italy) translation provided by Mauro, ManuelIzziL.
@@ -54,7 +56,7 @@ This plugin is compatible with multi-site installation.
 * Polish (Poland) translation provided by rzuf, ukasz, Lukasz
 * Portuguese (Brazil) translation provided by FabyanoTitara, Francisco
 * Romanian (Romania) translation provided by Francisco
-* Russian (Russia) translation provided by sever, Sprigin, vyachek, Copyright
+* Russian (Russia) translation provided by SedLex, sever, Sprigin, vyachek, Copyright, OlegKovalenko
 * Turkish (Turkey) translation provided by 
 * Vietnamese (Viet Nam) translation provided by Khco
 
@@ -80,6 +82,10 @@ Have fun !
 2. An image zommed
 
 == Changelog ==
+
+= 1.8.1 =
+* NEW: Add icon
+* NEW: width and height for the mobile terminals may be configured
 
 = 1.8.0 =
 * NEW: Speed up the framework
@@ -194,4 +200,4 @@ Have fun !
 Visit http://www.sedlex.fr/cote_geek/
  
  
-InfoVersion:c798c9ac28c46a1d8ef17dedb48c930ca8ee306c
+InfoVersion:28d571c6d6141f4f0aa68ac2702d9772e46f1460

@@ -3,7 +3,8 @@
 Plugin Name: Image Zoom
 Plugin Name: zoom, highslide, image, panorama
 Description: <p>Allow to dynamically zoom on images in posts/pages/... </p><p>When clicked, the image will dynamically scale-up. Please note that you have to insert image normally with the wordpress embedded editor.</p><p>You may configure:</p><ul><li>The max width/height of the image; </li><li>The transition delay; </li><li>The position of the buttons; </li><li>The auto-start of the slideshow; </li><li>the opacity of the background; </li><li>the pages to be excluded. </li></ul><p>If the image does not scale-up, please verify that the HTML looks like the following : &lt;a href=' '&gt;&lt;img src=' '&gt;&lt;/a&gt;.</p><p>This plugin implements the colorbox javascript library. </p><p>This plugin is under GPL licence.</p>
-Version: 1.8.0
+Version: 1.8.1
+
 
 Author: SedLex
 Author Email: sedlex@sedlex.fr
@@ -99,6 +100,10 @@ class imagezoom extends pluginSedLex {
 		switch ($option) {
 			case 'widthRestriction'		 	: return 1200 	; break ; 
 			case 'heightRestriction'		: return 1200 	; break ; 
+
+			case 'mobile_restriction'		 	: return false 	; break ; 
+			case 'widthRestriction_mobile'		 	: return 800 	; break ; 
+			case 'heightRestriction_mobile'		: return 800 	; break ; 
 			
 			case 'show_interval'		 	: return 5000 	; break ; 
 			case 'show_alt'		 			: return false 	; break ; 
@@ -215,8 +220,21 @@ class imagezoom extends pluginSedLex {
 		
 			jQuery(window).resize(function () { 
 				jQuery('a.gallery_colorbox').colorbox({
+				<?php
+					if ((!$this->get_param('mobile_restriction'))||(!wp_is_mobile())) {
+				?>
 					maxWidth: Math.min(<?php echo $this->get_param('widthRestriction') ; ?>, Math.floor(0.95*jQuery(window).width())-80), 
 					maxHeight: Math.min(<?php echo $this->get_param('heightRestriction') ; ?>, Math.floor(0.95*jQuery(window).height())-80)
+				<?php
+					} else {
+				?>
+					maxWidth: Math.min(<?php echo $this->get_param('widthRestriction_mobile') ; ?>, Math.floor(0.95*jQuery(window).width())-80), 
+					maxHeight: Math.min(<?php echo $this->get_param('heightRestriction_mobile') ; ?>, Math.floor(0.95*jQuery(window).height())-80)
+				<?php
+					
+					}
+				?>
+
 				}) ; 
 			});
 				
@@ -273,15 +291,34 @@ class imagezoom extends pluginSedLex {
 				close:'<?php echo $this->get_param('tra_close') ; ?>',
 				<?php 
 				if ($this->get_param('image_clip')) { ?>
+				<?php
+					if ((!$this->get_param('mobile_restriction'))||(!wp_is_mobile())) {
+				?>
 					maxWidth: Math.min(<?php echo $this->get_param('widthRestriction') ; ?>, Math.floor(0.95*jQuery(window).width())-80), 
 					maxHeight: Math.min(<?php echo $this->get_param('heightRestriction') ; ?>, Math.floor(0.95*jQuery(window).height())-80),
-				<?php 
+				<?php
+					} else {
+				?>
+					maxWidth: Math.min(<?php echo $this->get_param('widthRestriction_mobile') ; ?>, Math.floor(0.95*jQuery(window).width())-80), 
+					maxHeight: Math.min(<?php echo $this->get_param('heightRestriction_mobile') ; ?>, Math.floor(0.95*jQuery(window).height())-80),
+				<?php
+					}
 				} else { ?>
+				<?php
+					if ((!$this->get_param('mobile_restriction'))||(!wp_is_mobile())) {
+				?>
 					maxWidth: <?php echo $this->get_param('widthRestriction') ; ?>, 
-					maxHeight: <?php echo $this->get_param('heightRestriction') ; ?>,				
-				<?php 
-				}?>
-				
+					maxHeight: <?php echo $this->get_param('heightRestriction') ; ?>,
+				<?php
+					} else {
+				?>
+					maxWidth: <?php echo $this->get_param('widthRestriction_mobile') ; ?>, 
+					maxHeight: <?php echo $this->get_param('heightRestriction_mobile') ; ?>,
+				<?php
+					}
+				}
+				?>
+								
 				
 				opacity:<?php echo $this->get_param('background_opacity');?> , 
 				onComplete : function(){ 
@@ -476,6 +513,9 @@ class imagezoom extends pluginSedLex {
 				$params->add_param('widthRestriction', __('Max width:',$this->pluginID)) ; 
 				$params->add_param('heightRestriction', __('Max height:',$this->pluginID)) ; 
 				$params->add_param('image_clip', __('Do you want to clip to browser size:',$this->pluginID)) ; 
+				$params->add_param('mobile_restriction', __('Do you want other width/height for mobile terminals?',$this->pluginID), "", "", array("widthRestriction_mobile", "heightRestriction_mobile")) ; 
+				$params->add_param('widthRestriction_mobile', __('Max width for mobile:',$this->pluginID)) ; 
+				$params->add_param('heightRestriction_mobile', __('Max height for mobile:',$this->pluginID)) ; 
 				
 				$params->add_title(__('What is the text for the frontend?',$this->pluginID)) ; 
 				$params->add_param('tra_previous', __('Previous:',$this->pluginID)) ; 
