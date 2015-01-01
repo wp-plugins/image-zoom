@@ -4,13 +4,14 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2014-05-18T11:17:36+00:00\n"
+"PO-Revision-Date: 2014-12-30T22:29:15+00:00\n"
 "Last-Translator: tcp443 <www.tcp443.de>\n"
 "Last-Translator: B.Klein <www.kpowered.de>\n"
 "Last-Translator: Frutte <http://www.figaros-netzwerk.de>\n"
 "Last-Translator: Dirk <dirk@dredv.de>\n"
 "Last-Translator: Robin <rc.tontechnik@gmail.com>\n"
 "Last-Translator: Francisco <franko.cubava.cu>\n"
+"Last-Translator: Lothar <kontakt@ezigarette-discount.de>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -151,9 +152,6 @@ msgstr "Du kannst die selbe Seite auch ausschließen, indem du diese Option zu %
 msgid "In addition, you may set this option to %s and to %s to exclude the home page"
 msgstr "Darüber hinaus können Sie diese Option, um %s zu setzen und %s, um die Homepage ausschließen"
 
-msgid "Disable if the user uses mobile terminal:"
-msgstr ""
-
 msgid "Parameters"
 msgstr "Einstellungen"
 
@@ -165,4 +163,28 @@ msgstr "Feedback"
 
 msgid "Other plugins"
 msgstr "weitere Plugins"
+
+msgid "Max width for mobile:"
+msgstr "Maximale Breite für Mobilgeräte"
+
+msgid "Max height for mobile:"
+msgstr "Maximale Höhe für Mobilgeräte"
+
+msgid "Additional CSS you want to add:"
+msgstr "Zusätzlicher CSS Code den Du hinzufügen kannst"
+
+msgid "Disable if the user uses mobile terminal:"
+msgstr "Muss deaktiviert werden, wenn ein mobiles Endgerät verwendet wird"
+
+msgid "Purpose of that plugin"
+msgstr "Zweck dieses Plugin"
+
+msgid "Exclude an image"
+msgstr "Ausschließen eines Bildes"
+
+msgid "Exclude a page"
+msgstr "Ausschließen einer Seite"
+
+msgid "The plugin does not work"
+msgstr "Das Plugin funktioniert nicht"
 
