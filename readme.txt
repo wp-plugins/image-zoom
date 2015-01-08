@@ -4,7 +4,7 @@ Author: SedLex
 Contributors: SedLex
 Author URI: http://www.sedlex.fr/
 Plugin URI: http://wordpress.org/plugins/image-zoom/
-Tags: 
+Tags: zoom, highslide, image, panorama
 Requires at least: 3.0
 Tested up to: 4.2
 Stable tag: trunk
@@ -43,7 +43,7 @@ This plugin is compatible with multi-site installation.
 * Arabic (Syria) translation provided by aboRoma, Dimajahiz
 * Bulgarian (Bulgaria) translation provided by Vangelov, KalinLynnDimitrov, KonstantinYovev
 * Czech (Czech Republic) translation provided by jurajh, LukasProkop
-* German (Germany) translation provided by tcp443, B.Klein, Frutte, Dirk, Robin, Francisco
+* German (Germany) translation provided by tcp443, B.Klein, Frutte, Dirk, Robin, Francisco, Lothar
 * English (United States), default language
 * Spanish (Spain) translation provided by genteblackberry, Wildsouth, Paul, RUDIS, yanmarcosgtmo, yorkel, DJREY, Francisco
 * French (France) translation provided by SedLex, mediacop, FlorianP., LaurentChemla, FabienPardo, GizProd, Francisco, Cdric, Haugier
@@ -200,4 +200,4 @@ Have fun !
 Visit http://www.sedlex.fr/cote_geek/
  
  
-InfoVersion:a4d3f89bd600b47b2401a63de727943773461288
+InfoVersion:79961baa4ac5ebb5fe3cc3d37d2bd7b2993263b0

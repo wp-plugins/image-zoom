@@ -1,327 +1,327 @@
 Content-Transfer-Encoding: 8bit
 
-#: image-zoom.php:154
+#: image-zoom.php:152
 #@ imagezoom
 msgid "Theme 01"
 msgstr ""
 
-#: image-zoom.php:155
+#: image-zoom.php:153
 #@ imagezoom
 msgid "Theme 02"
 msgstr ""
 
-#: image-zoom.php:156
+#: image-zoom.php:154
 #@ imagezoom
 msgid "Theme 03"
 msgstr ""
 
-#: image-zoom.php:157
-#: image-zoom.php:180
+#: image-zoom.php:155
+#: image-zoom.php:178
 #@ imagezoom
 msgid "Theme 04"
 msgstr ""
 
-#: image-zoom.php:498
+#: image-zoom.php:496
 #@ imagezoom
 msgid "Your theme contains (i.e. in %s file) a hardcoded reference to the jQuery javascript library."
 msgstr ""
 
-#: image-zoom.php:498
+#: image-zoom.php:496
 #@ imagezoom
 msgid "This reference may break the plugin. So, if the plugin does not work, please either delete this reference or move it just after the %s declaration."
 msgstr ""
 
-#: image-zoom.php:512
+#: image-zoom.php:510
 #@ imagezoom
 msgid "What are the clipped dimensions of the zoomed image?"
 msgstr ""
 
-#: image-zoom.php:513
+#: image-zoom.php:511
 #@ imagezoom
 msgid "Max width:"
 msgstr ""
 
-#: image-zoom.php:514
+#: image-zoom.php:512
 #@ imagezoom
 msgid "Max height:"
 msgstr ""
 
-#: image-zoom.php:515
+#: image-zoom.php:513
 #@ imagezoom
 msgid "Do you want to clip to browser size:"
 msgstr ""
 
-#: image-zoom.php:516
+#: image-zoom.php:514
 #@ imagezoom
 msgid "Do you want other width/height for mobile terminals?"
 msgstr ""
 
-#: image-zoom.php:517
+#: image-zoom.php:515
 #@ imagezoom
 msgid "Max width for mobile:"
 msgstr ""
 
-#: image-zoom.php:518
+#: image-zoom.php:516
 #@ imagezoom
 msgid "Max height for mobile:"
 msgstr ""
 
-#: image-zoom.php:520
+#: image-zoom.php:518
 #@ imagezoom
 msgid "What is the text for the frontend?"
 msgstr ""
 
-#: image-zoom.php:521
+#: image-zoom.php:519
 #@ imagezoom
 msgid "Previous:"
 msgstr ""
 
-#: image-zoom.php:522
+#: image-zoom.php:520
 #@ imagezoom
 msgid "Next:"
 msgstr ""
 
-#: image-zoom.php:523
+#: image-zoom.php:521
 #@ imagezoom
 msgid "Close:"
 msgstr ""
 
-#: image-zoom.php:524
+#: image-zoom.php:522
 #@ imagezoom
 msgid "Play:"
 msgstr ""
 
-#: image-zoom.php:525
+#: image-zoom.php:523
 #@ imagezoom
 msgid "Pause:"
 msgstr ""
 
-#: image-zoom.php:526
+#: image-zoom.php:524
 #@ imagezoom
 msgid "The image counter:"
 msgstr ""
 
-#: image-zoom.php:527
+#: image-zoom.php:525
 #@ imagezoom
 msgid "The %s will be replace with the index of the image and %s with the total number of images in the page."
 msgstr ""
 
-#: image-zoom.php:529
+#: image-zoom.php:527
 #@ imagezoom
 msgid "What is the theme?"
 msgstr ""
 
-#: image-zoom.php:530
+#: image-zoom.php:528
 #@ imagezoom
 msgid "Choose the theme:"
 msgstr ""
 
-#: image-zoom.php:531
+#: image-zoom.php:529
 #@ imagezoom
 msgid "Theme 01 is : %s."
 msgstr ""
 
-#: image-zoom.php:532
+#: image-zoom.php:530
 #@ imagezoom
 msgid "Theme 02 is : %s."
 msgstr ""
 
-#: image-zoom.php:533
+#: image-zoom.php:531
 #@ imagezoom
 msgid "Theme 03 is : %s."
 msgstr ""
 
-#: image-zoom.php:534
+#: image-zoom.php:532
 #@ imagezoom
 msgid "Theme 04 is : %s (created by %s)."
 msgstr ""
 
-#: image-zoom.php:535
+#: image-zoom.php:533
 #@ imagezoom
 msgid "Additional CSS you want to add:"
 msgstr ""
 
-#: image-zoom.php:536
+#: image-zoom.php:534
 #@ imagezoom
 msgid "If you want to modify sligthly the CSS, you can modify it here."
 msgstr ""
 
-#: image-zoom.php:539
+#: image-zoom.php:537
 #@ imagezoom
 msgid "Show description text"
 msgstr ""
 
-#: image-zoom.php:540
+#: image-zoom.php:538
 #@ imagezoom
 msgid "Show the title of the image:"
 msgstr ""
 
-#: image-zoom.php:541
+#: image-zoom.php:539
 #@ imagezoom
 msgid "Show the alternative text of the image:"
 msgstr ""
 
-#: image-zoom.php:543
+#: image-zoom.php:541
 #@ imagezoom
 msgid "What are the other parameters?"
 msgstr ""
 
-#: image-zoom.php:544
+#: image-zoom.php:542
 #@ imagezoom
 msgid "Transition time if the slideshow is on:"
 msgstr ""
 
-#: image-zoom.php:545
+#: image-zoom.php:543
 #@ imagezoom
 msgid "Auto-start the slideshow when launched:"
 msgstr ""
 
-#: image-zoom.php:546
+#: image-zoom.php:544
 #@ imagezoom
 msgid "The opacity of the background:"
 msgstr ""
 
-#: image-zoom.php:548
+#: image-zoom.php:546
 #@ imagezoom
 msgid "Advanced parameters?"
 msgstr ""
 
-#: image-zoom.php:549
+#: image-zoom.php:547
 #@ imagezoom
 msgid "Disable the navigation buttons on images:"
 msgstr ""
 
-#: image-zoom.php:550
+#: image-zoom.php:548
 #@ imagezoom
 msgid "Disable click on the image for next (it will then close the slideshow):"
 msgstr ""
 
-#: image-zoom.php:551
+#: image-zoom.php:549
 #@ imagezoom
 msgid "Disable the slideshow buttons on images:"
 msgstr ""
 
-#: image-zoom.php:553
+#: image-zoom.php:551
 #@ imagezoom
 msgid "List of page exclusions (regular expressions):"
 msgstr ""
 
-#: image-zoom.php:554
+#: image-zoom.php:552
 #@ imagezoom
 msgid "For instance, you may exclude page with URL like %s by setting this option to %s. Please add one regular expressions by line"
 msgstr ""
 
-#: image-zoom.php:555
+#: image-zoom.php:553
 #@ imagezoom
 msgid "You may also exclude this same page by setting this option to %s"
 msgstr ""
 
-#: image-zoom.php:556
+#: image-zoom.php:554
 #@ imagezoom
 msgid "In addition, you may set this option to %s and to %s to exclude the home page"
 msgstr ""
 
-#: image-zoom.php:558
+#: image-zoom.php:556
 #@ imagezoom
 msgid "Disable if the user uses mobile terminal:"
 msgstr ""
 
-#: image-zoom.php:561
+#: image-zoom.php:559
 #@ imagezoom
 msgid "Parameters"
 msgstr ""
 
-#: image-zoom.php:565
+#: image-zoom.php:563
 #@ imagezoom
 msgid "This plugin allows a dynamic zoom on the images."
 msgstr ""
 
-#: image-zoom.php:566
+#: image-zoom.php:564
 #@ imagezoom
 msgid "All images in your pages/posts like %s will be zoomable."
 msgstr ""
 
-#: image-zoom.php:567
+#: image-zoom.php:565
 #@ imagezoom
 msgid "Purpose of that plugin"
 msgstr ""
 
-#: image-zoom.php:569
+#: image-zoom.php:567
 #@ imagezoom
 msgid "If you want to exclude one specific image, please modify the HTML code so that this image is like that: %s or %s."
 msgstr ""
 
-#: image-zoom.php:570
+#: image-zoom.php:568
 #@ imagezoom
 msgid "Exclude an image"
 msgstr ""
 
-#: image-zoom.php:572
+#: image-zoom.php:570
 #@ imagezoom
 msgid "If you want to exclude one specific page, please use the advanced option in the configuration tab"
 msgstr ""
 
-#: image-zoom.php:573
+#: image-zoom.php:571
 #@ imagezoom
 msgid "For instance, you may exclude page with URL like %s by setting this option to portfolio. Please add one regular expressions by line."
 msgstr ""
 
-#: image-zoom.php:574
+#: image-zoom.php:572
 #@ imagezoom
 msgid "You may also exclude this same page by setting this option to %s."
 msgstr ""
 
-#: image-zoom.php:575
+#: image-zoom.php:573
 #@ imagezoom
 msgid "In addition, you may set this option to %s and to %s to exclude the home page."
 msgstr ""
 
-#: image-zoom.php:576
+#: image-zoom.php:574
 #@ imagezoom
 msgid "Exclude a page"
 msgstr ""
 
-#: image-zoom.php:578
+#: image-zoom.php:576
 #@ imagezoom
 msgid "One of the most probable reason that the plugin does not work is that there is a conflict with your theme of one of your plugins."
 msgstr ""
 
-#: image-zoom.php:579
+#: image-zoom.php:577
 #@ imagezoom
 msgid "Before contacting me, please test deactivating each plugin one by one to see if it solve the problem and change the theme by the default one."
 msgstr ""
 
-#: image-zoom.php:580
+#: image-zoom.php:578
 #@ imagezoom
 msgid "Indeed, most of the time the %s library is not loaded correctly."
 msgstr ""
 
-#: image-zoom.php:581
+#: image-zoom.php:579
 #@ imagezoom
 msgid "I cannot give you a simple way to correct it!"
 msgstr ""
 
-#: image-zoom.php:582
+#: image-zoom.php:580
 #@ imagezoom
 msgid "The plugin does not work"
 msgstr ""
 
-#: image-zoom.php:588
+#: image-zoom.php:586
 #@ imagezoom
 msgid "How To"
 msgstr ""
 
-#: image-zoom.php:594
+#: image-zoom.php:592
 #@ imagezoom
 msgid "Manage translations"
 msgstr ""
 
-#: image-zoom.php:600
+#: image-zoom.php:598
 #@ imagezoom
 msgid "Give feedback"
 msgstr ""
 
-#: image-zoom.php:605
+#: image-zoom.php:603
 #@ imagezoom
 msgid "Other plugins"
 msgstr ""
