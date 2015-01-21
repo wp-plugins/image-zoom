@@ -46,6 +46,7 @@ This plugin is compatible with multi-site installation.
 * German (Germany) translation provided by tcp443, B.Klein, Frutte, Dirk, Robin, Francisco, Lothar
 * English (United States), default language
 * Spanish (Spain) translation provided by genteblackberry, Wildsouth, Paul, RUDIS, yanmarcosgtmo, yorkel, DJREY, Francisco
+* Farsi (Iran) translation provided by amirhosein
 * French (France) translation provided by SedLex, mediacop, FlorianP., LaurentChemla, FabienPardo, GizProd, Francisco, Cdric, Haugier
 * Croatian (Croatia) translation provided by Rene
 * Hungarian (Hungary) translation provided by Metoyou, DvnyiFerenc
@@ -82,6 +83,9 @@ Have fun !
 2. An image zommed
 
 == Changelog ==
+
+= 1.8.2 =
+* NEW: delete temp files upon desinstall
 
 = 1.8.1 =
 * NEW: Add icon
@@ -200,4 +204,4 @@ Have fun !
 Visit http://www.sedlex.fr/cote_geek/
  
  
-InfoVersion:79961baa4ac5ebb5fe3cc3d37d2bd7b2993263b0
+InfoVersion:9e4e2d0ab97aba5d62cecf4034e09de72cc9e64d
