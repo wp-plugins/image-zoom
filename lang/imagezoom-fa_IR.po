@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2015-01-20T13:23:25+00:00\n"
+"PO-Revision-Date: 2015-02-02T15:50:41+00:00\n"
 "Last-Translator: amirhosein <h.kabiri@rocketmail.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -67,4 +67,7 @@ msgstr "چگونه"
 
 msgid "Other plugins"
 msgstr "افزونه های دیگر"
+
+msgid "Manage translations"
+msgstr "مدیریت زبان"
 
