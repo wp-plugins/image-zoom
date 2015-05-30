@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2014-11-29T17:15:06+00:00\n"
+"PO-Revision-Date: 2015-03-01T18:10:55+00:00\n"
 "Last-Translator: SedLex <http://www.sedlex.fr/>\n"
 "Last-Translator: mediacop <>\n"
 "Last-Translator: FlorianP. <floflo63400@gmail.com>\n"
@@ -99,12 +99,6 @@ msgstr "Thème 03 est : %s."
 
 msgid "Theme 04 is : %s (created by %s)."
 msgstr "Thème 04 est : %s (créé par %s)."
-
-msgid "Additional CSS you want to add:"
-msgstr ""
-
-msgid "If you want to modify sligthly the CSS, you can modify it here."
-msgstr ""
 
 msgid "Show description text"
 msgstr "Montrer la description"
@@ -213,4 +207,19 @@ msgstr "Donner son avis"
 
 msgid "Other plugins"
 msgstr "Autres plugins"
+
+msgid "Do you want other width/height for mobile terminals?"
+msgstr "Voulez-vous autre largeur / hauteur pour les terminaux mobiles?"
+
+msgid "Max width for mobile:"
+msgstr "Largeur max pour mobile:"
+
+msgid "Max height for mobile:"
+msgstr "Hauteur maximale pour mobile:"
+
+msgid "Additional CSS you want to add:"
+msgstr "CSS supplémentaires que vous souhaitez ajouter:"
+
+msgid "If you want to modify sligthly the CSS, you can modify it here."
+msgstr "Si vous souhaitez modifier sligthly le CSS, vous pouvez le modifier ici."
 

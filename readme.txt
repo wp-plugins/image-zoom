@@ -39,11 +39,12 @@ This plugin is compatible with multi-site installation.
 
 = Localization =
 
-* Arabic (Lebanon) translation provided by 
+* Arabic (U.A.E.) translation provided by FajrYassin
+* Arabic (Lebanon) translation provided by FajrYassin
 * Arabic (Syria) translation provided by aboRoma, Dimajahiz
 * Bulgarian (Bulgaria) translation provided by Vangelov, KalinLynnDimitrov, KonstantinYovev
 * Czech (Czech Republic) translation provided by jurajh, LukasProkop
-* German (Germany) translation provided by tcp443, B.Klein, Frutte, Dirk, Robin, Francisco, Lothar
+* German (Germany) translation provided by tcp443, B.Klein, Frutte, Dirk, Robin, Francisco, Lothar, MDS
 * English (United States), default language
 * Spanish (Spain) translation provided by genteblackberry, Wildsouth, Paul, RUDIS, yanmarcosgtmo, yorkel, DJREY, Francisco
 * Farsi (Iran) translation provided by amirhosein
@@ -57,7 +58,7 @@ This plugin is compatible with multi-site installation.
 * Polish (Poland) translation provided by rzuf, ukasz, Lukasz
 * Portuguese (Brazil) translation provided by FabyanoTitara, Francisco
 * Romanian (Romania) translation provided by Francisco
-* Russian (Russia) translation provided by SedLex, sever, Sprigin, vyachek, Copyright, OlegKovalenko
+* Russian (Russia) translation provided by SedLex, sever, Sprigin, vyachek, Copyright, OlegKovalenko, Elsper
 * Turkish (Turkey) translation provided by 
 * Vietnamese (Viet Nam) translation provided by Khco
 
@@ -83,6 +84,9 @@ Have fun !
 2. An image zommed
 
 == Changelog ==
+
+= 1.8.3 =
+* BUG: remove the e modifier for preg_replace (deprecated in 5.5)
 
 = 1.8.2 =
 * NEW: delete temp files upon desinstall
@@ -204,4 +208,4 @@ Have fun !
 Visit http://www.sedlex.fr/cote_geek/
  
  
-InfoVersion:ed732eebd4f8db06671fbdc369cfafa92701142c
+InfoVersion:9399cc22f3cde2d9ecf37f8eb1d7b19dffa466ab
