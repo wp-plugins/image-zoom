@@ -3,7 +3,7 @@
 Plugin Name: Image Zoom
 Plugin Tag: zoom, highslide, image, panorama
 Description: <p>Allow to dynamically zoom on images in posts/pages/... </p><p>When clicked, the image will dynamically scale-up. Please note that you have to insert image normally with the wordpress embedded editor.</p><p>You may configure:</p><ul><li>The max width/height of the image; </li><li>The transition delay; </li><li>The position of the buttons; </li><li>The auto-start of the slideshow; </li><li>the opacity of the background; </li><li>the pages to be excluded. </li></ul><p>If the image does not scale-up, please verify that the HTML looks like the following : &lt;a href=' '&gt;&lt;img src=' '&gt;&lt;/a&gt;.</p><p>This plugin implements the colorbox javascript library. </p><p>This plugin is under GPL licence.</p>
-Version: 1.8.6
+Version: 1.8.7
 Author: SedLex
 Author Email: sedlex@sedlex.fr
 Framework Email: sedlex@sedlex.fr
@@ -460,9 +460,7 @@ class imagezoom extends pluginSedLex {
 		$pattern_img = '/(<a([^>]*?)href=["\']([^"\']*[.])'.$this->image_type.'["\']([^>]*?)>((?:[^<]|<br)*)<img([^>]*?)src=["\']([^"\']*[.])'.$this->image_type.'["\']([^>]*?)>((?:[^<]|<br)*?)<\/a>)/isU';
   		
 		if (preg_match($pattern_img, $matches[0])) {
-			return preg_replace_callback($pattern_img, function ($m) {
-  				return stripslashes("<a".$m[2]."href=\"".$m[3]."".$m[4]."\" class=\"gallery_colorbox\"".$m[5].">".$m[6]."<img".$m[7]."src=\"".$m[8]."".$m[9]."\" ".$m[10].">".$m[11]."</a>");
-			}, $matches[0]);
+			return preg_replace_callback($pattern_img, array($this, "_modify_content_callback2"), $matches[0]);
 		}
 		
 		$id_attach = url_to_postid($matches[3]) ; 
@@ -476,14 +474,19 @@ class imagezoom extends pluginSedLex {
   			
   			$this->image_temp = $image ; 
 			
-			return preg_replace_callback($pattern, function ($m) {
-				return stripslashes("<a".$m[2]."href=\"".$this->image_temp[0]."\" class=\"gallery_colorbox\"".$m[4].">".$m[5]."<img".$m[6]."src=\"".$m[7]."".$m[8]."\" ".$m[9].">".$m[10]."</a>") ; 
-			}, $matches[0]);
+			return preg_replace_callback($pattern, array($this, "_modify_content_callback3"), $matches[0]);
 		}
 		
   		return $matches[0];
 	}
-  	
+	
+  	function _modify_content_callback2 ($m) {
+  		return stripslashes("<a".$m[2]."href=\"".$m[3]."".$m[4]."\" class=\"gallery_colorbox\"".$m[5].">".$m[6]."<img".$m[7]."src=\"".$m[8]."".$m[9]."\" ".$m[10].">".$m[11]."</a>");
+	}
+	
+	function _modify_content_callback3 ($m) {
+		return stripslashes("<a".$m[2]."href=\"".$this->image_temp[0]."\" class=\"gallery_colorbox\"".$m[4].">".$m[5]."<img".$m[6]."src=\"".$m[7]."".$m[8]."\" ".$m[9].">".$m[10]."</a>") ; 
+	}
 	
 	
 	/** ====================================================================================================================================================

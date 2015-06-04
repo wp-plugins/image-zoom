@@ -85,6 +85,9 @@ Have fun !
 
 == Changelog ==
 
+= 1.8.4 - 1.8.7 =
+* BUG: various version to overcome a bug in PHP 5.2 
+
 = 1.8.3 =
 * BUG: remove the e modifier for preg_replace (deprecated in 5.5)
 
@@ -208,4 +211,4 @@ Have fun !
 Visit http://www.sedlex.fr/cote_geek/
  
  
-InfoVersion:a87fac306ca6f172db1c60c133538d006944b708
+InfoVersion:442fd52d7eb365b5ec925e54de5e944da36c0e34
